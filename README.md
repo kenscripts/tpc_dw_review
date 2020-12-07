@@ -1,13 +1,13 @@
-#Disease Resistance Genes
+# Disease Resistance Genes
 
-##(NLRs)
+## (NLRs)
 
 working directory: ./dk_resistance genes/duckweed_nbarc/
 
 The Hidden Markov Model for the NB-ARC domain (PF00931) was used to search the proteomes specified in Table 1 using the gathering bit score threshold.
 
 
-##(AMPs)
+## (AMPs)
 
 working directory: ./dk_resistance genes/duckweed_amp/
 
