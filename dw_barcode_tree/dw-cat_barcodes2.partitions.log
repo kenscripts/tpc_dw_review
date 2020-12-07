@@ -1,0 +1,542 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    epigenome (SSE4.2, 94 GB RAM)
+Command: iqtree -s dw-cat_barcodes2.alnfa -spp dw-cat_barcodes2.partitions -bb 1000 -bnni
+Seed:    432571 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Wed Dec  2 14:41:56 2020
+Kernel:  SSE2 - 1 threads (24 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 24 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file dw-cat_barcodes2.partitions ...
+Reading alignment file dw-cat_barcodes2.alnfa ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 139 sequences with 1664 columns, 949 distinct patterns
+587 parsimony-informative, 105 singleton sites, 972 constant sites
+WARNING: Some sequence names are changed as follows:
+Landoltia_punctata_strain_7248>Landoltia_punctata_strain_7248 -> Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248
+Landoltia_punctata_strain_7260>Landoltia_punctata_strain_7260 -> Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260
+Landoltia_punctata_strain_7449>Landoltia_punctata_strain_7449 -> Landoltia_punctata_strain_7449_Landoltia_punctata_strain_7449
+Landoltia_punctata_strain_7487>Landoltia_punctata_strain_7487 -> Landoltia_punctata_strain_7487_Landoltia_punctata_strain_7487
+Landoltia_punctata_strain_8721>Landoltia_punctata_strain_8721 -> Landoltia_punctata_strain_8721_Landoltia_punctata_strain_8721
+Landoltia_punctata_strain_9278>Landoltia_punctata_strain_9278 -> Landoltia_punctata_strain_9278_Landoltia_punctata_strain_9278
+Lemna_aequinoctialis_strain_6612>Lemna_aequinoctialis_strain_6612 -> Lemna_aequinoctialis_strain_6612_Lemna_aequinoctialis_strain_6612
+Lemna_aequinoctialis_strain_6746>Lemna_aequinoctialis_strain_6746 -> Lemna_aequinoctialis_strain_6746_Lemna_aequinoctialis_strain_6746
+Lemna_aequinoctialis_strain_7126>Lemna_aequinoctialis_strain_7126 -> Lemna_aequinoctialis_strain_7126_Lemna_aequinoctialis_strain_7126
+Lemna_disperma_strain_7269>Lemna_disperma_strain_7269 -> Lemna_disperma_strain_7269_Lemna_disperma_strain_7269
+Lemna_gibba_strain_7589>Lemna_gibba_strain_7589 -> Lemna_gibba_strain_7589_Lemna_gibba_strain_7589
+Lemna_gibba_strain_7741>Lemna_gibba_strain_7741 -> Lemna_gibba_strain_7741_Lemna_gibba_strain_7741
+Lemna_gibba_strain_7784>Lemna_gibba_strain_7784 -> Lemna_gibba_strain_7784_Lemna_gibba_strain_7784
+Lemna_gibba_strain_8703>Lemna_gibba_strain_8703 -> Lemna_gibba_strain_8703_Lemna_gibba_strain_8703
+Lemna_japonica_strain_0189>Lemna_japonica_strain_0189 -> Lemna_japonica_strain_0189_Lemna_japonica_strain_0189
+Lemna_japonica_strain_0216>Lemna_japonica_strain_0216 -> Lemna_japonica_strain_0216_Lemna_japonica_strain_0216
+Lemna_japonica_strain_8695>Lemna_japonica_strain_8695 -> Lemna_japonica_strain_8695_Lemna_japonica_strain_8695
+Lemna_japonica_strain_9017>Lemna_japonica_strain_9017 -> Lemna_japonica_strain_9017_Lemna_japonica_strain_9017
+Lemna_minor_strain_7018>Lemna_minor_strain_7018 -> Lemna_minor_strain_7018_Lemna_minor_strain_7018
+Lemna_minor_strain_7136>Lemna_minor_strain_7136 -> Lemna_minor_strain_7136_Lemna_minor_strain_7136
+Lemna_minor_strain_7210>Lemna_minor_strain_7210 -> Lemna_minor_strain_7210_Lemna_minor_strain_7210
+Lemna_minor_strain_9016>Lemna_minor_strain_9016 -> Lemna_minor_strain_9016_Lemna_minor_strain_9016
+Lemna_minor_strain_9253>Lemna_minor_strain_9253 -> Lemna_minor_strain_9253_Lemna_minor_strain_9253
+Lemna_minor_strain_9417>Lemna_minor_strain_9417 -> Lemna_minor_strain_9417_Lemna_minor_strain_9417
+Lemna_minuta_clone_5571>Lemna_minuta_clone_5571 -> Lemna_minuta_clone_5571_Lemna_minuta_clone_5571
+Lemna_minuta_clone_5572>Lemna_minuta_clone_5572 -> Lemna_minuta_clone_5572_Lemna_minuta_clone_5572
+Lemna_minuta_clone_5573>Lemna_minuta_clone_5573 -> Lemna_minuta_clone_5573_Lemna_minuta_clone_5573
+Lemna_minuta_clone_6717>Lemna_minuta_clone_6717 -> Lemna_minuta_clone_6717_Lemna_minuta_clone_6717
+Lemna_minuta_clone_7612>Lemna_minuta_clone_7612 -> Lemna_minuta_clone_7612_Lemna_minuta_clone_7612
+Lemna_minuta_clone_8699>Lemna_minuta_clone_8699 -> Lemna_minuta_clone_8699_Lemna_minuta_clone_8699
+Lemna_minuta_clone_9226>Lemna_minuta_clone_9226 -> Lemna_minuta_clone_9226_Lemna_minuta_clone_9226
+Lemna_minuta_clone_9414>Lemna_minuta_clone_9414 -> Lemna_minuta_clone_9414_Lemna_minuta_clone_9414
+Lemna_minuta_clone_9473>Lemna_minuta_clone_9473 -> Lemna_minuta_clone_9473_Lemna_minuta_clone_9473
+Lemna_minuta_clone_9474>Lemna_minuta_clone_9474 -> Lemna_minuta_clone_9474_Lemna_minuta_clone_9474
+Lemna_minuta_clone_9476>Lemna_minuta_clone_9476 -> Lemna_minuta_clone_9476_Lemna_minuta_clone_9476
+Lemna_minuta_clone_9484>Lemna_minuta_clone_9484 -> Lemna_minuta_clone_9484_Lemna_minuta_clone_9484
+Lemna_minuta_clone_9581>Lemna_minuta_clone_9581 -> Lemna_minuta_clone_9581_Lemna_minuta_clone_9581
+Lemna_minuta_strain_7284>Lemna_minuta_strain_7284 -> Lemna_minuta_strain_7284_Lemna_minuta_strain_7284
+Lemna_minuta_strain_7726>Lemna_minuta_strain_7726 -> Lemna_minuta_strain_7726_Lemna_minuta_strain_7726
+Lemna_minuta_strain_8065>Lemna_minuta_strain_8065 -> Lemna_minuta_strain_8065_Lemna_minuta_strain_8065
+Lemna_obscura_strain_7856>Lemna_obscura_strain_7856 -> Lemna_obscura_strain_7856_Lemna_obscura_strain_7856
+Lemna_perpusilla_strain_8539>Lemna_perpusilla_strain_8539 -> Lemna_perpusilla_strain_8539_Lemna_perpusilla_strain_8539
+Lemna_tenera_strain_9020>Lemna_tenera_strain_9020 -> Lemna_tenera_strain_9020_Lemna_tenera_strain_9020
+Lemna_tenera_strain_9024>Lemna_tenera_strain_9024 -> Lemna_tenera_strain_9024_Lemna_tenera_strain_9024
+Lemna_trisulca_strain_7579>Lemna_trisulca_strain_7579 -> Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579
+Lemna_trisulca_strain_8137>Lemna_trisulca_strain_8137 -> Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137
+Lemna_turionifera_strain_8339>Lemna_turionifera_strain_8339 -> Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339
+Lemna_turionifera_strain_8760>Lemna_turionifera_strain_8760 -> Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760
+Lemna_valdiviana_clone_9228>Lemna_valdiviana_clone_9228 -> Lemna_valdiviana_clone_9228_Lemna_valdiviana_clone_9228
+Lemna_valdiviana_clone_9229>Lemna_valdiviana_clone_9229 -> Lemna_valdiviana_clone_9229_Lemna_valdiviana_clone_9229
+Lemna_valdiviana_clone_9233>Lemna_valdiviana_clone_9233 -> Lemna_valdiviana_clone_9233_Lemna_valdiviana_clone_9233
+Lemna_valdiviana_clone_9267>Lemna_valdiviana_clone_9267 -> Lemna_valdiviana_clone_9267_Lemna_valdiviana_clone_9267
+Lemna_valdiviana_clone_9395>Lemna_valdiviana_clone_9395 -> Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395
+Lemna_valdiviana_clone_9401>Lemna_valdiviana_clone_9401 -> Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401
+Lemna_valdiviana_clone_9442>Lemna_valdiviana_clone_9442 -> Lemna_valdiviana_clone_9442_Lemna_valdiviana_clone_9442
+Lemna_valdiviana_clone_9443>Lemna_valdiviana_clone_9443 -> Lemna_valdiviana_clone_9443_Lemna_valdiviana_clone_9443
+Lemna_valdiviana_clone_9475>Lemna_valdiviana_clone_9475 -> Lemna_valdiviana_clone_9475_Lemna_valdiviana_clone_9475
+Lemna_valdiviana_strain_7288>Lemna_valdiviana_strain_7288 -> Lemna_valdiviana_strain_7288_Lemna_valdiviana_strain_7288
+Lemna_valdiviana_strain_9229>Lemna_valdiviana_strain_9229 -> Lemna_valdiviana_strain_9229_Lemna_valdiviana_strain_9229
+Lemna_valdiviana_strain_9232>Lemna_valdiviana_strain_9232 -> Lemna_valdiviana_strain_9232_Lemna_valdiviana_strain_9232
+Lemna_valdiviana_clone_9209>Lemna_valdiviana_clone_9209 -> Lemna_valdiviana_clone_9209_Lemna_valdiviana_clone_9209
+Lemna_valdiviana_strain_9207>Lemna_valdiviana_strain_9207 -> Lemna_valdiviana_strain_9207_Lemna_valdiviana_strain_9207
+Lemna_valdiviana_strain_9208>Lemna_valdiviana_strain_9208 -> Lemna_valdiviana_strain_9208_Lemna_valdiviana_strain_9208
+Lemna_valdiviana_strain_9210>Lemna_valdiviana_strain_9210 -> Lemna_valdiviana_strain_9210_Lemna_valdiviana_strain_9210
+Spirodela_intermedia_strain_7125>Spirodela_intermedia_strain_7125 -> Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125
+Spirodela_intermedia_strain_7178>Spirodela_intermedia_strain_7178 -> Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178
+Spirodela_intermedia_strain_7291>Spirodela_intermedia_strain_7291 -> Spirodela_intermedia_strain_7291_Spirodela_intermedia_strain_7291
+Spirodela_intermedia_strain_7355>Spirodela_intermedia_strain_7355 -> Spirodela_intermedia_strain_7355_Spirodela_intermedia_strain_7355
+Spirodela_intermedia_strain_7450>Spirodela_intermedia_strain_7450 -> Spirodela_intermedia_strain_7450_Spirodela_intermedia_strain_7450
+Spirodela_intermedia_strain_7747>Spirodela_intermedia_strain_7747 -> Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747
+Spirodela_intermedia_strain_8410>Spirodela_intermedia_strain_8410 -> Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410
+Spirodela_polyrhiza_strain_7205>Spirodela_polyrhiza_strain_7205 -> Spirodela_polyrhiza_strain_7205_Spirodela_polyrhiza_strain_7205
+Spirodela_polyrhiza_strain_7212>Spirodela_polyrhiza_strain_7212 -> Spirodela_polyrhiza_strain_7212_Spirodela_polyrhiza_strain_7212
+Spirodela_polyrhiza_strain_7222>Spirodela_polyrhiza_strain_7222 -> Spirodela_polyrhiza_strain_7222_Spirodela_polyrhiza_strain_7222
+Spirodela_polyrhiza_strain_7498>Spirodela_polyrhiza_strain_7498 -> Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498
+Spirodela_polyrhiza_strain_7657>Spirodela_polyrhiza_strain_7657 -> Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657
+Spirodela_polyrhiza_strain_8790>Spirodela_polyrhiza_strain_8790 -> Spirodela_polyrhiza_strain_8790_Spirodela_polyrhiza_strain_8790
+Spirodela_intermedia_strain_9203>Spirodela_intermedia_strain_9203 -> Spirodela_intermedia_strain_9203_Spirodela_intermedia_strain_9203
+Wolffia_angusta_strain_7476>Wolffia_angusta_strain_7476 -> Wolffia_angusta_strain_7476_Wolffia_angusta_strain_7476
+Wolffia_arrhiza_strain_8872>Wolffia_arrhiza_strain_8872 -> Wolffia_arrhiza_strain_8872_Wolffia_arrhiza_strain_8872
+Wolffia_australiana_strain_7733>Wolffia_australiana_strain_7733 -> Wolffia_australiana_strain_7733_Wolffia_australiana_strain_7733
+Wolffia_australiana_strain_8730>Wolffia_australiana_strain_8730 -> Wolffia_australiana_strain_8730_Wolffia_australiana_strain_8730
+Wolffia_borealis_strain_9123>Wolffia_borealis_strain_9123 -> Wolffia_borealis_strain_9123_Wolffia_borealis_strain_9123
+Wolffia_borealis_strain_9147>Wolffia_borealis_strain_9147 -> Wolffia_borealis_strain_9147_Wolffia_borealis_strain_9147
+Wolffia_brasiliensis_strain_7150>Wolffia_brasiliensis_strain_7150 -> Wolffia_brasiliensis_strain_7150_Wolffia_brasiliensis_strain_7150
+Wolffia_brasiliensis_strain_7306>Wolffia_brasiliensis_strain_7306 -> Wolffia_brasiliensis_strain_7306_Wolffia_brasiliensis_strain_7306
+Wolffia_brasiliensis_strain_8743>Wolffia_brasiliensis_strain_8743 -> Wolffia_brasiliensis_strain_8743_Wolffia_brasiliensis_strain_8743
+Wolffia_columbiana_strain_7310>Wolffia_columbiana_strain_7310 -> Wolffia_columbiana_strain_7310_Wolffia_columbiana_strain_7310
+Wolffia_columbiana_strain_7972>Wolffia_columbiana_strain_7972 -> Wolffia_columbiana_strain_7972_Wolffia_columbiana_strain_7972
+Wolffia_columbiana_strain_8265>Wolffia_columbiana_strain_8265 -> Wolffia_columbiana_strain_8265_Wolffia_columbiana_strain_8265
+Wolffia_columbiana_strain_8856>Wolffia_columbiana_strain_8856 -> Wolffia_columbiana_strain_8856_Wolffia_columbiana_strain_8856
+Wolffia_columbiana_strain_8890>Wolffia_columbiana_strain_8890 -> Wolffia_columbiana_strain_8890_Wolffia_columbiana_strain_8890
+Wolffia_cylindracea_strain_9080>Wolffia_cylindracea_strain_9080 -> Wolffia_cylindracea_strain_9080_Wolffia_cylindracea_strain_9080
+Wolffia_elongata_strain_9188>Wolffia_elongata_strain_9188 -> Wolffia_elongata_strain_9188_Wolffia_elongata_strain_9188
+Wolffia_globosa_strain_8152>Wolffia_globosa_strain_8152 -> Wolffia_globosa_strain_8152_Wolffia_globosa_strain_8152
+Wolffia_globosa_strain_8441>Wolffia_globosa_strain_8441 -> Wolffia_globosa_strain_8441_Wolffia_globosa_strain_8441
+Wolffia_globosa_strain_8691>Wolffia_globosa_strain_8691 -> Wolffia_globosa_strain_8691_Wolffia_globosa_strain_8691
+Wolffia_globosa_strain_8789>Wolffia_globosa_strain_8789 -> Wolffia_globosa_strain_8789_Wolffia_globosa_strain_8789
+Wolffia_globosa_strain_8973>Wolffia_globosa_strain_8973 -> Wolffia_globosa_strain_8973_Wolffia_globosa_strain_8973
+Wolffia_globosa_strain_9196>Wolffia_globosa_strain_9196 -> Wolffia_globosa_strain_9196_Wolffia_globosa_strain_9196
+Wolffia_globosa_strain_9317>Wolffia_globosa_strain_9317 -> Wolffia_globosa_strain_9317_Wolffia_globosa_strain_9317
+Wolffia_microscopica_strain_2000>Wolffia_microscopica_strain_2000 -> Wolffia_microscopica_strain_2000_Wolffia_microscopica_strain_2000
+Wolffia_microscopica_strain_2001>Wolffia_microscopica_strain_2001 -> Wolffia_microscopica_strain_2001_Wolffia_microscopica_strain_2001
+Wolffia_microscopica_strain_2002>Wolffia_microscopica_strain_2002 -> Wolffia_microscopica_strain_2002_Wolffia_microscopica_strain_2002
+Wolffia_microscopica_strain_2005>Wolffia_microscopica_strain_2005 -> Wolffia_microscopica_strain_2005_Wolffia_microscopica_strain_2005
+Wolffia_microscopica_strain_2006>Wolffia_microscopica_strain_2006 -> Wolffia_microscopica_strain_2006_Wolffia_microscopica_strain_2006
+Wolffia_microscopica_strain_2007>Wolffia_microscopica_strain_2007 -> Wolffia_microscopica_strain_2007_Wolffia_microscopica_strain_2007
+Wolffia_microscopica_strain_2008>Wolffia_microscopica_strain_2008 -> Wolffia_microscopica_strain_2008_Wolffia_microscopica_strain_2008
+Wolffia_neglecta_strain_9149>Wolffia_neglecta_strain_9149 -> Wolffia_neglecta_strain_9149_Wolffia_neglecta_strain_9149
+Wolffiella_caudata_strain_9139>Wolffiella_caudata_strain_9139 -> Wolffiella_caudata_strain_9139_Wolffiella_caudata_strain_9139
+Wolffiella_caudata_strain_9165>Wolffiella_caudata_strain_9165 -> Wolffiella_caudata_strain_9165_Wolffiella_caudata_strain_9165
+Wolffiella_caudata_strain_9214>Wolffiella_caudata_strain_9214 -> Wolffiella_caudata_strain_9214_Wolffiella_caudata_strain_9214
+Wolffiella_denticulata_strain_8221>Wolffiella_denticulata_strain_8221 -> Wolffiella_denticulata_strain_8221_Wolffiella_denticulata_strain_8221
+Wolffiella_gladiata_strain_7595>Wolffiella_gladiata_strain_7595 -> Wolffiella_gladiata_strain_7595_Wolffiella_gladiata_strain_7595
+Wolffiella_gladiata_strain_7852>Wolffiella_gladiata_strain_7852 -> Wolffiella_gladiata_strain_7852_Wolffiella_gladiata_strain_7852
+Wolffiella_gladiata_strain_8066>Wolffiella_gladiata_strain_8066 -> Wolffiella_gladiata_strain_8066_Wolffiella_gladiata_strain_8066
+Wolffiella_gladiata_strain_8261>Wolffiella_gladiata_strain_8261 -> Wolffiella_gladiata_strain_8261_Wolffiella_gladiata_strain_8261
+Wolffiella_gladiata_strain_8350>Wolffiella_gladiata_strain_8350 -> Wolffiella_gladiata_strain_8350_Wolffiella_gladiata_strain_8350
+Wolffiella_hyalina_strain_8640>Wolffiella_hyalina_strain_8640 -> Wolffiella_hyalina_strain_8640_Wolffiella_hyalina_strain_8640
+Wolffiella_lingulata_strain_7289>Wolffiella_lingulata_strain_7289 -> Wolffiella_lingulata_strain_7289_Wolffiella_lingulata_strain_7289
+Wolffiella_lingulata_strain_7464>Wolffiella_lingulata_strain_7464 -> Wolffiella_lingulata_strain_7464_Wolffiella_lingulata_strain_7464
+Wolffiella_lingulata_strain_7655>Wolffiella_lingulata_strain_7655 -> Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655
+Wolffiella_lingulata_strain_7725>Wolffiella_lingulata_strain_7725 -> Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725
+Wolffiella_neotropica_strain_7290>Wolffiella_neotropica_strain_7290 -> Wolffiella_neotropica_strain_7290_Wolffiella_neotropica_strain_7290
+Wolffiella_neotropica_strain_7609>Wolffiella_neotropica_strain_7609 -> Wolffiella_neotropica_strain_7609_Wolffiella_neotropica_strain_7609
+Wolffiella_neotropica_strain_8848>Wolffiella_neotropica_strain_8848 -> Wolffiella_neotropica_strain_8848_Wolffiella_neotropica_strain_8848
+Wolffiella_oblonga_strain_7164>Wolffiella_oblonga_strain_7164 -> Wolffiella_oblonga_strain_7164_Wolffiella_oblonga_strain_7164
+Wolffiella_oblonga_strain_7201>Wolffiella_oblonga_strain_7201 -> Wolffiella_oblonga_strain_7201_Wolffiella_oblonga_strain_7201
+Wolffiella_oblonga_strain_7343>Wolffiella_oblonga_strain_7343 -> Wolffiella_oblonga_strain_7343_Wolffiella_oblonga_strain_7343
+Wolffiella_oblonga_strain_8072>Wolffiella_oblonga_strain_8072 -> Wolffiella_oblonga_strain_8072_Wolffiella_oblonga_strain_8072
+Wolffiella_oblonga_strain_9136>Wolffiella_oblonga_strain_9136 -> Wolffiella_oblonga_strain_9136_Wolffiella_oblonga_strain_9136
+Wolffiella_repanda_strain_9062>Wolffiella_repanda_strain_9062 -> Wolffiella_repanda_strain_9062_Wolffiella_repanda_strain_9062
+Wolffiella_repanda_strain_9107>Wolffiella_repanda_strain_9107 -> Wolffiella_repanda_strain_9107_Wolffiella_repanda_strain_9107
+Wolffiella_repanda_strain_9122>Wolffiella_repanda_strain_9122 -> Wolffiella_repanda_strain_9122_Wolffiella_repanda_strain_9122
+Wolffiella_rotunda_strain_9072>Wolffiella_rotunda_strain_9072 -> Wolffiella_rotunda_strain_9072_Wolffiella_rotunda_strain_9072
+Wolffiella_rotunda_strain_9121>Wolffiella_rotunda_strain_9121 -> Wolffiella_rotunda_strain_9121_Wolffiella_rotunda_strain_9121
+Wolffiella_welwitschii_strain_7468>Wolffiella_welwitschii_strain_7468 -> Wolffiella_welwitschii_strain_7468_Wolffiella_welwitschii_strain_7468
+Wolffiella_welwitschii_strain_9086>Wolffiella_welwitschii_strain_9086 -> Wolffiella_welwitschii_strain_9086_Wolffiella_welwitschii_strain_9086
+Wolffiella_welwitschii_strain_9466>Wolffiella_welwitschii_strain_9466 -> Wolffiella_welwitschii_strain_9466_Wolffiella_welwitschii_strain_9466
+
+                                                                       Gap/Ambiguity  Composition  p-value
+   1  Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248           35.10%    passed     89.35%
+   2  Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260           35.10%    passed     89.35%
+   3  Landoltia_punctata_strain_7449_Landoltia_punctata_strain_7449           35.16%    passed     89.79%
+   4  Landoltia_punctata_strain_7487_Landoltia_punctata_strain_7487           35.10%    passed     89.35%
+   5  Landoltia_punctata_strain_8721_Landoltia_punctata_strain_8721           35.10%    passed     89.35%
+   6  Landoltia_punctata_strain_9278_Landoltia_punctata_strain_9278           35.10%    passed     89.35%
+   7  Lemna_aequinoctialis_strain_6612_Lemna_aequinoctialis_strain_6612       35.94%    passed     94.85%
+   8  Lemna_aequinoctialis_strain_6746_Lemna_aequinoctialis_strain_6746       37.56%    passed     99.85%
+   9  Lemna_aequinoctialis_strain_7126_Lemna_aequinoctialis_strain_7126       37.56%    passed     99.64%
+  10  Lemna_disperma_strain_7269_Lemna_disperma_strain_7269                   36.12%    passed     87.78%
+  11  Lemna_gibba_strain_7589_Lemna_gibba_strain_7589                         35.76%    passed     97.15%
+  12  Lemna_gibba_strain_7741_Lemna_gibba_strain_7741                         35.76%    passed     97.15%
+  13  Lemna_gibba_strain_7784_Lemna_gibba_strain_7784                         35.76%    passed     97.15%
+  14  Lemna_gibba_strain_8703_Lemna_gibba_strain_8703                         35.76%    passed     97.15%
+  15  Lemna_japonica_strain_0189_Lemna_japonica_strain_0189                   26.92%    passed     79.95%
+  16  Lemna_japonica_strain_0216_Lemna_japonica_strain_0216                   26.56%    passed     73.72%
+  17  Lemna_japonica_strain_8695_Lemna_japonica_strain_8695                   31.01%    passed     97.80%
+  18  Lemna_japonica_strain_9017_Lemna_japonica_strain_9017                   31.19%    passed     96.61%
+  19  Lemna_minor_strain_7018_Lemna_minor_strain_7018                         35.58%    passed     95.95%
+  20  Lemna_minor_strain_7136_Lemna_minor_strain_7136                         35.46%    passed     96.85%
+  21  Lemna_minor_strain_7210_Lemna_minor_strain_7210                         35.46%    passed     96.85%
+  22  Lemna_minor_strain_9016_Lemna_minor_strain_9016                         35.40%    passed     97.27%
+  23  Lemna_minor_strain_9253_Lemna_minor_strain_9253                         35.52%    passed     97.14%
+  24  Lemna_minor_strain_9417_Lemna_minor_strain_9417                         35.40%    passed     97.27%
+  25  Lemna_minuta_clone_5571_Lemna_minuta_clone_5571                         34.62%    passed     94.06%
+  26  Lemna_minuta_clone_5572_Lemna_minuta_clone_5572                         34.62%    passed     94.06%
+  27  Lemna_minuta_clone_5573_Lemna_minuta_clone_5573                         34.62%    passed     94.06%
+  28  Lemna_minuta_clone_6717_Lemna_minuta_clone_6717                         35.70%    passed     96.54%
+  29  Lemna_minuta_clone_7612_Lemna_minuta_clone_7612                         34.56%    passed     93.35%
+  30  Lemna_minuta_clone_8699_Lemna_minuta_clone_8699                         35.88%    passed     91.61%
+  31  Lemna_minuta_clone_9226_Lemna_minuta_clone_9226                         34.56%    passed     93.35%
+  32  Lemna_minuta_clone_9414_Lemna_minuta_clone_9414                         34.62%    passed     94.06%
+  33  Lemna_minuta_clone_9473_Lemna_minuta_clone_9473                         34.62%    passed     94.06%
+  34  Lemna_minuta_clone_9474_Lemna_minuta_clone_9474                         35.64%    passed     96.07%
+  35  Lemna_minuta_clone_9476_Lemna_minuta_clone_9476                         34.62%    passed     94.06%
+  36  Lemna_minuta_clone_9484_Lemna_minuta_clone_9484                         34.62%    passed     94.06%
+  37  Lemna_minuta_clone_9581_Lemna_minuta_clone_9581                         34.62%    passed     94.06%
+  38  Lemna_minuta_strain_7284_Lemna_minuta_strain_7284                       36.54%    passed     87.97%
+  39  Lemna_minuta_strain_7726_Lemna_minuta_strain_7726                       36.60%    passed     90.25%
+  40  Lemna_minuta_strain_8065_Lemna_minuta_strain_8065                       36.54%    passed     89.01%
+  41  Lemna_obscura_strain_7856_Lemna_obscura_strain_7856                     36.60%    passed     93.92%
+  42  Lemna_perpusilla_strain_8539_Lemna_perpusilla_strain_8539               44.41%    passed     65.34%
+  43  Lemna_tenera_strain_9020_Lemna_tenera_strain_9020                       34.31%    passed     94.00%
+  44  Lemna_tenera_strain_9024_Lemna_tenera_strain_9024                       37.38%    passed     94.98%
+  45  Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579                   34.50%    passed     97.51%
+  46  Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137                   34.50%    passed     97.51%
+  47  Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339             36.06%    passed     97.67%
+  48  Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760             36.06%    passed     97.67%
+  49  Lemna_valdiviana_clone_9228_Lemna_valdiviana_clone_9228                 34.31%    passed     92.63%
+  50  Lemna_valdiviana_clone_9229_Lemna_valdiviana_clone_9229                 36.06%    passed     92.34%
+  51  Lemna_valdiviana_clone_9233_Lemna_valdiviana_clone_9233                 34.62%    passed     91.79%
+  52  Lemna_valdiviana_clone_9267_Lemna_valdiviana_clone_9267                 34.01%    passed     85.22%
+  53  Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395                 34.68%    passed     92.57%
+  54  Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401                 34.68%    passed     92.57%
+  55  Lemna_valdiviana_clone_9442_Lemna_valdiviana_clone_9442                 34.74%    passed     93.26%
+  56  Lemna_valdiviana_clone_9443_Lemna_valdiviana_clone_9443                 35.76%    passed     95.36%
+  57  Lemna_valdiviana_clone_9475_Lemna_valdiviana_clone_9475                 34.50%    passed     88.30%
+  58  Lemna_valdiviana_strain_7288_Lemna_valdiviana_strain_7288               36.66%    passed     89.75%
+  59  Lemna_valdiviana_strain_9229_Lemna_valdiviana_strain_9229               37.14%    passed     93.75%
+  60  Lemna_valdiviana_strain_9232_Lemna_valdiviana_strain_9232               36.54%    passed     89.01%
+  61  Lemna_valdiviana_clone_9209_Lemna_valdiviana_clone_9209                 34.62%    passed     92.85%
+  62  Lemna_valdiviana_strain_9207_Lemna_valdiviana_strain_9207               28.79%    passed     90.34%
+  63  Lemna_valdiviana_strain_9208_Lemna_valdiviana_strain_9208               28.85%    passed     88.83%
+  64  Lemna_valdiviana_strain_9210_Lemna_valdiviana_strain_9210               29.93%    passed     79.22%
+  65  Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125       53.19%    passed     97.21%
+  66  Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178       53.19%    passed     97.21%
+  67  Spirodela_intermedia_strain_7291_Spirodela_intermedia_strain_7291       53.12%    passed     98.45%
+  68  Spirodela_intermedia_strain_7355_Spirodela_intermedia_strain_7355       53.12%    passed     98.45%
+  69  Spirodela_intermedia_strain_7450_Spirodela_intermedia_strain_7450       53.19%    passed     98.50%
+  70  Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747       53.12%    passed     97.15%
+  71  Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410       53.12%    passed     97.15%
+  72  Spirodela_polyrhiza_strain_7205_Spirodela_polyrhiza_strain_7205         35.34%    passed     83.80%
+  73  Spirodela_polyrhiza_strain_7212_Spirodela_polyrhiza_strain_7212         35.40%    passed     79.35%
+  74  Spirodela_polyrhiza_strain_7222_Spirodela_polyrhiza_strain_7222         35.16%    passed     83.41%
+  75  Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498         35.28%    passed     87.00%
+  76  Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657         35.28%    passed     87.00%
+  77  Spirodela_polyrhiza_strain_8790_Spirodela_polyrhiza_strain_8790         35.28%    passed     87.00%
+  78  Spirodela_intermedia_strain_9203_Spirodela_intermedia_strain_9203       53.19%    passed     97.83%
+  79  Wolffia_angusta_strain_7476_Wolffia_angusta_strain_7476                 29.57%    passed     50.17%
+  80  Wolffia_arrhiza_strain_8872_Wolffia_arrhiza_strain_8872                 30.35%    passed     91.31%
+  81  Wolffia_australiana_strain_7733_Wolffia_australiana_strain_7733         34.62%    passed     85.88%
+  82  Wolffia_australiana_strain_8730_Wolffia_australiana_strain_8730         34.38%    passed     87.71%
+  83  Wolffia_borealis_strain_9123_Wolffia_borealis_strain_9123               29.81%    passed     67.33%
+  84  Wolffia_borealis_strain_9147_Wolffia_borealis_strain_9147               29.57%    passed     51.09%
+  85  Wolffia_brasiliensis_strain_7150_Wolffia_brasiliensis_strain_7150       34.13%    passed     99.58%
+  86  Wolffia_brasiliensis_strain_7306_Wolffia_brasiliensis_strain_7306       35.10%    passed     99.57%
+  87  Wolffia_brasiliensis_strain_8743_Wolffia_brasiliensis_strain_8743       34.07%    passed     98.93%
+  88  Wolffia_columbiana_strain_7310_Wolffia_columbiana_strain_7310           30.47%    passed     93.31%
+  89  Wolffia_columbiana_strain_7972_Wolffia_columbiana_strain_7972           30.41%    passed     90.89%
+  90  Wolffia_columbiana_strain_8265_Wolffia_columbiana_strain_8265           30.11%    passed     86.46%
+  91  Wolffia_columbiana_strain_8856_Wolffia_columbiana_strain_8856           30.05%    passed     91.20%
+  92  Wolffia_columbiana_strain_8890_Wolffia_columbiana_strain_8890           30.29%    passed     89.87%
+  93  Wolffia_cylindracea_strain_9080_Wolffia_cylindracea_strain_9080         32.51%    passed     98.36%
+  94  Wolffia_elongata_strain_9188_Wolffia_elongata_strain_9188               30.71%    passed     93.84%
+  95  Wolffia_globosa_strain_8152_Wolffia_globosa_strain_8152                 30.05%    passed     72.66%
+  96  Wolffia_globosa_strain_8441_Wolffia_globosa_strain_8441                 29.99%    passed     69.05%
+  97  Wolffia_globosa_strain_8691_Wolffia_globosa_strain_8691                 29.93%    passed     63.90%
+  98  Wolffia_globosa_strain_8789_Wolffia_globosa_strain_8789                 29.93%    passed     60.99%
+  99  Wolffia_globosa_strain_8973_Wolffia_globosa_strain_8973                 30.05%    passed     63.40%
+ 100  Wolffia_globosa_strain_9196_Wolffia_globosa_strain_9196                 29.93%    passed     59.18%
+ 101  Wolffia_globosa_strain_9317_Wolffia_globosa_strain_9317                 29.87%    passed     72.87%
+ 102  Wolffia_microscopica_strain_2000_Wolffia_microscopica_strain_2000       24.82%    passed     32.10%
+ 103  Wolffia_microscopica_strain_2001_Wolffia_microscopica_strain_2001       24.16%    passed     39.06%
+ 104  Wolffia_microscopica_strain_2002_Wolffia_microscopica_strain_2002       25.54%    passed     52.44%
+ 105  Wolffia_microscopica_strain_2005_Wolffia_microscopica_strain_2005       24.76%    passed     32.96%
+ 106  Wolffia_microscopica_strain_2006_Wolffia_microscopica_strain_2006       25.00%    passed     47.34%
+ 107  Wolffia_microscopica_strain_2007_Wolffia_microscopica_strain_2007       27.28%    passed     75.19%
+ 108  Wolffia_microscopica_strain_2008_Wolffia_microscopica_strain_2008       24.70%    passed     32.82%
+ 109  Wolffia_neglecta_strain_9149_Wolffia_neglecta_strain_9149               29.87%    passed     85.56%
+ 110  Wolffiella_caudata_strain_9139_Wolffiella_caudata_strain_9139           31.97%    passed     88.43%
+ 111  Wolffiella_caudata_strain_9165_Wolffiella_caudata_strain_9165           27.58%    passed     38.85%
+ 112  Wolffiella_caudata_strain_9214_Wolffiella_caudata_strain_9214           27.76%    passed     51.38%
+ 113  Wolffiella_denticulata_strain_8221_Wolffiella_denticulata_strain_8221   32.63%    passed     85.56%
+ 114  Wolffiella_gladiata_strain_7595_Wolffiella_gladiata_strain_7595         47.66%    passed     97.03%
+ 115  Wolffiella_gladiata_strain_7852_Wolffiella_gladiata_strain_7852         47.60%    passed     97.40%
+ 116  Wolffiella_gladiata_strain_8066_Wolffiella_gladiata_strain_8066         47.54%    passed     97.69%
+ 117  Wolffiella_gladiata_strain_8261_Wolffiella_gladiata_strain_8261         47.60%    passed     97.40%
+ 118  Wolffiella_gladiata_strain_8350_Wolffiella_gladiata_strain_8350         49.76%    passed     90.44%
+ 119  Wolffiella_hyalina_strain_8640_Wolffiella_hyalina_strain_8640           34.74%    passed     66.43%
+ 120  Wolffiella_lingulata_strain_7289_Wolffiella_lingulata_strain_7289       35.76%    passed     87.41%
+ 121  Wolffiella_lingulata_strain_7464_Wolffiella_lingulata_strain_7464       35.76%    passed     87.41%
+ 122  Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655       35.52%    passed     78.95%
+ 123  Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725       35.52%    passed     78.95%
+ 124  Wolffiella_neotropica_strain_7290_Wolffiella_neotropica_strain_7290     35.76%    passed     94.04%
+ 125  Wolffiella_neotropica_strain_7609_Wolffiella_neotropica_strain_7609     35.82%    passed     92.59%
+ 126  Wolffiella_neotropica_strain_8848_Wolffiella_neotropica_strain_8848     35.82%    passed     92.98%
+ 127  Wolffiella_oblonga_strain_7164_Wolffiella_oblonga_strain_7164           48.56%    passed     91.69%
+ 128  Wolffiella_oblonga_strain_7201_Wolffiella_oblonga_strain_7201           48.62%    passed     90.39%
+ 129  Wolffiella_oblonga_strain_7343_Wolffiella_oblonga_strain_7343           37.20%    passed     92.37%
+ 130  Wolffiella_oblonga_strain_8072_Wolffiella_oblonga_strain_8072           48.50%    passed     94.35%
+ 131  Wolffiella_oblonga_strain_9136_Wolffiella_oblonga_strain_9136           37.32%    passed     93.11%
+ 132  Wolffiella_repanda_strain_9062_Wolffiella_repanda_strain_9062           28.31%    passed     27.97%
+ 133  Wolffiella_repanda_strain_9107_Wolffiella_repanda_strain_9107           30.29%    passed     43.61%
+ 134  Wolffiella_repanda_strain_9122_Wolffiella_repanda_strain_9122           27.88%    passed     55.78%
+ 135  Wolffiella_rotunda_strain_9072_Wolffiella_rotunda_strain_9072           36.00%    passed     86.27%
+ 136  Wolffiella_rotunda_strain_9121_Wolffiella_rotunda_strain_9121           34.86%    passed     86.04%
+ 137  Wolffiella_welwitschii_strain_7468_Wolffiella_welwitschii_strain_7468   27.34%    passed     70.47%
+ 138  Wolffiella_welwitschii_strain_9086_Wolffiella_welwitschii_strain_9086   27.82%    passed     75.85%
+ 139  Wolffiella_welwitschii_strain_9466_Wolffiella_welwitschii_strain_9466   27.22%    passed     64.68%
+WARNING: 8 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                                                   35.22%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Loading 2 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		139	805	199	574	K3Pu+F+R3	part1
+2	DNA	139	859	388	398	TPM2u+F+R3	part2
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+NOTE: Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260 is identical to Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248 but kept for subsequent analysis
+NOTE: Lemna_gibba_strain_7784_Lemna_gibba_strain_7784 is identical to Lemna_gibba_strain_7741_Lemna_gibba_strain_7741 but kept for subsequent analysis
+NOTE: Lemna_minor_strain_7210_Lemna_minor_strain_7210 is identical to Lemna_minor_strain_7136_Lemna_minor_strain_7136 but kept for subsequent analysis
+NOTE: Lemna_minuta_clone_5572_Lemna_minuta_clone_5572 is identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571 but kept for subsequent analysis
+NOTE: Lemna_minuta_clone_9226_Lemna_minuta_clone_9226 is identical to Lemna_minuta_clone_7612_Lemna_minuta_clone_7612 but kept for subsequent analysis
+NOTE: Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137 is identical to Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579 but kept for subsequent analysis
+NOTE: Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760 is identical to Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339 but kept for subsequent analysis
+NOTE: Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401 is identical to Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395 but kept for subsequent analysis
+NOTE: Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178 is identical to Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125 but kept for subsequent analysis
+NOTE: Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410 is identical to Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747 but kept for subsequent analysis
+NOTE: Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657 is identical to Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498 but kept for subsequent analysis
+NOTE: Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725 is identical to Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655 but kept for subsequent analysis
+NOTE: 11 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Landoltia_punctata_strain_7487_Landoltia_punctata_strain_7487 (identical to Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Landoltia_punctata_strain_8721_Landoltia_punctata_strain_8721 (identical to Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Landoltia_punctata_strain_9278_Landoltia_punctata_strain_9278 (identical to Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Lemna_gibba_strain_8703_Lemna_gibba_strain_8703 (identical to Lemna_gibba_strain_7741_Lemna_gibba_strain_7741) is ignored but added at the end
+NOTE: Lemna_minuta_clone_5573_Lemna_minuta_clone_5573 (identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9414_Lemna_minuta_clone_9414 (identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9473_Lemna_minuta_clone_9473 (identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9476_Lemna_minuta_clone_9476 (identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9484_Lemna_minuta_clone_9484 (identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9581_Lemna_minuta_clone_9581 (identical to Lemna_minuta_clone_5571_Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Spirodela_polyrhiza_strain_8790_Spirodela_polyrhiza_strain_8790 (identical to Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498) is ignored but added at the end
+Concatenated alignment was printed to dw-cat_barcodes2.partitions.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to dw-cat_barcodes2.partitions.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.017 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 432571)...
+
+NOTE: 15 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -9998.099
+Current log-likelihood at step 1: -9826.978
+Current log-likelihood at step 2: -9809.710
+Current log-likelihood at step 3: -9807.155
+Current log-likelihood at step 4: -9805.535
+Current log-likelihood at step 5: -9804.076
+Current log-likelihood at step 6: -9802.518
+Current log-likelihood at step 7: -9800.787
+Current log-likelihood at step 8: -9798.751
+Current log-likelihood at step 9: -9796.211
+Current log-likelihood at step 10: -9792.731
+Current log-likelihood at step 11: -9787.922
+Current log-likelihood at step 12: -9780.723
+Current log-likelihood at step 13: -9772.479
+Current log-likelihood at step 14: -9766.045
+Current log-likelihood at step 15: -9764.301
+Current log-likelihood at step 16: -9764.051
+Current log-likelihood at step 17: -9763.912
+Current log-likelihood at step 18: -9763.817
+Partition-specific rates:  0.302 1.654
+Parameters optimization took 17 rounds (8.252 sec)
+
+Computing ML distances based on estimated model parameters... 0.344 sec
+Computing BIONJ tree...
+0.011 seconds
+Log-likelihood of BIONJ tree: -9839.433
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.334 second
+Computing log-likelihood of 98 initial trees ... 10.904 seconds
+Current best score: -9756.983
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -9752.025
+Current log-likelihood at step 1: -9751.862
+Current log-likelihood at step 2: -9751.817
+Parameters optimization took 1 rounds (0.789 sec)
+
+BETTER TREE FOUND at iteration 1: -9751.817
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -9751.806
+Current log-likelihood at step 1: -9751.771
+Parameters optimization took 0 rounds (0.376 sec)
+
+BETTER TREE FOUND at iteration 2: -9751.771
+BETTER TREE FOUND at iteration 7: -9751.770
+Iteration 10 / LogL: -9751.779 / Time: 0h:0m:38s
+BETTER TREE FOUND at iteration 11: -9751.770
+BETTER TREE FOUND at iteration 12: -9751.769
+BETTER TREE FOUND at iteration 20: -9751.769
+Iteration 20 / LogL: -9751.769 / Time: 0h:0m:53s
+Finish initializing candidate tree set (20)
+Current best tree score: -9751.769 / CPU time: 44.167
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -9751.770 / Time: 0h:1m:8s (0h:3m:32s left)
+Iteration 40 / LogL: -9751.783 / Time: 0h:1m:24s (0h:2m:52s left)
+Iteration 50 / LogL: -9756.532 / Time: 0h:1m:40s (0h:2m:23s left)
+Iteration 60 / LogL: -9887.740 / Time: 0h:1m:56s (0h:1m:58s left)
+Iteration 70 / LogL: -9751.778 / Time: 0h:2m:12s (0h:1m:36s left)
+Iteration 80 / LogL: -9751.792 / Time: 0h:2m:28s (0h:1m:14s left)
+Iteration 90 / LogL: -9752.055 / Time: 0h:2m:43s (0h:0m:55s left)
+Iteration 100 / LogL: -9752.049 / Time: 0h:3m:0s (0h:0m:36s left)
+Iteration 110 / LogL: -9751.772 / Time: 0h:3m:17s (0h:0m:18s left)
+Iteration 120 / LogL: -9751.780 / Time: 0h:3m:33s (0h:0m:0s left)
+Refining ufboot trees with NNI 5 branches...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 121 ITERATIONS / Time: 0h:14m:55s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -9751.768
+Current log-likelihood at step 1: -9751.738
+Current log-likelihood at step 2: -9751.711
+Current log-likelihood at step 3: -9751.687
+Current log-likelihood at step 4: -9751.666
+Current log-likelihood at step 5: -9751.646
+Current log-likelihood at step 6: -9751.628
+Current log-likelihood at step 7: -9751.611
+Current log-likelihood at step 8: -9751.595
+Current log-likelihood at step 9: -9751.580
+Current log-likelihood at step 10: -9751.565
+Current log-likelihood at step 11: -9751.551
+Current log-likelihood at step 12: -9751.536
+Current log-likelihood at step 13: -9751.522
+Current log-likelihood at step 14: -9751.507
+Current log-likelihood at step 15: -9751.492
+Current log-likelihood at step 16: -9751.478
+Current log-likelihood at step 17: -9751.462
+Current log-likelihood at step 18: -9751.447
+Current log-likelihood at step 19: -9751.431
+Current log-likelihood at step 20: -9751.415
+Current log-likelihood at step 21: -9751.399
+Current log-likelihood at step 22: -9751.382
+Current log-likelihood at step 23: -9751.364
+Current log-likelihood at step 24: -9751.346
+Current log-likelihood at step 25: -9751.327
+Current log-likelihood at step 26: -9751.308
+Current log-likelihood at step 27: -9751.287
+Current log-likelihood at step 28: -9751.267
+Current log-likelihood at step 29: -9751.246
+Current log-likelihood at step 30: -9751.225
+Current log-likelihood at step 31: -9751.203
+Current log-likelihood at step 32: -9751.182
+Current log-likelihood at step 33: -9751.160
+Current log-likelihood at step 34: -9751.138
+Current log-likelihood at step 35: -9751.117
+Current log-likelihood at step 36: -9751.095
+Current log-likelihood at step 37: -9751.074
+Current log-likelihood at step 38: -9751.053
+Current log-likelihood at step 39: -9751.032
+Current log-likelihood at step 40: -9751.011
+Current log-likelihood at step 41: -9750.990
+Current log-likelihood at step 42: -9750.970
+Current log-likelihood at step 43: -9750.949
+Current log-likelihood at step 44: -9750.929
+Current log-likelihood at step 45: -9750.908
+Current log-likelihood at step 46: -9750.888
+Current log-likelihood at step 47: -9750.867
+Current log-likelihood at step 48: -9750.847
+Current log-likelihood at step 49: -9750.826
+Current log-likelihood at step 50: -9750.806
+Current log-likelihood at step 51: -9750.785
+Current log-likelihood at step 52: -9750.765
+Current log-likelihood at step 53: -9750.744
+Current log-likelihood at step 54: -9750.723
+Current log-likelihood at step 55: -9750.703
+Current log-likelihood at step 56: -9750.682
+Current log-likelihood at step 57: -9750.661
+Current log-likelihood at step 58: -9750.640
+Current log-likelihood at step 59: -9750.620
+Current log-likelihood at step 60: -9750.599
+Current log-likelihood at step 61: -9750.579
+Current log-likelihood at step 62: -9750.559
+Current log-likelihood at step 63: -9750.540
+Current log-likelihood at step 64: -9750.520
+Current log-likelihood at step 65: -9750.501
+Current log-likelihood at step 66: -9750.483
+Current log-likelihood at step 67: -9750.465
+Current log-likelihood at step 68: -9750.448
+Current log-likelihood at step 69: -9750.431
+Current log-likelihood at step 70: -9750.416
+Current log-likelihood at step 71: -9750.401
+Current log-likelihood at step 72: -9750.386
+Current log-likelihood at step 73: -9750.373
+Current log-likelihood at step 74: -9750.361
+Current log-likelihood at step 75: -9750.350
+Current log-likelihood at step 76: -9750.339
+Current log-likelihood at step 77: -9750.330
+Partition-specific rates:  0.292 1.663
+Parameters optimization took 76 rounds (25.187 sec)
+
+BEST SCORE FOUND : -9750.330
+Creating bootstrap support values...
+Split supports printed to NEXUS file dw-cat_barcodes2.partitions.splits.nex
+Total tree length: 2.359
+
+Total number of iterations: 121
+CPU time used for tree search: 886.104 sec (0h:14m:46s)
+Wall-clock time used for tree search: 886.447 sec (0h:14m:46s)
+Total CPU time used: 921.012 sec (0h:15m:21s)
+Total wall-clock time used: 921.404 sec (0h:15m:21s)
+UFBoot trees printed to dw-cat_barcodes2.partitions.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file dw-cat_barcodes2.partitions.splits.nex...
+128 taxa and 1444 splits.
+Consensus tree written to dw-cat_barcodes2.partitions.contree
+Reading input trees file dw-cat_barcodes2.partitions.contree
+Log-likelihood of consensus tree: -9750.355
+
+Analysis results written to: 
+  IQ-TREE report:                dw-cat_barcodes2.partitions.iqtree
+  Maximum-likelihood tree:       dw-cat_barcodes2.partitions.treefile
+  Likelihood distances:          dw-cat_barcodes2.partitions.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          dw-cat_barcodes2.partitions.splits.nex
+  Consensus tree:                dw-cat_barcodes2.partitions.contree
+  UFBoot trees:                  dw-cat_barcodes2.partitions.ufboot
+  Screen log file:               dw-cat_barcodes2.partitions.log
+
+Date and Time: Wed Dec  2 14:57:19 2020

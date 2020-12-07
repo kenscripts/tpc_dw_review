@@ -1,0 +1,6 @@
+#nexus
+begin sets;
+    charset part1 = 1-800;
+    charset part2 = 801-1652;
+    charpartition mine = K3Pu+F+R3:part1, TPM2u+F+R3:part2;
+end;

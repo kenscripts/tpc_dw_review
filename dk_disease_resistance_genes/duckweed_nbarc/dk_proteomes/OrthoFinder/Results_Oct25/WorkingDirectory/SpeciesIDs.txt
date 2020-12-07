@@ -1,0 +1,4 @@
+0: Sp7498_pacbio.protein.fasta
+1: Sp9509_oxford_v3.proteins.fasta
+2: wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta
+3: wa8730.asm201904v2.ann1.proteins.fasta

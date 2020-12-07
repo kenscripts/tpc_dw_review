@@ -1,0 +1,432 @@
+TPC2020_DIR="/home/microbiome/data/el_projects/plant_cell_searches"
+PROJ_DIR="$TPC2020_DIR/duckweed_amp_hmm"
+DK_GENOMES="/home/microbiome/data/duckweed_genomics"
+
+SP9509="$DK_GENOMES/Sp9509/Sp9509_oxford_v3.proteins.fasta"
+SP7498="$DK_GENOMES/Sp7498v3/Sp7498_pacbio.protein.fasta"
+WA8730="$DK_GENOMES/Wa8730/wa8730.asm201904v2.ann1.proteins.fasta"
+WA7733="$DK_GENOMES/Wa7733/wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta"
+
+BRACHY="$TPC2020_DIR/proteome.all_transcripts.bdi.fasta"
+RICE="$TPC2020_DIR/proteome.all_transcripts.osa.fasta"
+ARABIDOPSIS="$TPC2020_DIR/proteome.all_transcripts.ath.fasta"
+MEDICAGO="$TPC2020_DIR/proteome.all_transcripts.mtr.fasta"
+
+
+## not used
+#ORTHO_DIR="$PROJ_DIR/OrthoFinder/Results_Aug25/Orthogroups"
+#LG7742="$PROJ_DIR/lg7742a.asm201904v2.ann1.proteins.fasta"
+#LM8627="$PROJ_DIR/lm8627.asm201904v2.ann1.proteins.fasta"
+#OLDWA8730="/home/microbiome/data/duckweed_genomics/Wa8730/old_assemblies/wa8730.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta"
+
+
+##################################################
+# HMM
+##################################################
+
+
+# wd: $PROJ_DIR
+
+
+# using the OrthoFinder approach yielded \
+# less results than BLAST approach by Dr. Lam;
+# tried BLASTP on newer Wa8730 assembly and got more results \
+# then OrthoFinder approach;
+# downloaded AMP family fasta from PhytAMP database 
+# msa of AMP family
+# hmm of AMP family
+# search in each organism
+
+
+# Cyclotide
+muscle -in PhytAMP_Cyclotide.fasta -out PhytAMP_Cyclotide.muscle.fasta
+hmmbuild PhytAMP_Cyclotide.hmm PhytAMP_Cyclotide.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Defensin
+muscle -in PhytAMP_Defensin.fasta -out PhytAMP_Defensin.muscle.fasta
+hmmbuild PhytAMP_Defensin.hmm PhytAMP_Defensin.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Hevein
+muscle -in PhytAMP_Hevein.fasta -out PhytAMP_Hevein.muscle.fasta
+hmmbuild PhytAMP_Hevein.hmm PhytAMP_Hevein.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Impatiens
+muscle -in PhytAMP_Impatiens.fasta -out PhytAMP_Impatiens.muscle.fasta
+hmmbuild PhytAMP_Impatiens.hmm PhytAMP_Impatiens.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Knottins
+muscle -in PhytAMP_Knottins.fasta -out PhytAMP_Knottins.muscle.fasta
+hmmbuild PhytAMP_Knottins.hmm PhytAMP_Knottins.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# LTP
+muscle -in PhytAMP_LTP.fasta -out PhytAMP_LTP.muscle.fasta
+hmmbuild PhytAMP_LTP.hmm PhytAMP_LTP.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_LTP.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_LTP.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Snakins
+muscle -in PhytAMP_Snakins.fasta -out PhytAMP_Snakins.muscle.fasta
+hmmbuild PhytAMP_Snakins.hmm PhytAMP_Snakins.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Shepherin
+muscle -in PhytAMP_Shepherin.fasta -out PhytAMP_Shepherin.muscle.fasta
+hmmbuild --amino PhytAMP_Shepherin.hmm PhytAMP_Shepherin.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Thionin
+muscle -in PhytAMP_Thionin.fasta -out PhytAMP_Thionin.muscle.fasta
+hmmbuild PhytAMP_Thionin.hmm PhytAMP_Thionin.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+# Vicilin
+muscle -in PhytAMP_Vicilin.fasta -out PhytAMP_Vicilin.muscle.fasta
+hmmbuild PhytAMP_Vicilin.hmm PhytAMP_Vicilin.muscle.fasta 
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $SP9509 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $SP7498 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $WA8730 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $WA7733 | awk '/>>/' | wc -l
+
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $ARABIDOPSIS | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+hmmsearch --cut_ga PhytAMP_Vicilin.hmm $MEDICAGO | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
+
+
+##################################################
+# OrthoFinder
+##################################################
+
+## searched for orthologs using OrthoFinder
+## small number of AMPs found in duckweed using this approach
+## decided to use hmm approach
+
+
+#Orthofinder -f ./duckweed_amps
+
+
+# 128 AMPs not found in query plants
+#awk \
+#'$2 ~ /PHY/' \
+#Orthogroups_UnassignedGenes.tsv | 
+#cut -f 2 | 
+#wc -l
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Sp9509
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv | 
+#cut -f 3 | 
+#sed 's/, /\n/g' > Sp9509.amps
+
+
+#extract_fastaseqs.py \
+#-f Sp9509.amps \
+#-i ~/data/duckweed_genomics/Sp9509/Sp9509_oxford_v3.proteins.fasta \
+#-z \
+#> Sp9509.amps.fasta
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Lg7742a (unpublished work)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv | 
+#cut -f 4 | 
+#sed 's/, /\n/g' > Lg7742a.amps
+
+
+#extract_fastaseqs.py \
+#-f Lg7742a.amps \
+#-i ~/data/duckweed_genomics/Lg7742/lg7742a.asm201904v2.ann1.proteins.fasta \
+#-z \
+#> Lg7742a.amps.fasta
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Lm8627 (unpublished work)
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv | 
+#cut -f 5 | 
+#sed 's/, /\n/g' > Lm8627.amps
+
+
+#extract_fastaseqs.py \
+#-f Lm8627.amps \
+#-i ~/data/duckweed_genomics/Lm8627/lm8627.asm201904v2.ann1.proteins.fasta \
+#-z \
+##> Lm8627.amps.fasta
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Wa8730
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv | 
+#cut -f 8 | 
+#sed 's/, /\n/g' > Wa8730.amps
+
+
+#extract_fastaseqs.py \
+#-f Wa8730.amps \
+#-i ~/data/duckweed_genomics/Wa8730/wa8730.asm201904v2.ann1.proteins.fasta \
+#-z \
+#> Wa8730.amps.fasta
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Brachypodium
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv | 
+#cut -f 6 | 
+#sed 's/, /\n/g' > Brachypodium.amps
+
+
+#extract_fastaseqs.py \
+#-f Brachypodium.amps \
+#-i proteome.all_transcripts.bdi.fasta \
+#-z \
+#> Brachypodium.amps.fasta
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Rice
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv | 
+#cut -f 7 | 
+#sed 's/, /\n/g' > Rice.amps
+
+
+#extract_fastaseqs.py \
+#-f Rice.amps \
+#-i proteome.all_transcripts.osa.fasta \
+#-z \
+#> Rice.amps.fasta
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Phylogenetic Tree
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+# cat *.amps.fasta > plant.amps.fasta
+
+
+## msa
+#muscle \
+#-in plant.amps.fasta \
+#-out plant.amps.muscle.fasta
+
+
+## tree
+#muscle \
+#-maketree \
+#-in plant.amps.muscle.fasta \
+#-out plant.amps.muscle.phy \
+#-cluster neighborjoining
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Sp7498v3 Test
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+## EL said Sp9509 AMPs count was low
+## referred me to An et al., PNAS
+
+
+## downloaded Sp7498v3 assembly and annotation (Todd Michael)
+## ran orthofinder with Sp7498v3 (pacbio) and PhytAMPs
+## ~20 AMP orthologs were found in Sp7498
+
+
+## looked at paper again
+## downloaded MCScanX
+## had issue with make
+## https://github.com/wyp1125/MCScanX/pull/20
+## modifed protein fasta header
+## created BLAST db
+## ran self BLASTP with Sp7498
+
+
+## parsed gff file for MCScanX
+#awk \
+#'/\tgene\t/ {print $1,$9,$4,$5}' \
+#~/data/duckweed_genomics/Sp7498v3/Sp7498_pacbio.gff \
+#> Sp7498_pacbio.MCScanX.gff
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# PhytAMP Count
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+## msa
+#muscle \
+#-in PhytAMP.fasta \
+#-out PhytAMP.muscle.fasta
+
+
+## tree
+#muscle \
+#-maketree \
+#-in PhytAMP.muscle.fasta \
+#-out PhytAMP.muscle.phy \
+#-cluster neighborjoining
+
+
+## manually annotated orthogroups
+## LTP, Snakin, Defensin, Thionin, Hevein
+#awk \
+#'$2 ~ /PHY/' \
+#$ORTHO_DIR/Orthogroups.tsv \
+#> PhytAMP.orthogroups.tsv
+
+
+## counted number of genes in each AMP family
+## counted isoforms as 1
+#cut -f 1,3 PhytAMP.orthogroups.tsv
+
+
+##################################################
+# Other Work
+##################################################
+
+
+## determine expression using wa8730 circadian data
+## needed to use old annotation
+#hmmsearch PhytAMP_Cyclotide.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Defensin.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Hevein.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Impatiens.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Knottins.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_LTP.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Snakins.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Thionin.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+#hmmsearch PhytAMP_Vicilin.hmm $OLDWA8730 | awk '/>>/' | tee -a Wa8730.amps
+
+
+## formatted header
+#grep -f Wa8730.amps circadian_counts-Wa8730.tsv > Wa8730.amp.circadian_count.tsv
+#HEADER=$(head -n 1 circadian_counts-Wa8730.tsv)
+#sed -i "1i $HEADER" Wa8730.amp.circadian_count.tsv
+
+
+## checked Sp7498 for tandem gene duplication
+## did not find any tandem gene duplication as suggested by Wang lab
+#hmmsearch PhytAMP_Cyclotide.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Defensin.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Hevein.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Impatiens.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Knottins.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_LTP.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Snakins.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Thionin.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps
+#hmmsearch PhytAMP_Vicilin.hmm $SP7498 | awk '/>>/' | tee -a Sp7498.amps

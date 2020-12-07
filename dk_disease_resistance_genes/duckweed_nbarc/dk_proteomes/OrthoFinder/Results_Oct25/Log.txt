@@ -1,0 +1,14 @@
+2020-10-25 13:03:36 : Started OrthoFinder version 2.3.1
+Command Line: orthofinder -f dk_proteomes/
+
+WorkingDirectory_Base: /media/lamdata/microbiome/el_projects/dk_disease_resistance_genes/duckweed_nbarc/dk_proteomes/OrthoFinder/Results_Oct25/WorkingDirectory/
+
+Species used: 
+0: Sp7498_pacbio.protein.fasta
+1: Sp9509_oxford_v3.proteins.fasta
+2: wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta
+3: wa8730.asm201904v2.ann1.proteins.fasta
+
+FN_Orthogroups: /media/lamdata/microbiome/el_projects/dk_disease_resistance_genes/duckweed_nbarc/dk_proteomes/OrthoFinder/Results_Oct25/WorkingDirectory/clusters_OrthoFinder_I1.5.txt_id_pairs.txt
+WorkingDirectory_Trees: /media/lamdata/microbiome/el_projects/dk_disease_resistance_genes/duckweed_nbarc/dk_proteomes/OrthoFinder/Results_Oct25/WorkingDirectory/
+2020-10-25 13:12:24 : OrthoFinder run completed

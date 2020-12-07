@@ -1,0 +1,362 @@
+# downloaded barcode sequences from multiple projects (n = 5)
+# downloaded accessions from projects
+
+##################################################
+# atp analysis
+##################################################
+
+
+# get ids
+grep \
+ -Ei 'atp' \
+dw-plastid.seq |
+sed "s/>//g" \
+> dw-atp.seq
+# get seqs
+extract_fastaseqs.py \
+-f dw-atp.seq \
+-i dw-plastid.fasta \
+-z \
+> dw-atp.fasta
+
+
+# sort ids
+# remove seqs w/o 4 digit ID
+# n = 182 
+sed \
+"s/\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/\1 \2 \3 \4/g" \
+dw-atp.seq |
+sort > dw-atp-sort.seq
+# get sorted seqs
+extract_fastaseqs.py \
+-f dw-atp-sort.seq \
+-i dw-atp.fasta \
+-z \
+> dw-atp-sort.fasta
+
+
+# generate alignment
+muscle \
+-in dw-atp-sort.fasta \
+-out dw-atp-sort.alnfa
+
+
+# format alignment
+# single line and only clone name
+extract_fastaseqs.py \
+-f dw-atp-sort.seq \
+-i dw-atp-sort.alnfa \
+-z |
+sed \
+"s/>\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/>\1_\2_\3_\4/g" \
+> dw-atp-fmt.alnfa
+
+
+# http://www.iqtree.org/doc/Tutorial
+# Best-fit model: K3Pu+F+R3 chosen according to BIC
+iqtree -s dw-atp-fmt.alnfa
+
+
+##################################################
+# psbk analysis
+##################################################
+
+
+# get ids
+grep \
+ -Ei 'psbk' \
+dw-plastid.seq |
+sed "s/>//g" \
+> dw-psbk.seq
+# get seqs
+extract_fastaseqs.py \
+-f dw-psbk.seq \
+-i dw-plastid.fasta \
+-z \
+> dw-psbk.fasta
+
+
+# sort ids
+# remove seqs w/o 4 digit ID
+sed \
+"s/\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/\1 \2 \3 \4/g" \
+dw-psbk.seq |
+sort > dw-psbk-sort.seq
+# get sorted seqs
+extract_fastaseqs.py \
+-f dw-psbk-sort.seq \
+-i dw-psbk.fasta \
+-z \
+> dw-psbk-sort.fasta
+
+
+# generate alignment
+#mafft \
+#--localpair \
+#--maxiterate 1000 \
+#dw-atp.sfasta \
+#> dw-atp.aln.fasta 2> dw-atp.aln.stats
+muscle \
+-in dw-psbk-sort.fasta \
+-out dw-psbk-sort.alnfa
+
+
+# format alignment
+# single line and only clone name
+extract_fastaseqs.py \
+-f dw-psbk-sort.seq \
+-i dw-psbk-sort.alnfa \
+-z |
+sed \
+"s/>\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/>\1_\2_\3_\4/g" \
+> dw-psbk-fmt.alnfa
+
+
+# http://www.iqtree.org/doc/Tutorial
+# Best-fit model: TPM2u+F+R3
+iqtree -s dw-psbk-fmt.alnfa
+
+
+##################################################
+# concatentated analysis
+##################################################
+
+
+# Taro outgroup needed to proper root tree
+
+
+# find common barcodes
+# del W. microscopica 9276 - out of place
+# del L. japonica 7182 - out of place
+# del L. japonica 9250 - out of place
+# del W. welwitschii 9381 - out of place
+# n = 140
+# get ids
+# added Taro
+grep \
+-f dw-psbk-sort.seq \
+dw-atp-sort.seq \
+> dw-cat_barcodes.seq
+
+
+# get atp seqs
+extract_fastaseqs.py \
+-f dw-cat_barcodes.seq \
+-i dw-atp.fasta \
+-z \
+> dw-cat_barcodes-atp.fasta
+
+
+# get Taro atp seq
+# find atp region
+# match on antisense strand
+blastn \
+-query dw-atp.fasta \
+-subject cpTaro.JN105690_1.fasta \
+-outfmt "6 qseqid sseqid qlen length pident qcovs evalue bitscore sstart send" \
+> cpTaro-atp.blastout 
+sort \
+-k 4 \
+cpTaro-atp.blastout |
+tail -n 1 |
+awk '{OFS="\t"; print $2,$10,$9}' > cpTaro-atp.bed
+# modify bed to reverse complement sequence
+# extract seq
+bedtools getfasta \
+-s \
+-fi cpTaro.JN105690_1.fasta \
+-bed cpTaro-atp.bed \
+-fo cpTaro-atp.fasta
+# add to atp fasta
+# modify Taro header
+cat cpTaro-atp.fasta >> dw-cat_barcodes-atp.fasta
+
+
+# generate atp alignment
+muscle \
+-in dw-cat_barcodes-atp.fasta \
+-out dw-cat_barcodes-atp.alnfa
+# format atp alignment
+# single line and only clone name
+extract_fastaseqs.py \
+-f dw-cat_barcodes.seq \
+-i dw-cat_barcodes-atp.alnfa \
+-z |
+sed \
+"s/>\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/>\1_\2_\3_\4/g" \
+> dw-cat_barcodes-atp.fmt.alnfa
+
+
+# get psbk seqs
+extract_fastaseqs.py \
+-f dw-cat_barcodes.seq \
+-i dw-psbk.fasta \
+-z \
+> dw-cat_barcodes-psbk.fasta
+
+
+# get Taro psbk seq
+# find psbk region
+# checked NCBI Gene db
+# psbk: NC_016753.1 (8350-8538)
+# psbI: NC_016753.1 (9016-9126)
+blastn \
+-query dw-psbk.fasta \
+-subject cpTaro.JN105690_1.fasta \
+-outfmt "6 qseqid sseqid qlen length pident qcovs evalue bitscore sstart send" \
+> cpTaro-psbk.blastout
+sort \
+-k 4 \
+cpTaro-psbk.blastout |
+tail -n 1 |
+awk '{OFS="\t"; print $2,$9,$10}' > cpTaro-psbk.bed
+# extract seq
+bedtools getfasta \
+-s \
+-fi cpTaro.JN105690_1.fasta \
+-bed cpTaro-psbk.bed \
+-fo cpTaro-psbk.fasta
+# add to psbk fasta
+# modifed Taro header
+cat cpTaro-psbk.fasta >> dw-cat_barcodes-psbk.fasta
+
+
+# generate psbk alignment
+muscle \
+-in dw-cat_barcodes-psbk.fasta \
+-out dw-cat_barcodes-psbk.alnfa
+# format psbk alignment
+# single line and only clone name
+extract_fastaseqs.py \
+-f dw-cat_barcodes.seq \
+-i dw-cat_barcodes-psbk.alnfa \
+-z |
+sed \
+"s/>\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/>\1_\2_\3_\4/g" \
+> dw-cat_barcodes-psbk.fmt.alnfa
+
+
+# determine lengths for each alignment
+# atp = 800
+grep \
+-Ev ">" \
+dw-cat_barcodes-atp.fmt.alnfa | 
+awk '{print length}' | 
+sort | 
+uniq
+# psbk = 874
+grep \
+-Ev ">" \
+dw-cat_barcodes-psbk.fmt.alnfa | 
+awk '{print length}' |
+sort |
+uniq
+
+
+# created concatenated alignment
+paste \
+-d "" \
+dw-cat_barcodes-atp.fmt.alnfa \
+dw-cat_barcodes-psbk.fmt.alnfa \
+> dw-cat_barcodes.alnfa
+# cat barcodes = 1674
+grep \
+-Ev ">" \
+dw-cat_barcodes.alnfa | \
+awk '{print length}' |
+sort |
+uniq
+
+
+# created flexible NEXUS partition file
+
+# double check concatentated alignment
+# remove duplications in headers
+# S.polyrhiza 9203 > S.intermedia 9203
+# yungensis > valdiviana
+# http://www.iqtree.org/doc/Advanced-Tutorial
+iqtree \
+-s dw-cat_barcodes.alnfa \
+-spp dw-cat_barcodes.partitions \
+-o Colocasia_esculenta \
+-bb 1000 \
+-bnni
+
+
+##################################################
+# concatentated analysis no outgroup
+##################################################
+
+# deleted Taro from dw-cat_barcodes-*.fasta
+
+# generate atp alignment
+muscle \
+-in dw-cat_barcodes2-atp.fasta \
+-out dw-cat_barcodes2-atp.alnfa
+# format atp alignment
+# single line and only clone name
+extract_fastaseqs.py \
+-f dw-cat_barcodes2.seq \
+-i dw-cat_barcodes2-atp.alnfa \
+-z |
+sed \
+"s/>\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/>\1_\2_\3_\4/g" \
+> dw-cat_barcodes2-atp.fmt.alnfa
+
+# generate psbk alignment
+muscle \
+-in dw-cat_barcodes2-psbk.fasta \
+-out dw-cat_barcodes2-psbk.alnfa
+# format psbk alignment
+# single line and only clone name
+extract_fastaseqs.py \
+-f dw-cat_barcodes2.seq \
+-i dw-cat_barcodes2-psbk.alnfa \
+-z |
+sed \
+"s/>\S* \(\S*\) \(\S*\) \(\S*\) \([0-9]*\).*/>\1_\2_\3_\4/g" \
+> dw-cat_barcodes2-psbk.fmt.alnfa
+
+
+# determine lengths for each alignment
+# atp = 805
+grep \
+-Ev ">" \
+dw-cat_barcodes2-atp.fmt.alnfa | 
+awk '{print length}' | 
+sort | 
+uniq
+# psbk = 859
+grep \
+-Ev ">" \
+dw-cat_barcodes2-psbk.fmt.alnfa | 
+awk '{print length}' |
+sort |
+uniq
+
+
+# created concatenated alignment
+paste \
+-d "" \
+dw-cat_barcodes2-atp.fmt.alnfa \
+dw-cat_barcodes2-psbk.fmt.alnfa \
+> dw-cat_barcodes2.alnfa
+# cat barcodes = 1664
+grep \
+-Ev ">" \
+dw-cat_barcodes2.alnfa | \
+awk '{print length}' |
+sort |
+uniq
+
+
+# double check concatentated alignment
+# remove duplications in headers
+# S.polyrhiza 9203 > S.intermedia 9203
+# yungensis > valdiviana
+# http://www.iqtree.org/doc/Advanced-Tutorial
+iqtree \
+-s dw-cat_barcodes2.alnfa \
+-spp dw-cat_barcodes2.partitions \
+-bb 1000 \
+-bnni

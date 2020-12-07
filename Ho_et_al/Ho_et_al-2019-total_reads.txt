@@ -1,0 +1,7 @@
+for FILE in $(cat SraAccList.txt); 
+do echo $FILE >> log.tsv;
+prefetch --transport http -o $FILE;
+fastq-dump $FILE;
+grep -c "@SRR" ${FILE}.fastq >> log.tsv;
+rm ${FILE}.fastq;
+done

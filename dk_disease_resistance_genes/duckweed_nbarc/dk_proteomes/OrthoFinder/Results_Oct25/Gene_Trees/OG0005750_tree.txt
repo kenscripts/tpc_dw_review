@@ -1,0 +1,1 @@
+(Sp7498_pacbio_protein_g9467.t1:5e-07,(Sp9509_oxford_v3_proteins_Sp09g00206:0,Sp7498_pacbio_protein_g9465.t1:0):0.184003,Sp9509_oxford_v3_proteins_Sp09g00208:5e-07);

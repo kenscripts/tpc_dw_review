@@ -1,0 +1,338 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    epigenome (SSE4.2, 94 GB RAM)
+Command: iqtree -s dw-cat_barcodes.alnfa -spp dw-cat_barcodes.partitions -o Colocasia_esculenta -bb 1000 -bnni
+Seed:    548515 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Nov  6 17:43:44 2020
+Kernel:  SSE2 - 1 threads (24 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 24 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading partition model file dw-cat_barcodes.partitions ...
+Reading alignment file dw-cat_barcodes.alnfa ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 140 sequences with 1652 columns, 978 distinct patterns
+591 parsimony-informative, 157 singleton sites, 904 constant sites
+                                    Gap/Ambiguity  Composition  p-value
+   1  1Landoltia_punctata_strain_7248      34.62%    passed     88.79%
+   2  Landoltia_punctata_strain_7260       34.62%    passed     88.79%
+   3  Landoltia_punctata_strain_7449       34.69%    passed     89.25%
+   4  Landoltia_punctata_strain_7487       34.62%    passed     88.79%
+   5  Landoltia_punctata_strain_8721       34.62%    passed     88.79%
+   6  Landoltia_punctata_strain_9278       34.62%    passed     88.79%
+   7  Lemna_aequinoctialis_strain_6612     35.47%    passed     94.73%
+   8  Lemna_aequinoctialis_strain_6746     37.11%    passed     99.86%
+   9  Lemna_aequinoctialis_strain_7126     37.11%    passed     99.62%
+  10  Lemna_disperma_strain_7269           35.65%    passed     87.68%
+  11  Lemna_gibba_strain_7589              35.29%    passed     96.93%
+  12  Lemna_gibba_strain_7741              35.29%    passed     96.93%
+  13  Lemna_gibba_strain_7784              35.29%    passed     96.93%
+  14  Lemna_gibba_strain_8703              35.29%    passed     96.93%
+  15  Lemna_japonica_strain_0189           26.39%    passed     80.42%
+  16  Lemna_japonica_strain_0216           26.03%    passed     74.32%
+  17  Lemna_japonica_strain_8695           30.51%    passed     97.90%
+  18  Lemna_japonica_strain_9017           30.69%    passed     96.71%
+  19  Lemna_minor_strain_7018              35.11%    passed     95.78%
+  20  Lemna_minor_strain_7136              34.99%    passed     96.74%
+  21  Lemna_minor_strain_7210              34.99%    passed     96.74%
+  22  Lemna_minor_strain_9016              34.93%    passed     97.15%
+  23  Lemna_minor_strain_9253              35.05%    passed     97.07%
+  24  Lemna_minor_strain_9417              34.93%    passed     97.15%
+  25  Lemna_minuta_clone_5571              34.14%    passed     93.97%
+  26  Lemna_minuta_clone_5572              34.14%    passed     93.97%
+  27  Lemna_minuta_clone_5573              34.14%    passed     93.97%
+  28  Lemna_minuta_clone_6717              35.23%    passed     96.48%
+  29  Lemna_minuta_clone_7612              34.08%    passed     93.25%
+  30  Lemna_minuta_clone_8699              35.41%    passed     91.47%
+  31  Lemna_minuta_clone_9226              34.08%    passed     93.25%
+  32  Lemna_minuta_clone_9414              34.14%    passed     93.97%
+  33  Lemna_minuta_clone_9473              34.14%    passed     93.97%
+  34  Lemna_minuta_clone_9474              35.17%    passed     95.99%
+  35  Lemna_minuta_clone_9476              34.14%    passed     93.97%
+  36  Lemna_minuta_clone_9484              34.14%    passed     93.97%
+  37  Lemna_minuta_clone_9581              34.14%    passed     93.97%
+  38  Lemna_minuta_strain_7284             36.08%    passed     87.65%
+  39  Lemna_minuta_strain_7726             36.14%    passed     89.99%
+  40  Lemna_minuta_strain_8065             36.08%    passed     88.73%
+  41  Lemna_obscura_strain_7856            36.14%    passed     94.05%
+  42  Lemna_perpusilla_strain_8539         44.01%    passed     64.62%
+  43  Lemna_tenera_strain_9020             33.84%    passed     93.88%
+  44  Lemna_tenera_strain_9024             36.92%    passed     95.05%
+  45  Lemna_trisulca_strain_7579           34.02%    passed     97.43%
+  46  Lemna_trisulca_strain_8137           34.02%    passed     97.43%
+  47  Lemna_turionifera_strain_8339        35.59%    passed     97.57%
+  48  Lemna_turionifera_strain_8760        35.59%    passed     97.57%
+  49  Lemna_valdiviana_clone_9228          33.84%    passed     92.68%
+  50  Lemna_valdiviana_clone_9229          35.59%    passed     92.45%
+  51  Lemna_valdiviana_clone_9233          34.14%    passed     91.85%
+  52  Lemna_valdiviana_clone_9267          33.54%    passed     84.95%
+  53  Lemna_valdiviana_clone_9395          34.20%    passed     92.64%
+  54  Lemna_valdiviana_clone_9401          34.20%    passed     92.64%
+  55  Lemna_valdiviana_clone_9442          34.26%    passed     93.35%
+  56  Lemna_valdiviana_clone_9443          35.29%    passed     95.45%
+  57  Lemna_valdiviana_clone_9475          34.02%    passed     88.11%
+  58  Lemna_valdiviana_strain_7288         36.20%    passed     89.67%
+  59  Lemna_valdiviana_strain_9229         36.68%    passed     93.66%
+  60  Lemna_valdiviana_strain_9232         36.08%    passed     88.73%
+  61  Lemna_valdiviana_clone_9209          34.14%    passed     92.92%
+  62  Lemna_valdiviana_strain_9207         28.27%    passed     90.74%
+  63  Lemna_valdiviana_strain_9208         28.33%    passed     89.29%
+  64  Lemna_valdiviana_strain_9210         29.42%    passed     79.76%
+  65  Spirodela_intermedia_strain_7125     52.85%    passed     97.24%
+  66  Spirodela_intermedia_strain_7178     52.85%    passed     97.24%
+  67  Spirodela_intermedia_strain_7291     52.78%    passed     98.44%
+  68  Spirodela_intermedia_strain_7355     52.78%    passed     98.44%
+  69  Spirodela_intermedia_strain_7450     52.85%    passed     98.50%
+  70  Spirodela_intermedia_strain_7747     52.78%    passed     97.17%
+  71  Spirodela_intermedia_strain_8410     52.78%    passed     97.17%
+  72  Spirodela_polyrhiza_strain_7205      34.87%    passed     83.38%
+  73  Spirodela_polyrhiza_strain_7212      34.93%    passed     78.85%
+  74  Spirodela_polyrhiza_strain_7222      34.69%    passed     82.94%
+  75  Spirodela_polyrhiza_strain_7498      34.81%    passed     86.61%
+  76  Spirodela_polyrhiza_strain_7657      34.81%    passed     86.61%
+  77  Spirodela_polyrhiza_strain_8790      34.81%    passed     86.61%
+  78  Spirodela_intermedia_strain_9203     52.85%    passed     97.79%
+  79  Wolffia_angusta_strain_7476          29.06%    passed     49.58%
+  80  Wolffia_arrhiza_strain_8872          29.84%    passed     91.04%
+  81  Wolffia_australiana_strain_7733      34.14%    passed     85.35%
+  82  Wolffia_australiana_strain_8730      33.90%    passed     87.43%
+  83  Wolffia_borealis_strain_9123         29.30%    passed     66.83%
+  84  Wolffia_borealis_strain_9147         29.06%    passed     50.57%
+  85  Wolffia_brasiliensis_strain_7150     33.66%    passed     99.64%
+  86  Wolffia_brasiliensis_strain_7306     34.62%    passed     99.56%
+  87  Wolffia_brasiliensis_strain_8743     33.60%    passed     99.06%
+  88  Wolffia_columbiana_strain_7310       29.96%    passed     93.46%
+  89  Wolffia_columbiana_strain_7972       29.90%    passed     91.08%
+  90  Wolffia_columbiana_strain_8265       29.60%    passed     86.72%
+  91  Wolffia_columbiana_strain_8856       29.54%    passed     91.32%
+  92  Wolffia_columbiana_strain_8890       29.78%    passed     90.10%
+  93  Wolffia_cylindracea_strain_9080      32.02%    passed     98.21%
+  94  Wolffia_elongata_strain_9188         30.21%    passed     93.74%
+  95  Wolffia_globosa_strain_8152          29.54%    passed     71.99%
+  96  Wolffia_globosa_strain_8441          29.48%    passed     68.50%
+  97  Wolffia_globosa_strain_8691          29.42%    passed     63.29%
+  98  Wolffia_globosa_strain_8789          29.42%    passed     60.41%
+  99  Wolffia_globosa_strain_8973          29.54%    passed     62.80%
+ 100  Wolffia_globosa_strain_9196          29.42%    passed     58.57%
+ 101  Wolffia_globosa_strain_9317          29.36%    passed     72.31%
+ 102  Wolffia_microscopica_strain_2000     24.27%    passed     32.62%
+ 103  Wolffia_microscopica_strain_2001     23.61%    passed     39.61%
+ 104  Wolffia_microscopica_strain_2002     25.00%    passed     52.99%
+ 105  Wolffia_microscopica_strain_2005     24.21%    passed     33.47%
+ 106  Wolffia_microscopica_strain_2006     24.46%    passed     47.89%
+ 107  Wolffia_microscopica_strain_2007     26.76%    passed     75.69%
+ 108  Wolffia_microscopica_strain_2008     24.15%    passed     33.32%
+ 109  Wolffia_neglecta_strain_9149         29.36%    passed     85.11%
+ 110  Wolffiella_caudata_strain_9139       31.48%    passed     89.01%
+ 111  Wolffiella_caudata_strain_9165       27.06%    passed     39.69%
+ 112  Wolffiella_caudata_strain_9214       27.24%    passed     52.24%
+ 113  Wolffiella_denticulata_strain_8221   32.14%    passed     85.03%
+ 114  Wolffiella_gladiata_strain_7595      47.28%    passed     96.97%
+ 115  Wolffiella_gladiata_strain_7852      47.22%    passed     97.34%
+ 116  Wolffiella_gladiata_strain_8066      47.15%    passed     97.62%
+ 117  Wolffiella_gladiata_strain_8261      47.22%    passed     97.34%
+ 118  Wolffiella_gladiata_strain_8350      49.39%    passed     90.49%
+ 119  Wolffiella_hyalina_strain_8640       34.26%    passed     65.60%
+ 120  Wolffiella_lingulata_strain_7289     35.29%    passed     87.88%
+ 121  Wolffiella_lingulata_strain_7464     35.29%    passed     87.88%
+ 122  Wolffiella_lingulata_strain_7655     35.05%    passed     79.48%
+ 123  Wolffiella_lingulata_strain_7725     35.05%    passed     79.48%
+ 124  Wolffiella_neotropica_strain_7290    35.29%    passed     94.30%
+ 125  Wolffiella_neotropica_strain_7609    35.35%    passed     92.92%
+ 126  Wolffiella_neotropica_strain_8848    35.35%    passed     93.26%
+ 127  Wolffiella_oblonga_strain_7164       48.18%    passed     91.82%
+ 128  Wolffiella_oblonga_strain_7201       48.24%    passed     90.53%
+ 129  Wolffiella_oblonga_strain_7343       36.74%    passed     92.68%
+ 130  Wolffiella_oblonga_strain_8072       48.12%    passed     94.46%
+ 131  Wolffiella_oblonga_strain_9136       36.86%    passed     93.39%
+ 132  Wolffiella_repanda_strain_9062       27.78%    passed     28.74%
+ 133  Wolffiella_repanda_strain_9107       29.78%    passed     44.54%
+ 134  Wolffiella_repanda_strain_9122       27.36%    passed     56.69%
+ 135  Wolffiella_rotunda_strain_9072       35.53%    passed     85.72%
+ 136  Wolffiella_rotunda_strain_9121       34.38%    passed     85.50%
+ 137  Wolffiella_welwitschii_strain_7468   26.82%    passed     71.31%
+ 138  Wolffiella_welwitschii_strain_9086   27.30%    passed     76.42%
+ 139  Wolffiella_welwitschii_strain_9466   26.69%    passed     65.57%
+ 140  Colocasia_esculenta                  25.91%    passed     21.73%
+WARNING: 8 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                34.69%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Loading 2 partitions...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1		140	800	201	539	K3Pu+F+R3	part1
+2	DNA	140	852	390	365	TPM2u+F+R3	part2
+Degree of missing data: 0.000
+Info: multi-threading strategy over partitions
+
+NOTE: Landoltia_punctata_strain_7260 is identical to 1Landoltia_punctata_strain_7248 but kept for subsequent analysis
+NOTE: Lemna_gibba_strain_7784 is identical to Lemna_gibba_strain_7741 but kept for subsequent analysis
+NOTE: Lemna_minor_strain_7210 is identical to Lemna_minor_strain_7136 but kept for subsequent analysis
+NOTE: Lemna_minuta_clone_5572 is identical to Lemna_minuta_clone_5571 but kept for subsequent analysis
+NOTE: Lemna_minuta_clone_9226 is identical to Lemna_minuta_clone_7612 but kept for subsequent analysis
+NOTE: Lemna_trisulca_strain_8137 is identical to Lemna_trisulca_strain_7579 but kept for subsequent analysis
+NOTE: Lemna_valdiviana_clone_9401 is identical to Lemna_valdiviana_clone_9395 but kept for subsequent analysis
+NOTE: Spirodela_intermedia_strain_8410 is identical to Spirodela_intermedia_strain_7747 but kept for subsequent analysis
+NOTE: Spirodela_polyrhiza_strain_7657 is identical to Spirodela_polyrhiza_strain_7498 but kept for subsequent analysis
+NOTE: Wolffiella_lingulata_strain_7464 is identical to Wolffiella_lingulata_strain_7289 but kept for subsequent analysis
+NOTE: 10 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Landoltia_punctata_strain_7487 (identical to 1Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Landoltia_punctata_strain_8721 (identical to 1Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Lemna_gibba_strain_8703 (identical to Lemna_gibba_strain_7741) is ignored but added at the end
+NOTE: Lemna_minuta_clone_5573 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9414 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9473 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9476 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9484 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9581 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Spirodela_polyrhiza_strain_8790 (identical to Spirodela_polyrhiza_strain_7498) is ignored but added at the end
+Concatenated alignment was printed to dw-cat_barcodes.partitions.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to dw-cat_barcodes.partitions.uniqueseq.phy
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.020 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 548515)...
+
+NOTE: 16 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -10442.182
+Current log-likelihood at step 1: -10263.172
+Current log-likelihood at step 2: -10245.725
+Current log-likelihood at step 3: -10241.481
+Current log-likelihood at step 4: -10238.468
+Current log-likelihood at step 5: -10235.735
+Current log-likelihood at step 6: -10232.995
+Current log-likelihood at step 7: -10230.014
+Current log-likelihood at step 8: -10226.245
+Current log-likelihood at step 9: -10220.604
+Current log-likelihood at step 10: -10212.565
+Current log-likelihood at step 11: -10204.773
+Current log-likelihood at step 12: -10203.165
+Current log-likelihood at step 13: -10202.379
+Current log-likelihood at step 14: -10201.865
+Current log-likelihood at step 15: -10201.478
+Current log-likelihood at step 16: -10201.163
+Current log-likelihood at step 17: -10200.893
+Current log-likelihood at step 18: -10200.654
+Current log-likelihood at step 19: -10200.436
+Current log-likelihood at step 20: -10200.233
+Current log-likelihood at step 21: -10200.041
+Current log-likelihood at step 22: -10199.859
+Current log-likelihood at step 23: -10199.685
+Current log-likelihood at step 24: -10199.518
+Current log-likelihood at step 25: -10199.359
+Current log-likelihood at step 26: -10199.207
+Current log-likelihood at step 27: -10199.063
+Current log-likelihood at step 28: -10198.929
+Current log-likelihood at step 29: -10198.805
+Current log-likelihood at step 30: -10198.692
+Current log-likelihood at step 31: -10198.593
+Partition-specific rates:  0.329 1.630
+Parameters optimization took 30 rounds (13.756 sec)
+
+Computing ML distances based on estimated model parameters... 0.328 sec
+Computing BIONJ tree...
+0.010 seconds
+Log-likelihood of BIONJ tree: -10247.356
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.198 second
+Computing log-likelihood of 98 initial trees ... 11.425 seconds
+Current best score: -10192.086
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -10190.354
+Current log-likelihood at step 1: -10190.152
+Current log-likelihood at step 2: -10190.036
+Current log-likelihood at step 3: -10189.951
+Parameters optimization took 2 rounds (1.229 sec)
+
+BETTER TREE FOUND at iteration 1: -10189.951
+BETTER TREE FOUND at iteration 9: -10189.950
+Iteration 10 / LogL: -10189.950 / Time: 0h:0m:42s
+Iteration 20 / LogL: -10190.206 / Time: 0h:0m:56s
+Finish initializing candidate tree set (20)
+Current best tree score: -10189.950 / CPU time: 41.951
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -10188.184
+Current log-likelihood at step 1: -10188.099
+Parameters optimization took 0 rounds (0.396 sec)
+
+BETTER TREE FOUND at iteration 26: -10188.099
+Iteration 30 / LogL: -10219.027 / Time: 0h:1m:13s (0h:4m:4s left)
+Iteration 40 / LogL: -10188.101 / Time: 0h:1m:30s (0h:3m:20s left)
+Iteration 50 / LogL: -10208.427 / Time: 0h:1m:49s (0h:2m:50s left)
+Iteration 60 / LogL: -10201.818 / Time: 0h:2m:7s (0h:2m:22s left)
+Iteration 70 / LogL: -10207.968 / Time: 0h:2m:24s (0h:1m:57s left)
+Iteration 80 / LogL: -10193.164 / Time: 0h:2m:41s (0h:1m:34s left)
+Iteration 90 / LogL: -10234.951 / Time: 0h:3m:0s (0h:1m:12s left)
+Iteration 100 / LogL: -10188.101 / Time: 0h:3m:17s (0h:0m:51s left)
+Iteration 110 / LogL: -10188.977 / Time: 0h:3m:34s (0h:0m:31s left)
+Iteration 120 / LogL: -10188.099 / Time: 0h:3m:51s (0h:0m:11s left)
+Refining ufboot trees with NNI 5 branches...
+100 samples done
+200 samples done
+300 samples done
+400 samples done
+500 samples done
+600 samples done
+700 samples done
+800 samples done
+900 samples done
+1000 samples done
+Total 1000 ufboot trees refined
+TREE SEARCH COMPLETED AFTER 127 ITERATIONS / Time: 0h:14m:16s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -10188.099
+Current log-likelihood at step 1: -10188.055
+Current log-likelihood at step 2: -10188.028
+Current log-likelihood at step 3: -10188.010
+Current log-likelihood at step 4: -10187.998
+Current log-likelihood at step 5: -10187.991
+Partition-specific rates:  0.331 1.628
+Parameters optimization took 4 rounds (1.988 sec)
+
+BEST SCORE FOUND : -10187.991
+Creating bootstrap support values...
+Split supports printed to NEXUS file dw-cat_barcodes.partitions.splits.nex
+Total tree length: 2.370
+
+Total number of iterations: 127
+CPU time used for tree search: 841.944 sec (0h:14m:1s)
+Wall-clock time used for tree search: 842.305 sec (0h:14m:2s)
+Total CPU time used: 858.932 sec (0h:14m:18s)
+Total wall-clock time used: 859.315 sec (0h:14m:19s)
+UFBoot trees printed to dw-cat_barcodes.partitions.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file dw-cat_barcodes.partitions.splits.nex...
+130 taxa and 1489 splits.
+Consensus tree written to dw-cat_barcodes.partitions.contree
+Reading input trees file dw-cat_barcodes.partitions.contree
+Log-likelihood of consensus tree: -10187.993
+
+Analysis results written to: 
+  IQ-TREE report:                dw-cat_barcodes.partitions.iqtree
+  Maximum-likelihood tree:       dw-cat_barcodes.partitions.treefile
+  Likelihood distances:          dw-cat_barcodes.partitions.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          dw-cat_barcodes.partitions.splits.nex
+  Consensus tree:                dw-cat_barcodes.partitions.contree
+  UFBoot trees:                  dw-cat_barcodes.partitions.ufboot
+  Screen log file:               dw-cat_barcodes.partitions.log
+
+Date and Time: Fri Nov  6 17:58:05 2020

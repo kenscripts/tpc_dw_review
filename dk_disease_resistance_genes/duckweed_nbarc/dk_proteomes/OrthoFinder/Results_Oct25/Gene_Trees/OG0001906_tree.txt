@@ -1,0 +1,1 @@
+(Sp9509_oxford_v3_proteins_Sp01g01797:0.692708,(wa8730_asm201904v2_ann1_proteins_Wa8730a001g011280_P001:0.917047,(Sp9509_oxford_v3_proteins_Sp01g01629:0.262612,Sp7498_pacbio_protein_g1896.t1:0.416784):0.193149):0.172318,Sp9509_oxford_v3_proteins_Sp10g00998:0.752347);

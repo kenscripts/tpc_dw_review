@@ -1,0 +1,642 @@
+IQ-TREE 1.6.12 built Aug 15 2019
+
+Partition file name: dw-cat_barcodes2.partitions
+Input file name: dw-cat_barcodes2.alnfa
+Type of analysis: ModelFinder + tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 432571
+
+REFERENCES
+----------
+
+To cite ModelFinder please use: 
+
+Subha Kalyaanamoorthy, Bui Quang Minh, Thomas KF Wong, Arndt von Haeseler,
+and Lars S Jermiin (2017) ModelFinder: Fast model selection for
+accurate phylogenetic estimates. Nature Methods, 14:587–589.
+https://doi.org/10.1038/nmeth.4285
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+Since you used partition models please also cite:
+
+Olga Chernomor, Arndt von Haeseler, and Bui Quang Minh (2016)
+Terrace aware data structure for phylogenomic inference from
+supermatrices. Syst Biol, 65:997-1008.
+https://doi.org/10.1093/sysbio/syw037
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 139 taxa with 2 partitions and 1664 total sites (0% missing data)
+
+  ID  Name   Type	Seq	Site	Unique	Infor	Invar	Const
+   1  part1  DNA	128	805	355	199	574	574
+   2  part2  DNA	128	859	612	388	398	398
+
+Column meanings:
+  Unique: Number of unique site patterns
+  Infor:  Number of parsimony-informative sites
+  Invar:  Number of invariant sites
+  Const:  Number of constant sites (can be subset of invariant sites)
+
+SUBSTITUTION PROCESS
+--------------------
+
+Edge-linked-proportional partition model but separate models between partitions
+
+  ID  Model           Speed  Parameters
+   1  K3Pu+F+R3      0.2923  K3Pu{0.88235,0.558558}+F{0.339233,0.159936,0.155469,0.345363}+R3{0.754687,0.310467,0.202963,2.30846,0.0423496,7.01688}
+   2  TPM2u+F+R3     1.6632  TPM2u{0.495689,0.568937}+F{0.365169,0.130442,0.124369,0.380021}+R3{0.513245,0.180241,0.415732,0.866166,0.0710239,7.70727}
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -9750.3299 (s.e. 265.8187)
+Unconstrained log-likelihood (without tree): -9027.2746
+Number of free parameters (#branches + #model parameters): 272
+Akaike information criterion (AIC) score: 20044.6598
+Corrected Akaike information criterion (AICc) score: 20151.4262
+Bayesian information criterion (BIC) score: 21518.0783
+
+Total tree length (sum of branch lengths): 2.3586
+Sum of internal branch lengths: 1.6976 (71.9742% of tree length)
+
+WARNING: 41 near-zero internal branches (<0.0006) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248
+|
++**Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260
+|
+|  +**Landoltia_punctata_strain_7449_Landoltia_punctata_strain_7449
++**| (67)
+   |                                    +---Lemna_aequinoctialis_strain_6612_Lemna_aequinoctialis_strain_6612
+   |                                 +--| (63)
+   |                                 |  |  +**Lemna_aequinoctialis_strain_7126_Lemna_aequinoctialis_strain_7126
+   |                                 |  +--| (61)
+   |                                 |     +--Lemna_perpusilla_strain_8539_Lemna_perpusilla_strain_8539
+   |                              +--| (69)
+   |                              |  +--Lemna_aequinoctialis_strain_6746_Lemna_aequinoctialis_strain_6746
+   |                       +------| (100)
+   |                       |      |    +**Lemna_tenera_strain_9020_Lemna_tenera_strain_9020
+   |                       |      +----| (100)
+   |                       |           +--Lemna_tenera_strain_9024_Lemna_tenera_strain_9024
+   |                    +--| (100)
+   |                    |  |                              +**Lemna_minuta_clone_5571_Lemna_minuta_clone_5571
+   |                    |  |                           +**| (6)
+   |                    |  |                           |  |  +**Lemna_minuta_clone_6717_Lemna_minuta_clone_6717
+   |                    |  |                           |  +**| (7)
+   |                    |  |                           |     +**Lemna_minuta_clone_8699_Lemna_minuta_clone_8699
+   |                    |  |                        +**| (14)
+   |                    |  |                        |  +**Lemna_minuta_clone_5572_Lemna_minuta_clone_5572
+   |                    |  |                     +**| (76)
+   |                    |  |                     |  +**Lemna_minuta_clone_9474_Lemna_minuta_clone_9474
+   |                    |  |                  +**| (93)
+   |                    |  |                  |  |  +**Lemna_minuta_clone_7612_Lemna_minuta_clone_7612
+   |                    |  |                  |  +**| (77)
+   |                    |  |                  |     +**Lemna_minuta_clone_9226_Lemna_minuta_clone_9226
+   |                    |  |               +--| (67)
+   |                    |  |               |  |     +**Lemna_minuta_strain_7726_Lemna_minuta_strain_7726
+   |                    |  |               |  |  +**| (84)
+   |                    |  |               |  |  |  +**Lemna_minuta_strain_8065_Lemna_minuta_strain_8065
+   |                    |  |               |  +**| (75)
+   |                    |  |               |     +**Lemna_valdiviana_strain_9232_Lemna_valdiviana_strain_9232
+   |                    |  |            +--| (65)
+   |                    |  |            |  +**Lemna_minuta_strain_7284_Lemna_minuta_strain_7284
+   |                    |  |         +**| (49)
+   |                    |  |         |  |  +**Lemna_valdiviana_clone_9229_Lemna_valdiviana_clone_9229
+   |                    |  |         |  +--| (91)
+   |                    |  |         |     +**Lemna_valdiviana_strain_9229_Lemna_valdiviana_strain_9229
+   |                    |  |      +**| (50)
+   |                    |  |      |  |     +**Lemna_valdiviana_clone_9228_Lemna_valdiviana_clone_9228
+   |                    |  |      |  |  +--| (90)
+   |                    |  |      |  |  |  |  +**Lemna_valdiviana_strain_9207_Lemna_valdiviana_strain_9207
+   |                    |  |      |  |  |  +**| (83)
+   |                    |  |      |  |  |     +**Lemna_valdiviana_strain_9208_Lemna_valdiviana_strain_9208
+   |                    |  |      |  +--| (88)
+   |                    |  |      |     |  +**Lemna_valdiviana_clone_9233_Lemna_valdiviana_clone_9233
+   |                    |  |      |     +--| (89)
+   |                    |  |      |        |     +**Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395
+   |                    |  |      |        |  +**| (4)
+   |                    |  |      |        |  |  |  +**Lemna_valdiviana_clone_9442_Lemna_valdiviana_clone_9442
+   |                    |  |      |        |  |  +**| (4)
+   |                    |  |      |        |  |     |  +**Lemna_valdiviana_clone_9443_Lemna_valdiviana_clone_9443
+   |                    |  |      |        |  |     +**| (13)
+   |                    |  |      |        |  |        |  +**Lemna_valdiviana_strain_7288_Lemna_valdiviana_strain_7288
+   |                    |  |      |        |  |        +**| (19)
+   |                    |  |      |        |  |           |  +**Lemna_valdiviana_clone_9209_Lemna_valdiviana_clone_9209
+   |                    |  |      |        |  |           +--| (74)
+   |                    |  |      |        |  |              +**Lemna_valdiviana_strain_9210_Lemna_valdiviana_strain_9210
+   |                    |  |      |        +**| (5)
+   |                    |  |      |           +**Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401
+   |                    |  +------| (100)
+   |                    |         |  +--Lemna_valdiviana_clone_9267_Lemna_valdiviana_clone_9267
+   |                    |         +--| (89)
+   |                    |            +--Lemna_valdiviana_clone_9475_Lemna_valdiviana_clone_9475
+   |             +------| (100)
+   |             |      |        +--Lemna_disperma_strain_7269_Lemna_disperma_strain_7269
+   |             |      |     +--| (100)
+   |             |      |     |  |  +**Lemna_gibba_strain_7589_Lemna_gibba_strain_7589
+   |             |      |     |  +--| (100)
+   |             |      |     |     |  +**Lemna_gibba_strain_7741_Lemna_gibba_strain_7741
+   |             |      |     |     +**| (92)
+   |             |      |     |        +**Lemna_gibba_strain_7784_Lemna_gibba_strain_7784
+   |             |      |  +--| (95)
+   |             |      |  |  |        +**Lemna_japonica_strain_0189_Lemna_japonica_strain_0189
+   |             |      |  |  |     +**| (98)
+   |             |      |  |  |     |  +**Lemna_japonica_strain_0216_Lemna_japonica_strain_0216
+   |             |      |  |  |  +**| (6)
+   |             |      |  |  |  |  |     +**Lemna_japonica_strain_8695_Lemna_japonica_strain_8695
+   |             |      |  |  |  |  |  +**| (8)
+   |             |      |  |  |  |  |  |  |  +**Lemna_minor_strain_7136_Lemna_minor_strain_7136
+   |             |      |  |  |  |  |  |  +**| (20)
+   |             |      |  |  |  |  |  |     +**Lemna_minor_strain_9417_Lemna_minor_strain_9417
+   |             |      |  |  |  |  +**| (8)
+   |             |      |  |  |  |     +**Lemna_japonica_strain_9017_Lemna_japonica_strain_9017
+   |             |      |  |  +--| (100)
+   |             |      |  |     |  +--Lemna_minor_strain_7018_Lemna_minor_strain_7018
+   |             |      |  |     +**| (11)
+   |             |      |  |        |     +**Lemna_minor_strain_7210_Lemna_minor_strain_7210
+   |             |      |  |        |  +**| (14)
+   |             |      |  |        |  |  +--Lemna_minor_strain_9253_Lemna_minor_strain_9253
+   |             |      |  |        +**| (12)
+   |             |      |  |           +**Lemna_minor_strain_9016_Lemna_minor_strain_9016
+   |             |      +--| (100)
+   |             |         |     +---Lemna_obscura_strain_7856_Lemna_obscura_strain_7856
+   |             |         |  +--| (63)
+   |             |         |  |  |  +**Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339
+   |             |         |  |  +--| (100)
+   |             |         |  |     +**Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760
+   |             |         +--| (77)
+   |             |            |  +**Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579
+   |             |            +--| (100)
+   |             |               +**Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137
+   +-------------| (100)
+                 |                   +**Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125
+                 |                +**| (74)
+                 |                |  +**Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178
+                 |             +--| (64)
+                 |             |  |  +**Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747
+                 |             |  +**| (75)
+                 |             |     +**Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410
+                 |       +-----| (100)
+                 |       |     |  +**Spirodela_intermedia_strain_7291_Spirodela_intermedia_strain_7291
+                 |       |     +**| (52)
+                 |       |        |     +**Spirodela_intermedia_strain_7355_Spirodela_intermedia_strain_7355
+                 |       |        |  +--| (98)
+                 |       |        |  |  +**Spirodela_intermedia_strain_7450_Spirodela_intermedia_strain_7450
+                 |       |        +**| (30)
+                 |       |           +**Spirodela_intermedia_strain_9203_Spirodela_intermedia_strain_9203
+                 |  +----| (93)
+                 |  |    |       +**Spirodela_polyrhiza_strain_7205_Spirodela_polyrhiza_strain_7205
+                 |  |    |    +--| (77)
+                 |  |    |    |  |  +**Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498
+                 |  |    |    |  +--| (92)
+                 |  |    |    |     +**Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657
+                 |  |    +----| (100)
+                 |  |         |  +--Spirodela_polyrhiza_strain_7212_Spirodela_polyrhiza_strain_7212
+                 |  |         +--| (80)
+                 |  |            +**Spirodela_polyrhiza_strain_7222_Spirodela_polyrhiza_strain_7222
+                 +--| (50)
+                    |                                    +--Wolffia_angusta_strain_7476_Wolffia_angusta_strain_7476
+                    |                                 +--| (89)
+                    |                                 |  |                 +--Wolffia_borealis_strain_9123_Wolffia_borealis_strain_9123
+                    |                                 |  |              +**| (72)
+                    |                                 |  |              |  +--Wolffia_borealis_strain_9147_Wolffia_borealis_strain_9147
+                    |                                 |  |           +--| (100)
+                    |                                 |  |           |  |  +--Wolffia_globosa_strain_9317_Wolffia_globosa_strain_9317
+                    |                                 |  |           |  +--| (98)
+                    |                                 |  |           |     +--Wolffia_neglecta_strain_9149_Wolffia_neglecta_strain_9149
+                    |                                 |  |        +--| (63)
+                    |                                 |  |        |  +**Wolffia_globosa_strain_8441_Wolffia_globosa_strain_8441
+                    |                                 |  |     +--| (69)
+                    |                                 |  |     |  +**Wolffia_globosa_strain_8691_Wolffia_globosa_strain_8691
+                    |                                 |  |  +--| (100)
+                    |                                 |  |  |  |  +**Wolffia_globosa_strain_8789_Wolffia_globosa_strain_8789
+                    |                                 |  |  |  +--| (83)
+                    |                                 |  |  |     |  +**Wolffia_globosa_strain_8973_Wolffia_globosa_strain_8973
+                    |                                 |  |  |     +--| (88)
+                    |                                 |  |  |        +**Wolffia_globosa_strain_9196_Wolffia_globosa_strain_9196
+                    |                                 |  +--| (92)
+                    |                                 |     +--Wolffia_globosa_strain_8152_Wolffia_globosa_strain_8152
+                    |                       +---------| (100)
+                    |                       |         |     +-----Wolffia_arrhiza_strain_8872_Wolffia_arrhiza_strain_8872
+                    |                       |         |  +--| (73)
+                    |                       |         |  |  +------Wolffia_cylindracea_strain_9080_Wolffia_cylindracea_strain_9080
+                    |                       |         +--| (95)
+                    |                       |            |        +--Wolffia_columbiana_strain_7310_Wolffia_columbiana_strain_7310
+                    |                       |            |     +--| (90)
+                    |                       |            |     |  |  +--Wolffia_columbiana_strain_7972_Wolffia_columbiana_strain_7972
+                    |                       |            |     |  +--| (73)
+                    |                       |            |     |     |  +**Wolffia_columbiana_strain_8856_Wolffia_columbiana_strain_8856
+                    |                       |            |     |     +**| (90)
+                    |                       |            |     |        +--Wolffia_columbiana_strain_8890_Wolffia_columbiana_strain_8890
+                    |                       |            |  +--| (100)
+                    |                       |            |  |  +--Wolffia_columbiana_strain_8265_Wolffia_columbiana_strain_8265
+                    |                       |            +--| (89)
+                    |                       |               +-----Wolffia_elongata_strain_9188_Wolffia_elongata_strain_9188
+                    |                    +--| (68)
+                    |                    |  |           +--Wolffia_australiana_strain_7733_Wolffia_australiana_strain_7733
+                    |                    |  +-----------| (100)
+                    |                    |              +--Wolffia_australiana_strain_8730_Wolffia_australiana_strain_8730
+                    |                +---| (95)
+                    |                |   |                    +**Wolffia_microscopica_strain_2000_Wolffia_microscopica_strain_2000
+                    |                |   |                 +**| (83)
+                    |                |   |                 |  +**Wolffia_microscopica_strain_2005_Wolffia_microscopica_strain_2005
+                    |                |   |              +**| (65)
+                    |                |   |              |  |  +**Wolffia_microscopica_strain_2001_Wolffia_microscopica_strain_2001
+                    |                |   |              |  +**| (87)
+                    |                |   |              |     |  +**Wolffia_microscopica_strain_2002_Wolffia_microscopica_strain_2002
+                    |                |   |              |     +**| (94)
+                    |                |   |              |        +**Wolffia_microscopica_strain_2006_Wolffia_microscopica_strain_2006
+                    |                |   |           +--| (92)
+                    |                |   |           |  +--Wolffia_microscopica_strain_2007_Wolffia_microscopica_strain_2007
+                    |                |   +-----------| (100)
+                    |                |               +--Wolffia_microscopica_strain_2008_Wolffia_microscopica_strain_2008
+                    +----------------| (100)
+                                     |                 +**Wolffia_brasiliensis_strain_7150_Wolffia_brasiliensis_strain_7150
+                                     |     +-----------| (100)
+                                     |     |           |  +--Wolffia_brasiliensis_strain_7306_Wolffia_brasiliensis_strain_7306
+                                     |     |           +--| (100)
+                                     |     |              +--Wolffia_brasiliensis_strain_8743_Wolffia_brasiliensis_strain_8743
+                                     |  +--| (58)
+                                     |  |  |          +--Wolffiella_hyalina_strain_8640_Wolffiella_hyalina_strain_8640
+                                     |  |  |       +--| (46)
+                                     |  |  |       |  +--Wolffiella_rotunda_strain_9072_Wolffiella_rotunda_strain_9072
+                                     |  |  +-------| (100)
+                                     |  |          +--Wolffiella_rotunda_strain_9121_Wolffiella_rotunda_strain_9121
+                                     +--| (77)
+                                        |                     +--Wolffiella_caudata_strain_9139_Wolffiella_caudata_strain_9139
+                                        |                  +--| (97)
+                                        |                  |  |     +--Wolffiella_oblonga_strain_7343_Wolffiella_oblonga_strain_7343
+                                        |                  |  |  +--| (64)
+                                        |                  |  |  |  +**Wolffiella_oblonga_strain_9136_Wolffiella_oblonga_strain_9136
+                                        |                  |  +--| (64)
+                                        |                  |     |     +--Wolffiella_repanda_strain_9062_Wolffiella_repanda_strain_9062
+                                        |                  |     +-----| (100)
+                                        |                  |           +--Wolffiella_repanda_strain_9107_Wolffiella_repanda_strain_9107
+                                        |               +**| (59)
+                                        |               |  |        +**Wolffiella_lingulata_strain_7289_Wolffiella_lingulata_strain_7289
+                                        |               |  |     +**| (73)
+                                        |               |  |     |  +**Wolffiella_lingulata_strain_7464_Wolffiella_lingulata_strain_7464
+                                        |               |  |  +--| (74)
+                                        |               |  |  |  |  +**Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655
+                                        |               |  |  |  +--| (89)
+                                        |               |  |  |     +**Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725
+                                        |               |  +--| (88)
+                                        |               |     +--Wolffiella_repanda_strain_9122_Wolffiella_repanda_strain_9122
+                                        |            +--| (99)
+                                        |            |  |     +--Wolffiella_caudata_strain_9165_Wolffiella_caudata_strain_9165
+                                        |            |  |  +--| (93)
+                                        |            |  |  |  +--Wolffiella_caudata_strain_9214_Wolffiella_caudata_strain_9214
+                                        |            |  +--| (84)
+                                        |            |     |     +**Wolffiella_gladiata_strain_7595_Wolffiella_gladiata_strain_7595
+                                        |            |     |  +--| (59)
+                                        |            |     |  |  |     +**Wolffiella_gladiata_strain_7852_Wolffiella_gladiata_strain_7852
+                                        |            |     |  |  |  +**| (94)
+                                        |            |     |  |  |  |  +**Wolffiella_gladiata_strain_8066_Wolffiella_gladiata_strain_8066
+                                        |            |     |  |  +--| (62)
+                                        |            |     |  |     |  +--Wolffiella_gladiata_strain_8350_Wolffiella_gladiata_strain_8350
+                                        |            |     |  |     +--| (79)
+                                        |            |     |  |        |     +**Wolffiella_oblonga_strain_7164_Wolffiella_oblonga_strain_7164
+                                        |            |     |  |        |  +**| (94)
+                                        |            |     |  |        |  |  +**Wolffiella_oblonga_strain_7201_Wolffiella_oblonga_strain_7201
+                                        |            |     |  |        +**| (86)
+                                        |            |     |  |           +--Wolffiella_oblonga_strain_8072_Wolffiella_oblonga_strain_8072
+                                        |            |     +--| (99)
+                                        |            |        +**Wolffiella_gladiata_strain_8261_Wolffiella_gladiata_strain_8261
+                                        |         +--| (57)
+                                        |         |  |     +--Wolffiella_welwitschii_strain_7468_Wolffiella_welwitschii_strain_7468
+                                        |         |  |  +--| (95)
+                                        |         |  |  |  +--Wolffiella_welwitschii_strain_9466_Wolffiella_welwitschii_strain_9466
+                                        |         |  +--| (100)
+                                        |         |     +--Wolffiella_welwitschii_strain_9086_Wolffiella_welwitschii_strain_9086
+                                        |  +------| (100)
+                                        |  |      |  +**Wolffiella_neotropica_strain_7290_Wolffiella_neotropica_strain_7290
+                                        |  |      +--| (100)
+                                        |  |         |  +--Wolffiella_neotropica_strain_7609_Wolffiella_neotropica_strain_7609
+                                        |  |         +--| (76)
+                                        |  |            +**Wolffiella_neotropica_strain_8848_Wolffiella_neotropica_strain_8848
+                                        +--| (100)
+                                           +--Wolffiella_denticulata_strain_8221_Wolffiella_denticulata_strain_8221
+
+Tree in newick format:
+
+(Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248:0.0000023448,Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260:0.0000023448,(Landoltia_punctata_strain_7449_Landoltia_punctata_strain_7449:0.0000023448,((((((Lemna_aequinoctialis_strain_6612_Lemna_aequinoctialis_strain_6612:0.0345862152,(Lemna_aequinoctialis_strain_7126_Lemna_aequinoctialis_strain_7126:0.0000023448,Lemna_perpusilla_strain_8539_Lemna_perpusilla_strain_8539:0.0071210478)61:0.0027014417)63:0.0086037509,Lemna_aequinoctialis_strain_6746_Lemna_aequinoctialis_strain_6746:0.0030757247)69:0.0182672920,(Lemna_tenera_strain_9020_Lemna_tenera_strain_9020:0.0000029794,Lemna_tenera_strain_9024_Lemna_tenera_strain_9024:0.0037705682)100:0.0468402188)100:0.0578557129,(((((((((Lemna_minuta_clone_5571_Lemna_minuta_clone_5571:0.0000023448,(Lemna_minuta_clone_6717_Lemna_minuta_clone_6717:0.0000023448,Lemna_minuta_clone_8699_Lemna_minuta_clone_8699:0.0000023448)7:0.0000023448)6:0.0000023448,Lemna_minuta_clone_5572_Lemna_minuta_clone_5572:0.0000023448)14:0.0000023448,Lemna_minuta_clone_9474_Lemna_minuta_clone_9474:0.0000023448)76:0.0000023448,(Lemna_minuta_clone_7612_Lemna_minuta_clone_7612:0.0000023448,Lemna_minuta_clone_9226_Lemna_minuta_clone_9226:0.0000023448)77:0.0000023448)93:0.0000023448,((Lemna_minuta_strain_7726_Lemna_minuta_strain_7726:0.0000023448,Lemna_minuta_strain_8065_Lemna_minuta_strain_8065:0.0000023448)84:0.0000023448,Lemna_valdiviana_strain_9232_Lemna_valdiviana_strain_9232:0.0000023448)75:0.0000023448)67:0.0017189437,Lemna_minuta_strain_7284_Lemna_minuta_strain_7284:0.0000023448)65:0.0017198214,(Lemna_valdiviana_clone_9229_Lemna_valdiviana_clone_9229:0.0000023448,Lemna_valdiviana_strain_9229_Lemna_valdiviana_strain_9229:0.0000023448)91:0.0034937396)49:0.0000023448,((Lemna_valdiviana_clone_9228_Lemna_valdiviana_clone_9228:0.0000023448,(Lemna_valdiviana_strain_9207_Lemna_valdiviana_strain_9207:0.0000023448,Lemna_valdiviana_strain_9208_Lemna_valdiviana_strain_9208:0.0000023448)83:0.0000023448)90:0.0033914597,(Lemna_valdiviana_clone_9233_Lemna_valdiviana_clone_9233:0.0000023448,((Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395:0.0000023448,(Lemna_valdiviana_clone_9442_Lemna_valdiviana_clone_9442:0.0000023448,(Lemna_valdiviana_clone_9443_Lemna_valdiviana_clone_9443:0.0000023448,(Lemna_valdiviana_strain_7288_Lemna_valdiviana_strain_7288:0.0000023448,(Lemna_valdiviana_clone_9209_Lemna_valdiviana_clone_9209:0.0000023448,Lemna_valdiviana_strain_9210_Lemna_valdiviana_strain_9210:0.0000023448)74:0.0024500237)19:0.0000023448)13:0.0000023448)4:0.0000023448)4:0.0000023448,Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401:0.0000023448)5:0.0000023448)89:0.0024518450)88:0.0033300822)50:0.0000023468,(Lemna_valdiviana_clone_9267_Lemna_valdiviana_clone_9267:0.0055587352,Lemna_valdiviana_clone_9475_Lemna_valdiviana_clone_9475:0.0018265658)89:0.0018213616)100:0.0625975264)100:0.0285218528,(((Lemna_disperma_strain_7269_Lemna_disperma_strain_7269:0.0166724853,(Lemna_gibba_strain_7589_Lemna_gibba_strain_7589:0.0000023448,(Lemna_gibba_strain_7741_Lemna_gibba_strain_7741:0.0000023448,Lemna_gibba_strain_7784_Lemna_gibba_strain_7784:0.0000023448)92:0.0000023448)100:0.0135334900)100:0.0313668605,(((Lemna_japonica_strain_0189_Lemna_japonica_strain_0189:0.0000023448,Lemna_japonica_strain_0216_Lemna_japonica_strain_0216:0.0000023448)98:0.0000023448,((Lemna_japonica_strain_8695_Lemna_japonica_strain_8695:0.0000023448,(Lemna_minor_strain_7136_Lemna_minor_strain_7136:0.0000023448,Lemna_minor_strain_9417_Lemna_minor_strain_9417:0.0000023448)20:0.0000023448)8:0.0000023448,Lemna_japonica_strain_9017_Lemna_japonica_strain_9017:0.0000023448)8:0.0000023448)6:0.0000029795,(Lemna_minor_strain_7018_Lemna_minor_strain_7018:0.0052965224,((Lemna_minor_strain_7210_Lemna_minor_strain_7210:0.0000023448,Lemna_minor_strain_9253_Lemna_minor_strain_9253:0.0017450017)14:0.0000029795,Lemna_minor_strain_9016_Lemna_minor_strain_9016:0.0000023448)12:0.0000023448)11:0.0000023448)100:0.0100504917)95:0.0050122235,((Lemna_obscura_strain_7856_Lemna_obscura_strain_7856:0.0358943687,(Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339:0.0000023448,Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760:0.0000023448)100:0.0202306460)63:0.0017485661,(Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579:0.0000023448,Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137:0.0000023448)100:0.0269808721)77:0.0018649500)100:0.0306174955)100:0.0614846331,(((((Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125:0.0000023448,Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178:0.0000023448)74:0.0000023448,(Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747:0.0000023448,Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410:0.0000023448)75:0.0000023448)64:0.0032852073,(Spirodela_intermedia_strain_7291_Spirodela_intermedia_strain_7291:0.0000023448,((Spirodela_intermedia_strain_7355_Spirodela_intermedia_strain_7355:0.0000023448,Spirodela_intermedia_strain_7450_Spirodela_intermedia_strain_7450:0.0000023448)98:0.0070579648,Spirodela_intermedia_strain_9203_Spirodela_intermedia_strain_9203:0.0000023448)30:0.0000023448)52:0.0000023448)100:0.0526866700,((Spirodela_polyrhiza_strain_7205_Spirodela_polyrhiza_strain_7205:0.0000023448,(Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498:0.0000023448,Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657:0.0000023448)92:0.0016951749)77:0.0017399213,(Spirodela_polyrhiza_strain_7212_Spirodela_polyrhiza_strain_7212:0.0035832779,Spirodela_polyrhiza_strain_7222_Spirodela_polyrhiza_strain_7222:0.0000023448)80:0.0017355330)100:0.0455451677)93:0.0434562364,(((((Wolffia_angusta_strain_7476_Wolffia_angusta_strain_7476:0.0308010260,((((((Wolffia_borealis_strain_9123_Wolffia_borealis_strain_9123:0.0011094708,Wolffia_borealis_strain_9147_Wolffia_borealis_strain_9147:0.0046723380)72:0.0000021909,(Wolffia_globosa_strain_9317_Wolffia_globosa_strain_9317:0.0050321453,Wolffia_neglecta_strain_9149_Wolffia_neglecta_strain_9149:0.0036237171)98:0.0071568899)100:0.0149888906,Wolffia_globosa_strain_8441_Wolffia_globosa_strain_8441:0.0000029012)63:0.0012561738,Wolffia_globosa_strain_8691_Wolffia_globosa_strain_8691:0.0000023448)69:0.0024456565,(Wolffia_globosa_strain_8789_Wolffia_globosa_strain_8789:0.0000023448,(Wolffia_globosa_strain_8973_Wolffia_globosa_strain_8973:0.0000023448,Wolffia_globosa_strain_9196_Wolffia_globosa_strain_9196:0.0000023448)88:0.0015565020)83:0.0016589713)100:0.0199000354,Wolffia_globosa_strain_8152_Wolffia_globosa_strain_8152:0.0158142921)92:0.0122084789)89:0.0109132272,((Wolffia_arrhiza_strain_8872_Wolffia_arrhiza_strain_8872:0.0533848454,Wolffia_cylindracea_strain_9080_Wolffia_cylindracea_strain_9080:0.0613861024)73:0.0096626758,(((Wolffia_columbiana_strain_7310_Wolffia_columbiana_strain_7310:0.0015542324,(Wolffia_columbiana_strain_7972_Wolffia_columbiana_strain_7972:0.0010225861,(Wolffia_columbiana_strain_8856_Wolffia_columbiana_strain_8856:0.0000023448,Wolffia_columbiana_strain_8890_Wolffia_columbiana_strain_8890:0.0010211101)90:0.0000023448)73:0.0059519116)90:0.0096354126,Wolffia_columbiana_strain_8265_Wolffia_columbiana_strain_8265:0.0121401365)100:0.0246752919,Wolffia_elongata_strain_9188_Wolffia_elongata_strain_9188:0.0499463288)89:0.0104283733)95:0.0221162282)100:0.0875725812,(Wolffia_australiana_strain_7733_Wolffia_australiana_strain_7733:0.0284579623,Wolffia_australiana_strain_8730_Wolffia_australiana_strain_8730:0.0078549035)100:0.1025828471)68:0.0098104235,((((Wolffia_microscopica_strain_2000_Wolffia_microscopica_strain_2000:0.0000023448,Wolffia_microscopica_strain_2005_Wolffia_microscopica_strain_2005:0.0000023448)83:0.0000023448,(Wolffia_microscopica_strain_2001_Wolffia_microscopica_strain_2001:0.0000023448,(Wolffia_microscopica_strain_2002_Wolffia_microscopica_strain_2002:0.0000023448,Wolffia_microscopica_strain_2006_Wolffia_microscopica_strain_2006:0.0000023448)94:0.0000023448)87:0.0000023448)65:0.0000023448,Wolffia_microscopica_strain_2007_Wolffia_microscopica_strain_2007:0.0014839999)92:0.0012977167,Wolffia_microscopica_strain_2008_Wolffia_microscopica_strain_2008:0.0047782255)100:0.1049335752)95:0.0342094783,(((Wolffia_brasiliensis_strain_7150_Wolffia_brasiliensis_strain_7150:0.0005738370,(Wolffia_brasiliensis_strain_7306_Wolffia_brasiliensis_strain_7306:0.0182548031,Wolffia_brasiliensis_strain_8743_Wolffia_brasiliensis_strain_8743:0.0037300418)100:0.0085662251)100:0.0982395573,((Wolffiella_hyalina_strain_8640_Wolffiella_hyalina_strain_8640:0.0285069302,Wolffiella_rotunda_strain_9072_Wolffiella_rotunda_strain_9072:0.0087280654)46:0.0015846219,Wolffiella_rotunda_strain_9121_Wolffiella_rotunda_strain_9121:0.0029187474)100:0.0668475951)58:0.0107223970,((((((Wolffiella_caudata_strain_9139_Wolffiella_caudata_strain_9139:0.0050951950,((Wolffiella_oblonga_strain_7343_Wolffiella_oblonga_strain_7343:0.0037311796,Wolffiella_oblonga_strain_9136_Wolffiella_oblonga_strain_9136:0.0000023448)64:0.0018463376,(Wolffiella_repanda_strain_9062_Wolffiella_repanda_strain_9062:0.0154773914,Wolffiella_repanda_strain_9107_Wolffiella_repanda_strain_9107:0.0062223344)100:0.0544856030)64:0.0025638742)97:0.0082734089,(((Wolffiella_lingulata_strain_7289_Wolffiella_lingulata_strain_7289:0.0000023448,Wolffiella_lingulata_strain_7464_Wolffiella_lingulata_strain_7464:0.0000023448)73:0.0000023448,(Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655:0.0000023448,Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725:0.0000023448)89:0.0035079158)74:0.0018400700,Wolffiella_repanda_strain_9122_Wolffiella_repanda_strain_9122:0.0020783319)88:0.0044342345)59:0.0000025158,((Wolffiella_caudata_strain_9165_Wolffiella_caudata_strain_9165:0.0094623652,Wolffiella_caudata_strain_9214_Wolffiella_caudata_strain_9214:0.0016976100)93:0.0060790497,((Wolffiella_gladiata_strain_7595_Wolffiella_gladiata_strain_7595:0.0000023448,((Wolffiella_gladiata_strain_7852_Wolffiella_gladiata_strain_7852:0.0000023448,Wolffiella_gladiata_strain_8066_Wolffiella_gladiata_strain_8066:0.0000023448)94:0.0000023448,(Wolffiella_gladiata_strain_8350_Wolffiella_gladiata_strain_8350:0.0140199805,((Wolffiella_oblonga_strain_7164_Wolffiella_oblonga_strain_7164:0.0000023448,Wolffiella_oblonga_strain_7201_Wolffiella_oblonga_strain_7201:0.0000023448)94:0.0000023448,Wolffiella_oblonga_strain_8072_Wolffiella_oblonga_strain_8072:0.0025762848)86:0.0000025109)79:0.0052816549)62:0.0025392687)59:0.0025336359,Wolffiella_gladiata_strain_8261_Wolffiella_gladiata_strain_8261:0.0000023448)99:0.0054997666)84:0.0040589629)99:0.0115829320,((Wolffiella_welwitschii_strain_7468_Wolffiella_welwitschii_strain_7468:0.0069090599,Wolffiella_welwitschii_strain_9466_Wolffiella_welwitschii_strain_9466:0.0070576759)95:0.0046474492,Wolffiella_welwitschii_strain_9086_Wolffiella_welwitschii_strain_9086:0.0080384345)100:0.0085510919)57:0.0016773746,(Wolffiella_neotropica_strain_7290_Wolffiella_neotropica_strain_7290:0.0000023448,(Wolffiella_neotropica_strain_7609_Wolffiella_neotropica_strain_7609:0.0017665999,Wolffiella_neotropica_strain_8848_Wolffiella_neotropica_strain_8848:0.0000023448)76:0.0017694419)100:0.0094646048)100:0.0576745523,Wolffiella_denticulata_strain_8221_Wolffiella_denticulata_strain_8221:0.0218044070)100:0.0249130482)77:0.0109073425)100:0.1413602235)50:0.0095757203)100:0.1145860232)67:0.0000023448);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -9750.355329
+Robinson-Foulds distance between ML tree and consensus tree: 36
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++**Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248
+|
+|        +--Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260
+|     +--|
+|     |  |  +--Landoltia_punctata_strain_7449_Landoltia_punctata_strain_7449
+|     |  +--| (67)
+|     |     |                                      +---Lemna_aequinoctialis_strain_6612_Lemna_aequinoctialis_strain_6612
+|     |     |                                   +--| (63)
+|     |     |                                   |  |  +--Lemna_aequinoctialis_strain_7126_Lemna_aequinoctialis_strain_7126
+|     |     |                                   |  +--| (61)
+|     |     |                                   |     +--Lemna_perpusilla_strain_8539_Lemna_perpusilla_strain_8539
+|     |     |                                +--| (69)
+|     |     |                                |  +--Lemna_aequinoctialis_strain_6746_Lemna_aequinoctialis_strain_6746
+|     |     |                         +------| (100)
+|     |     |                         |      |    +--Lemna_tenera_strain_9020_Lemna_tenera_strain_9020
+|     |     |                         |      +----| (100)
+|     |     |                         |           +--Lemna_tenera_strain_9024_Lemna_tenera_strain_9024
+|     |     |                      +--| (100)
+|     |     |                      |  |                                                +**Lemna_minuta_clone_5571_Lemna_minuta_clone_5571
+|     |     |                      |  |                                             +**|
+|     |     |                      |  |                                             |  +**Lemna_minuta_clone_9581_Lemna_minuta_clone_9581
+|     |     |                      |  |                                          +**|
+|     |     |                      |  |                                          |  +**Lemna_minuta_clone_9484_Lemna_minuta_clone_9484
+|     |     |                      |  |                                       +**|
+|     |     |                      |  |                                       |  +**Lemna_minuta_clone_9473_Lemna_minuta_clone_9473
+|     |     |                      |  |                                    +**|
+|     |     |                      |  |                                    |  +**Lemna_minuta_clone_9476_Lemna_minuta_clone_9476
+|     |     |                      |  |                                 +**|
+|     |     |                      |  |                                 |  +**Lemna_minuta_clone_9414_Lemna_minuta_clone_9414
+|     |     |                      |  |                              +--|
+|     |     |                      |  |                              |  +**Lemna_minuta_clone_5573_Lemna_minuta_clone_5573
+|     |     |                      |  |                           +--| (26)
+|     |     |                      |  |                           |  +--Lemna_minuta_clone_8699_Lemna_minuta_clone_8699
+|     |     |                      |  |                        +--| (21)
+|     |     |                      |  |                        |  |  +--Lemna_minuta_clone_6717_Lemna_minuta_clone_6717
+|     |     |                      |  |                        |  +--| (71)
+|     |     |                      |  |                        |     +--Lemna_minuta_clone_9474_Lemna_minuta_clone_9474
+|     |     |                      |  |                     +--| (76)
+|     |     |                      |  |                     |  +--Lemna_minuta_clone_5572_Lemna_minuta_clone_5572
+|     |     |                      |  |                  +--| (93)
+|     |     |                      |  |                  |  |  +--Lemna_minuta_clone_7612_Lemna_minuta_clone_7612
+|     |     |                      |  |                  |  +--| (77)
+|     |     |                      |  |                  |     +--Lemna_minuta_clone_9226_Lemna_minuta_clone_9226
+|     |     |                      |  |               +--| (67)
+|     |     |                      |  |               |  |     +--Lemna_minuta_strain_7726_Lemna_minuta_strain_7726
+|     |     |                      |  |               |  |  +--| (84)
+|     |     |                      |  |               |  |  |  +--Lemna_minuta_strain_8065_Lemna_minuta_strain_8065
+|     |     |                      |  |               |  +--| (75)
+|     |     |                      |  |               |     +--Lemna_valdiviana_strain_9232_Lemna_valdiviana_strain_9232
+|     |     |                      |  |            +--| (65)
+|     |     |                      |  |            |  +--Lemna_minuta_strain_7284_Lemna_minuta_strain_7284
+|     |     |                      |  |         +--| (49)
+|     |     |                      |  |         |  |  +--Lemna_valdiviana_clone_9229_Lemna_valdiviana_clone_9229
+|     |     |                      |  |         |  +--| (91)
+|     |     |                      |  |         |     +--Lemna_valdiviana_strain_9229_Lemna_valdiviana_strain_9229
+|     |     |                      |  |      +--| (50)
+|     |     |                      |  |      |  |     +--Lemna_valdiviana_clone_9228_Lemna_valdiviana_clone_9228
+|     |     |                      |  |      |  |  +--| (90)
+|     |     |                      |  |      |  |  |  |  +--Lemna_valdiviana_strain_9207_Lemna_valdiviana_strain_9207
+|     |     |                      |  |      |  |  |  +--| (83)
+|     |     |                      |  |      |  |  |     +--Lemna_valdiviana_strain_9208_Lemna_valdiviana_strain_9208
+|     |     |                      |  |      |  +--| (88)
+|     |     |                      |  |      |     |        +--Lemna_valdiviana_clone_9233_Lemna_valdiviana_clone_9233
+|     |     |                      |  |      |     |     +--| (22)
+|     |     |                      |  |      |     |     |  |     +--Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395
+|     |     |                      |  |      |     |     |  |  +--| (14)
+|     |     |                      |  |      |     |     |  |  |  +--Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401
+|     |     |                      |  |      |     |     |  +--| (15)
+|     |     |                      |  |      |     |     |     |  +--Lemna_valdiviana_clone_9442_Lemna_valdiviana_clone_9442
+|     |     |                      |  |      |     |     |     +--| (14)
+|     |     |                      |  |      |     |     |        +--Lemna_valdiviana_clone_9443_Lemna_valdiviana_clone_9443
+|     |     |                      |  |      |     |  +--| (29)
+|     |     |                      |  |      |     |  |  |  +--Lemna_valdiviana_clone_9209_Lemna_valdiviana_clone_9209
+|     |     |                      |  |      |     |  |  +--| (74)
+|     |     |                      |  |      |     |  |     +--Lemna_valdiviana_strain_9210_Lemna_valdiviana_strain_9210
+|     |     |                      |  |      |     +--| (89)
+|     |     |                      |  |      |        +--Lemna_valdiviana_strain_7288_Lemna_valdiviana_strain_7288
+|     |     |                      |  +------| (100)
+|     |     |                      |         |  +--Lemna_valdiviana_clone_9267_Lemna_valdiviana_clone_9267
+|     |     |                      |         +--| (89)
+|     |     |                      |            +--Lemna_valdiviana_clone_9475_Lemna_valdiviana_clone_9475
+|     |     |               +------| (100)
+|     |     |               |      |        +--Lemna_disperma_strain_7269_Lemna_disperma_strain_7269
+|     |     |               |      |     +--| (100)
+|     |     |               |      |     |  |  +--Lemna_gibba_strain_7589_Lemna_gibba_strain_7589
+|     |     |               |      |     |  +--| (100)
+|     |     |               |      |     |     |     +**Lemna_gibba_strain_7741_Lemna_gibba_strain_7741
+|     |     |               |      |     |     |  +--|
+|     |     |               |      |     |     |  |  +**Lemna_gibba_strain_8703_Lemna_gibba_strain_8703
+|     |     |               |      |     |     +--| (92)
+|     |     |               |      |     |        +--Lemna_gibba_strain_7784_Lemna_gibba_strain_7784
+|     |     |               |      |  +--| (95)
+|     |     |               |      |  |  |     +--Lemna_japonica_strain_0189_Lemna_japonica_strain_0189
+|     |     |               |      |  |  |  +--| (98)
+|     |     |               |      |  |  |  |  +--Lemna_japonica_strain_0216_Lemna_japonica_strain_0216
+|     |     |               |      |  |  +--| (100)
+|     |     |               |      |  |     |     +--Lemna_japonica_strain_8695_Lemna_japonica_strain_8695
+|     |     |               |      |  |     |  +--| (35)
+|     |     |               |      |  |     |  |  |  +--Lemna_minor_strain_7018_Lemna_minor_strain_7018
+|     |     |               |      |  |     |  |  +--| (76)
+|     |     |               |      |  |     |  |     |        +--Lemna_minor_strain_7136_Lemna_minor_strain_7136
+|     |     |               |      |  |     |  |     |     +--| (25)
+|     |     |               |      |  |     |  |     |     |  +--Lemna_minor_strain_9253_Lemna_minor_strain_9253
+|     |     |               |      |  |     |  |     |  +--| (31)
+|     |     |               |      |  |     |  |     |  |  |  +--Lemna_minor_strain_7210_Lemna_minor_strain_7210
+|     |     |               |      |  |     |  |     |  |  +--| (35)
+|     |     |               |      |  |     |  |     |  |     +--Lemna_minor_strain_9417_Lemna_minor_strain_9417
+|     |     |               |      |  |     |  |     +--| (51)
+|     |     |               |      |  |     |  |        +--Lemna_minor_strain_9016_Lemna_minor_strain_9016
+|     |     |               |      |  |     +--| (47)
+|     |     |               |      |  |        +--Lemna_japonica_strain_9017_Lemna_japonica_strain_9017
+|     |     |               |      +--| (100)
+|     |     |               |         |     +---Lemna_obscura_strain_7856_Lemna_obscura_strain_7856
+|     |     |               |         |  +--| (63)
+|     |     |               |         |  |  |  +--Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339
+|     |     |               |         |  |  +--| (100)
+|     |     |               |         |  |     +--Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760
+|     |     |               |         +--| (77)
+|     |     |               |            |  +--Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579
+|     |     |               |            +--| (100)
+|     |     |               |               +--Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137
+|     |     |            +--| (50)
+|     |     |            |  |                                    +--Wolffia_angusta_strain_7476_Wolffia_angusta_strain_7476
+|     |     |            |  |                                 +--| (89)
+|     |     |            |  |                                 |  |                 +--Wolffia_borealis_strain_9123_Wolffia_borealis_strain_9123
+|     |     |            |  |                                 |  |              +--| (72)
+|     |     |            |  |                                 |  |              |  +--Wolffia_borealis_strain_9147_Wolffia_borealis_strain_9147
+|     |     |            |  |                                 |  |           +--| (100)
+|     |     |            |  |                                 |  |           |  |  +--Wolffia_globosa_strain_9317_Wolffia_globosa_strain_9317
+|     |     |            |  |                                 |  |           |  +--| (98)
+|     |     |            |  |                                 |  |           |     +--Wolffia_neglecta_strain_9149_Wolffia_neglecta_strain_9149
+|     |     |            |  |                                 |  |        +--| (63)
+|     |     |            |  |                                 |  |        |  +--Wolffia_globosa_strain_8441_Wolffia_globosa_strain_8441
+|     |     |            |  |                                 |  |     +--| (69)
+|     |     |            |  |                                 |  |     |  +--Wolffia_globosa_strain_8691_Wolffia_globosa_strain_8691
+|     |     |            |  |                                 |  |  +--| (100)
+|     |     |            |  |                                 |  |  |  |  +--Wolffia_globosa_strain_8789_Wolffia_globosa_strain_8789
+|     |     |            |  |                                 |  |  |  +--| (83)
+|     |     |            |  |                                 |  |  |     |  +--Wolffia_globosa_strain_8973_Wolffia_globosa_strain_8973
+|     |     |            |  |                                 |  |  |     +--| (88)
+|     |     |            |  |                                 |  |  |        +--Wolffia_globosa_strain_9196_Wolffia_globosa_strain_9196
+|     |     |            |  |                                 |  +--| (92)
+|     |     |            |  |                                 |     +--Wolffia_globosa_strain_8152_Wolffia_globosa_strain_8152
+|     |     |            |  |                       +---------| (100)
+|     |     |            |  |                       |         |     +-----Wolffia_arrhiza_strain_8872_Wolffia_arrhiza_strain_8872
+|     |     |            |  |                       |         |  +--| (73)
+|     |     |            |  |                       |         |  |  +------Wolffia_cylindracea_strain_9080_Wolffia_cylindracea_strain_9080
+|     |     |            |  |                       |         +--| (95)
+|     |     |            |  |                       |            |        +--Wolffia_columbiana_strain_7310_Wolffia_columbiana_strain_7310
+|     |     |            |  |                       |            |     +--| (90)
+|     |     |            |  |                       |            |     |  |  +--Wolffia_columbiana_strain_7972_Wolffia_columbiana_strain_7972
+|     |     |            |  |                       |            |     |  +--| (73)
+|     |     |            |  |                       |            |     |     |  +--Wolffia_columbiana_strain_8856_Wolffia_columbiana_strain_8856
+|     |     |            |  |                       |            |     |     +--| (90)
+|     |     |            |  |                       |            |     |        +--Wolffia_columbiana_strain_8890_Wolffia_columbiana_strain_8890
+|     |     |            |  |                       |            |  +--| (100)
+|     |     |            |  |                       |            |  |  +--Wolffia_columbiana_strain_8265_Wolffia_columbiana_strain_8265
+|     |     |            |  |                       |            +--| (89)
+|     |     |            |  |                       |               +-----Wolffia_elongata_strain_9188_Wolffia_elongata_strain_9188
+|     |     |            |  |                    +--| (68)
+|     |     |            |  |                    |  |           +--Wolffia_australiana_strain_7733_Wolffia_australiana_strain_7733
+|     |     |            |  |                    |  +-----------| (100)
+|     |     |            |  |                    |              +--Wolffia_australiana_strain_8730_Wolffia_australiana_strain_8730
+|     |     |            |  |                +---| (95)
+|     |     |            |  |                |   |                    +--Wolffia_microscopica_strain_2000_Wolffia_microscopica_strain_2000
+|     |     |            |  |                |   |                 +--| (83)
+|     |     |            |  |                |   |                 |  +--Wolffia_microscopica_strain_2005_Wolffia_microscopica_strain_2005
+|     |     |            |  |                |   |              +--| (65)
+|     |     |            |  |                |   |              |  |  +--Wolffia_microscopica_strain_2001_Wolffia_microscopica_strain_2001
+|     |     |            |  |                |   |              |  +--| (87)
+|     |     |            |  |                |   |              |     |  +--Wolffia_microscopica_strain_2002_Wolffia_microscopica_strain_2002
+|     |     |            |  |                |   |              |     +--| (94)
+|     |     |            |  |                |   |              |        +--Wolffia_microscopica_strain_2006_Wolffia_microscopica_strain_2006
+|     |     |            |  |                |   |           +--| (92)
+|     |     |            |  |                |   |           |  +--Wolffia_microscopica_strain_2007_Wolffia_microscopica_strain_2007
+|     |     |            |  |                |   +-----------| (100)
+|     |     |            |  |                |               +--Wolffia_microscopica_strain_2008_Wolffia_microscopica_strain_2008
+|     |     |            |  +----------------| (100)
+|     |     |            |                   |                +--Wolffia_brasiliensis_strain_7150_Wolffia_brasiliensis_strain_7150
+|     |     |            |                   |     +----------| (100)
+|     |     |            |                   |     |          |  +--Wolffia_brasiliensis_strain_7306_Wolffia_brasiliensis_strain_7306
+|     |     |            |                   |     |          +--| (100)
+|     |     |            |                   |     |             +--Wolffia_brasiliensis_strain_8743_Wolffia_brasiliensis_strain_8743
+|     |     |            |                   |  +--| (58)
+|     |     |            |                   |  |  |      +--Wolffiella_hyalina_strain_8640_Wolffiella_hyalina_strain_8640
+|     |     |            |                   |  |  +------| (100)
+|     |     |            |                   |  |         |  +--Wolffiella_rotunda_strain_9072_Wolffiella_rotunda_strain_9072
+|     |     |            |                   |  |         +--| (54)
+|     |     |            |                   |  |            +--Wolffiella_rotunda_strain_9121_Wolffiella_rotunda_strain_9121
+|     |     |            |                   +--| (77)
+|     |     |            |                      |                    +--Wolffiella_caudata_strain_9139_Wolffiella_caudata_strain_9139
+|     |     |            |                      |                 +--| (97)
+|     |     |            |                      |                 |  |     +--Wolffiella_oblonga_strain_7343_Wolffiella_oblonga_strain_7343
+|     |     |            |                      |                 |  |  +--| (64)
+|     |     |            |                      |                 |  |  |  +--Wolffiella_oblonga_strain_9136_Wolffiella_oblonga_strain_9136
+|     |     |            |                      |                 |  +--| (64)
+|     |     |            |                      |                 |     |     +--Wolffiella_repanda_strain_9062_Wolffiella_repanda_strain_9062
+|     |     |            |                      |                 |     +-----| (100)
+|     |     |            |                      |                 |           +--Wolffiella_repanda_strain_9107_Wolffiella_repanda_strain_9107
+|     |     |            |                      |              +--| (59)
+|     |     |            |                      |              |  |        +--Wolffiella_lingulata_strain_7289_Wolffiella_lingulata_strain_7289
+|     |     |            |                      |              |  |     +--| (73)
+|     |     |            |                      |              |  |     |  +--Wolffiella_lingulata_strain_7464_Wolffiella_lingulata_strain_7464
+|     |     |            |                      |              |  |  +--| (74)
+|     |     |            |                      |              |  |  |  |  +--Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655
+|     |     |            |                      |              |  |  |  +--| (89)
+|     |     |            |                      |              |  |  |     +--Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725
+|     |     |            |                      |              |  +--| (88)
+|     |     |            |                      |              |     +--Wolffiella_repanda_strain_9122_Wolffiella_repanda_strain_9122
+|     |     |            |                      |           +--| (99)
+|     |     |            |                      |           |  |     +--Wolffiella_caudata_strain_9165_Wolffiella_caudata_strain_9165
+|     |     |            |                      |           |  |  +--| (93)
+|     |     |            |                      |           |  |  |  +--Wolffiella_caudata_strain_9214_Wolffiella_caudata_strain_9214
+|     |     |            |                      |           |  +--| (84)
+|     |     |            |                      |           |     |     +--Wolffiella_gladiata_strain_7595_Wolffiella_gladiata_strain_7595
+|     |     |            |                      |           |     |  +--| (59)
+|     |     |            |                      |           |     |  |  |     +--Wolffiella_gladiata_strain_7852_Wolffiella_gladiata_strain_7852
+|     |     |            |                      |           |     |  |  |  +--| (94)
+|     |     |            |                      |           |     |  |  |  |  +--Wolffiella_gladiata_strain_8066_Wolffiella_gladiata_strain_8066
+|     |     |            |                      |           |     |  |  +--| (62)
+|     |     |            |                      |           |     |  |     |  +--Wolffiella_gladiata_strain_8350_Wolffiella_gladiata_strain_8350
+|     |     |            |                      |           |     |  |     +--| (79)
+|     |     |            |                      |           |     |  |        |     +--Wolffiella_oblonga_strain_7164_Wolffiella_oblonga_strain_7164
+|     |     |            |                      |           |     |  |        |  +--| (94)
+|     |     |            |                      |           |     |  |        |  |  +--Wolffiella_oblonga_strain_7201_Wolffiella_oblonga_strain_7201
+|     |     |            |                      |           |     |  |        +--| (86)
+|     |     |            |                      |           |     |  |           +--Wolffiella_oblonga_strain_8072_Wolffiella_oblonga_strain_8072
+|     |     |            |                      |           |     +--| (99)
+|     |     |            |                      |           |        +--Wolffiella_gladiata_strain_8261_Wolffiella_gladiata_strain_8261
+|     |     |            |                      |        +--| (57)
+|     |     |            |                      |        |  |     +--Wolffiella_welwitschii_strain_7468_Wolffiella_welwitschii_strain_7468
+|     |     |            |                      |        |  |  +--| (95)
+|     |     |            |                      |        |  |  |  +--Wolffiella_welwitschii_strain_9466_Wolffiella_welwitschii_strain_9466
+|     |     |            |                      |        |  +--| (100)
+|     |     |            |                      |        |     +--Wolffiella_welwitschii_strain_9086_Wolffiella_welwitschii_strain_9086
+|     |     |            |                      |  +-----| (100)
+|     |     |            |                      |  |     |  +--Wolffiella_neotropica_strain_7290_Wolffiella_neotropica_strain_7290
+|     |     |            |                      |  |     +--| (100)
+|     |     |            |                      |  |        |  +--Wolffiella_neotropica_strain_7609_Wolffiella_neotropica_strain_7609
+|     |     |            |                      |  |        +--| (76)
+|     |     |            |                      |  |           +--Wolffiella_neotropica_strain_8848_Wolffiella_neotropica_strain_8848
+|     |     |            |                      +--| (100)
+|     |     |            |                         +--Wolffiella_denticulata_strain_8221_Wolffiella_denticulata_strain_8221
+|     |     +------------| (100)
+|     |                  |                +--Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125
+|     |                  |             +--| (74)
+|     |                  |             |  +--Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178
+|     |                  |          +--| (64)
+|     |                  |          |  |  +--Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747
+|     |                  |          |  +--| (75)
+|     |                  |          |     +--Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410
+|     |                  |    +-----| (100)
+|     |                  |    |     |     +--Spirodela_intermedia_strain_7291_Spirodela_intermedia_strain_7291
+|     |                  |    |     |  +--| (32)
+|     |                  |    |     |  |  |  +--Spirodela_intermedia_strain_7355_Spirodela_intermedia_strain_7355
+|     |                  |    |     |  |  +--| (98)
+|     |                  |    |     |  |     +--Spirodela_intermedia_strain_7450_Spirodela_intermedia_strain_7450
+|     |                  |    |     +--| (52)
+|     |                  |    |        +--Spirodela_intermedia_strain_9203_Spirodela_intermedia_strain_9203
+|     |                  +----| (93)
+|     |                       |       +--Spirodela_polyrhiza_strain_7205_Spirodela_polyrhiza_strain_7205
+|     |                       |    +--| (77)
+|     |                       |    |  |     +**Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498
+|     |                       |    |  |  +--|
+|     |                       |    |  |  |  +**Spirodela_polyrhiza_strain_8790_Spirodela_polyrhiza_strain_8790
+|     |                       |    |  +--| (92)
+|     |                       |    |     +--Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657
+|     |                       +----| (100)
+|     |                            |  +--Spirodela_polyrhiza_strain_7212_Spirodela_polyrhiza_strain_7212
+|     |                            +--| (80)
+|     |                               +--Spirodela_polyrhiza_strain_7222_Spirodela_polyrhiza_strain_7222
+|  +**|
+|  |  +**Landoltia_punctata_strain_8721_Landoltia_punctata_strain_8721
++**|
+|  +**Landoltia_punctata_strain_9278_Landoltia_punctata_strain_9278
+|
++**Landoltia_punctata_strain_7487_Landoltia_punctata_strain_7487
+
+
+Consensus tree in newick format: 
+
+(Landoltia_punctata_strain_7248_Landoltia_punctata_strain_7248:0.0000000000,(((Landoltia_punctata_strain_7260_Landoltia_punctata_strain_7260:0.0000021737,(Landoltia_punctata_strain_7449_Landoltia_punctata_strain_7449:0.0000021737,(((((((Lemna_aequinoctialis_strain_6612_Lemna_aequinoctialis_strain_6612:0.0346148445,(Lemna_aequinoctialis_strain_7126_Lemna_aequinoctialis_strain_7126:0.0000021737,Lemna_perpusilla_strain_8539_Lemna_perpusilla_strain_8539:0.0071285912)61:0.0027078802)63:0.0086370570,Lemna_aequinoctialis_strain_6746_Lemna_aequinoctialis_strain_6746:0.0030429310)69:0.0182395049,(Lemna_tenera_strain_9020_Lemna_tenera_strain_9020:0.0000027620,Lemna_tenera_strain_9024_Lemna_tenera_strain_9024:0.0037724533)100:0.0467888285)100:0.0607106154,(((((((((((((((Lemna_minuta_clone_5571_Lemna_minuta_clone_5571:0.0000000000,Lemna_minuta_clone_9581_Lemna_minuta_clone_9581:0.0000000000):0.0000000000,Lemna_minuta_clone_9484_Lemna_minuta_clone_9484:0.0000000000):0.0000000000,Lemna_minuta_clone_9473_Lemna_minuta_clone_9473:0.0000000000):0.0000000000,Lemna_minuta_clone_9476_Lemna_minuta_clone_9476:0.0000000000):0.0000000000,Lemna_minuta_clone_9414_Lemna_minuta_clone_9414:0.0000000000):0.0000000000,Lemna_minuta_clone_5573_Lemna_minuta_clone_5573:0.0000000000):0.0000021737,Lemna_minuta_clone_8699_Lemna_minuta_clone_8699:0.0000021737)26:0.0000021737,(Lemna_minuta_clone_6717_Lemna_minuta_clone_6717:0.0000021737,Lemna_minuta_clone_9474_Lemna_minuta_clone_9474:0.0000021737)71:0.0000021737)21:0.0000021737,Lemna_minuta_clone_5572_Lemna_minuta_clone_5572:0.0000021737)76:0.0000021737,(Lemna_minuta_clone_7612_Lemna_minuta_clone_7612:0.0000021737,Lemna_minuta_clone_9226_Lemna_minuta_clone_9226:0.0000021737)77:0.0000021737)93:0.0000021737,((Lemna_minuta_strain_7726_Lemna_minuta_strain_7726:0.0000021737,Lemna_minuta_strain_8065_Lemna_minuta_strain_8065:0.0000021737)84:0.0000021737,Lemna_valdiviana_strain_9232_Lemna_valdiviana_strain_9232:0.0000021737)75:0.0000021737)67:0.0017191751,Lemna_minuta_strain_7284_Lemna_minuta_strain_7284:0.0000021737)65:0.0017200656,(Lemna_valdiviana_clone_9229_Lemna_valdiviana_clone_9229:0.0000021737,Lemna_valdiviana_strain_9229_Lemna_valdiviana_strain_9229:0.0000021737)91:0.0034949094)49:0.0000021737,((Lemna_valdiviana_clone_9228_Lemna_valdiviana_clone_9228:0.0000021737,(Lemna_valdiviana_strain_9207_Lemna_valdiviana_strain_9207:0.0000021737,Lemna_valdiviana_strain_9208_Lemna_valdiviana_strain_9208:0.0000021737)83:0.0000021737)90:0.0033920639,(((Lemna_valdiviana_clone_9233_Lemna_valdiviana_clone_9233:0.0000021737,((Lemna_valdiviana_clone_9395_Lemna_valdiviana_clone_9395:0.0000021737,Lemna_valdiviana_clone_9401_Lemna_valdiviana_clone_9401:0.0000021737)14:0.0000021737,(Lemna_valdiviana_clone_9442_Lemna_valdiviana_clone_9442:0.0000021737,Lemna_valdiviana_clone_9443_Lemna_valdiviana_clone_9443:0.0000021737)14:0.0000021737)15:0.0000021737)22:0.0000021737,(Lemna_valdiviana_clone_9209_Lemna_valdiviana_clone_9209:0.0000021737,Lemna_valdiviana_strain_9210_Lemna_valdiviana_strain_9210:0.0000021737)74:0.0024534475)29:0.0000021737,Lemna_valdiviana_strain_7288_Lemna_valdiviana_strain_7288:0.0000021737)89:0.0024547530)88:0.0033309510)50:0.0017728443,(Lemna_valdiviana_clone_9267_Lemna_valdiviana_clone_9267:0.0055570459,Lemna_valdiviana_clone_9475_Lemna_valdiviana_clone_9475:0.0018294207)89:0.0000027620)100:0.0626076987)100:0.0255877650,(((Lemna_disperma_strain_7269_Lemna_disperma_strain_7269:0.0166825086,(Lemna_gibba_strain_7589_Lemna_gibba_strain_7589:0.0000021737,((Lemna_gibba_strain_7741_Lemna_gibba_strain_7741:0.0000000000,Lemna_gibba_strain_8703_Lemna_gibba_strain_8703:0.0000000000):0.0000021737,Lemna_gibba_strain_7784_Lemna_gibba_strain_7784:0.0000021737)92:0.0000021737)100:0.0135439890)100:0.0313963035,((Lemna_japonica_strain_0189_Lemna_japonica_strain_0189:0.0000021737,Lemna_japonica_strain_0216_Lemna_japonica_strain_0216:0.0000021737)98:0.0000027621,((Lemna_japonica_strain_8695_Lemna_japonica_strain_8695:0.0000021737,(Lemna_minor_strain_7018_Lemna_minor_strain_7018:0.0053020586,(((Lemna_minor_strain_7136_Lemna_minor_strain_7136:0.0000021737,Lemna_minor_strain_9253_Lemna_minor_strain_9253:0.0017456599)25:0.0000021737,(Lemna_minor_strain_7210_Lemna_minor_strain_7210:0.0000021737,Lemna_minor_strain_9417_Lemna_minor_strain_9417:0.0000021737)35:0.0000021737)31:0.0000021737,Lemna_minor_strain_9016_Lemna_minor_strain_9016:0.0000021737)51:0.0000021737)76:0.0000021737)35:0.0000021737,Lemna_japonica_strain_9017_Lemna_japonica_strain_9017:0.0000021737)47:0.0000021737)100:0.0100568289)95:0.0050178925,((Lemna_obscura_strain_7856_Lemna_obscura_strain_7856:0.0359397913,(Lemna_turionifera_strain_8339_Lemna_turionifera_strain_8339:0.0000021737,Lemna_turionifera_strain_8760_Lemna_turionifera_strain_8760:0.0000021737)100:0.0202468277)63:0.0017488630,(Lemna_trisulca_strain_7579_Lemna_trisulca_strain_7579:0.0000021737,Lemna_trisulca_strain_8137_Lemna_trisulca_strain_8137:0.0000021737)100:0.0270204423)77:0.0018675924)100:0.0311666508)100:0.0590464182,(((((Wolffia_angusta_strain_7476_Wolffia_angusta_strain_7476:0.0308601243,((((((Wolffia_borealis_strain_9123_Wolffia_borealis_strain_9123:0.0011106875,Wolffia_borealis_strain_9147_Wolffia_borealis_strain_9147:0.0046815488)72:0.0000020310,(Wolffia_globosa_strain_9317_Wolffia_globosa_strain_9317:0.0050439245,Wolffia_neglecta_strain_9149_Wolffia_neglecta_strain_9149:0.0036310455)98:0.0071735533)100:0.0150222009,Wolffia_globosa_strain_8441_Wolffia_globosa_strain_8441:0.0000020328)63:0.0012587796,Wolffia_globosa_strain_8691_Wolffia_globosa_strain_8691:0.0000021737)69:0.0024517577,(Wolffia_globosa_strain_8789_Wolffia_globosa_strain_8789:0.0000021737,(Wolffia_globosa_strain_8973_Wolffia_globosa_strain_8973:0.0000021737,Wolffia_globosa_strain_9196_Wolffia_globosa_strain_9196:0.0000021737)88:0.0015596340)83:0.0016636978)100:0.0199495844,Wolffia_globosa_strain_8152_Wolffia_globosa_strain_8152:0.0158556479)92:0.0122440165)89:0.0109227287,((Wolffia_arrhiza_strain_8872_Wolffia_arrhiza_strain_8872:0.0534170694,Wolffia_cylindracea_strain_9080_Wolffia_cylindracea_strain_9080:0.0615071720)73:0.0097444518,(((Wolffia_columbiana_strain_7310_Wolffia_columbiana_strain_7310:0.0015520351,(Wolffia_columbiana_strain_7972_Wolffia_columbiana_strain_7972:0.0010234642,(Wolffia_columbiana_strain_8856_Wolffia_columbiana_strain_8856:0.0000021737,Wolffia_columbiana_strain_8890_Wolffia_columbiana_strain_8890:0.0010218140)90:0.0000027621)73:0.0059686852)90:0.0096587834,Wolffia_columbiana_strain_8265_Wolffia_columbiana_strain_8265:0.0121745952)100:0.0247435433,Wolffia_elongata_strain_9188_Wolffia_elongata_strain_9188:0.0500826477)89:0.0104780627)95:0.0221846978)100:0.0882106625,(Wolffia_australiana_strain_7733_Wolffia_australiana_strain_7733:0.0284953088,Wolffia_australiana_strain_8730_Wolffia_australiana_strain_8730:0.0078768101)100:0.1023856701)68:0.0097837875,((((Wolffia_microscopica_strain_2000_Wolffia_microscopica_strain_2000:0.0000021737,Wolffia_microscopica_strain_2005_Wolffia_microscopica_strain_2005:0.0000021737)83:0.0000021737,(Wolffia_microscopica_strain_2001_Wolffia_microscopica_strain_2001:0.0000021737,(Wolffia_microscopica_strain_2002_Wolffia_microscopica_strain_2002:0.0000021737,Wolffia_microscopica_strain_2006_Wolffia_microscopica_strain_2006:0.0000021737)94:0.0000021737)87:0.0000021737)65:0.0000021737,Wolffia_microscopica_strain_2007_Wolffia_microscopica_strain_2007:0.0014829864)92:0.0012977498,Wolffia_microscopica_strain_2008_Wolffia_microscopica_strain_2008:0.0047835961)100:0.1048993371)95:0.0347015165,(((Wolffia_brasiliensis_strain_7150_Wolffia_brasiliensis_strain_7150:0.0000913870,(Wolffia_brasiliensis_strain_7306_Wolffia_brasiliensis_strain_7306:0.0183008213,Wolffia_brasiliensis_strain_8743_Wolffia_brasiliensis_strain_8743:0.0037355245)100:0.0090765134)100:0.0984042466,(Wolffiella_hyalina_strain_8640_Wolffiella_hyalina_strain_8640:0.0251028998,(Wolffiella_rotunda_strain_9072_Wolffiella_rotunda_strain_9072:0.0091077263,Wolffiella_rotunda_strain_9121_Wolffiella_rotunda_strain_9121:0.0036169013)54:0.0043533520)100:0.0658031252)58:0.0108423398,((((((Wolffiella_caudata_strain_9139_Wolffiella_caudata_strain_9139:0.0051004174,((Wolffiella_oblonga_strain_7343_Wolffiella_oblonga_strain_7343:0.0037356039,Wolffiella_oblonga_strain_9136_Wolffiella_oblonga_strain_9136:0.0000021737)64:0.0018482324,(Wolffiella_repanda_strain_9062_Wolffiella_repanda_strain_9062:0.0155003785,Wolffiella_repanda_strain_9107_Wolffiella_repanda_strain_9107:0.0062236547)100:0.0545475394)64:0.0025664653)97:0.0082761686,(((Wolffiella_lingulata_strain_7289_Wolffiella_lingulata_strain_7289:0.0000021737,Wolffiella_lingulata_strain_7464_Wolffiella_lingulata_strain_7464:0.0000021737)73:0.0000021737,(Wolffiella_lingulata_strain_7655_Wolffiella_lingulata_strain_7655:0.0000021737,Wolffiella_lingulata_strain_7725_Wolffiella_lingulata_strain_7725:0.0000021737)89:0.0035111423)74:0.0018414887,Wolffiella_repanda_strain_9122_Wolffiella_repanda_strain_9122:0.0020790532)88:0.0044369994)59:0.0000023257,((Wolffiella_caudata_strain_9165_Wolffiella_caudata_strain_9165:0.0094699089,Wolffiella_caudata_strain_9214_Wolffiella_caudata_strain_9214:0.0016996280)93:0.0060871654,((Wolffiella_gladiata_strain_7595_Wolffiella_gladiata_strain_7595:0.0000021737,((Wolffiella_gladiata_strain_7852_Wolffiella_gladiata_strain_7852:0.0000021737,Wolffiella_gladiata_strain_8066_Wolffiella_gladiata_strain_8066:0.0000021737)94:0.0000021737,(Wolffiella_gladiata_strain_8350_Wolffiella_gladiata_strain_8350:0.0140357250,((Wolffiella_oblonga_strain_7164_Wolffiella_oblonga_strain_7164:0.0000021737,Wolffiella_oblonga_strain_7201_Wolffiella_oblonga_strain_7201:0.0000021737)94:0.0000021737,Wolffiella_oblonga_strain_8072_Wolffiella_oblonga_strain_8072:0.0025794443)86:0.0000023507)79:0.0052892005)62:0.0025425728)59:0.0025372309,Wolffiella_gladiata_strain_8261_Wolffiella_gladiata_strain_8261:0.0000021737)99:0.0055112056)84:0.0040657556)99:0.0115944778,((Wolffiella_welwitschii_strain_7468_Wolffiella_welwitschii_strain_7468:0.0069131531,Wolffiella_welwitschii_strain_9466_Wolffiella_welwitschii_strain_9466:0.0070727704)95:0.0046529194,Wolffiella_welwitschii_strain_9086_Wolffiella_welwitschii_strain_9086:0.0080497480)100:0.0085636057)57:0.0016827357,(Wolffiella_neotropica_strain_7290_Wolffiella_neotropica_strain_7290:0.0000021737,(Wolffiella_neotropica_strain_7609_Wolffiella_neotropica_strain_7609:0.0017682823,Wolffiella_neotropica_strain_8848_Wolffiella_neotropica_strain_8848:0.0000021737)76:0.0017711275)100:0.0094743388)100:0.0577422886,Wolffiella_denticulata_strain_8221_Wolffiella_denticulata_strain_8221:0.0218580519)100:0.0250594564)77:0.0103454299)100:0.1437682938)50:0.0127025627,((((Spirodela_intermedia_strain_7125_Spirodela_intermedia_strain_7125:0.0000021737,Spirodela_intermedia_strain_7178_Spirodela_intermedia_strain_7178:0.0000021737)74:0.0000021737,(Spirodela_intermedia_strain_7747_Spirodela_intermedia_strain_7747:0.0000021737,Spirodela_intermedia_strain_8410_Spirodela_intermedia_strain_8410:0.0000021737)75:0.0000021737)64:0.0032864969,((Spirodela_intermedia_strain_7291_Spirodela_intermedia_strain_7291:0.0000021737,(Spirodela_intermedia_strain_7355_Spirodela_intermedia_strain_7355:0.0000021737,Spirodela_intermedia_strain_7450_Spirodela_intermedia_strain_7450:0.0000021737)98:0.0070617180)32:0.0000021737,Spirodela_intermedia_strain_9203_Spirodela_intermedia_strain_9203:0.0000021737)52:0.0000021737)100:0.0528243136,((Spirodela_polyrhiza_strain_7205_Spirodela_polyrhiza_strain_7205:0.0000021737,((Spirodela_polyrhiza_strain_7498_Spirodela_polyrhiza_strain_7498:0.0000000000,Spirodela_polyrhiza_strain_8790_Spirodela_polyrhiza_strain_8790:0.0000000000):0.0000021737,Spirodela_polyrhiza_strain_7657_Spirodela_polyrhiza_strain_7657:0.0000021737)92:0.0016973805)77:0.0017393785,(Spirodela_polyrhiza_strain_7212_Spirodela_polyrhiza_strain_7212:0.0035853689,Spirodela_polyrhiza_strain_7222_Spirodela_polyrhiza_strain_7222:0.0000021737)80:0.0017367749)100:0.0425910050)93:0.0469742789)100:0.1128039561)67:0.0000021737):0.0000021737,Landoltia_punctata_strain_8721_Landoltia_punctata_strain_8721:0.0000000000):0.0000000000,Landoltia_punctata_strain_9278_Landoltia_punctata_strain_9278:0.0000000000):0.0000000000,Landoltia_punctata_strain_7487_Landoltia_punctata_strain_7487:0.0000000000);
+
+TIME STAMP
+----------
+
+Date and time: Wed Dec  2 14:57:19 2020
+Total CPU time used: 921.012 seconds (0h:15m:21s)
+Total wall-clock time used: 922.4820981 seconds (0h:15m:22s)
+

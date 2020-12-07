@@ -1,0 +1,79 @@
+COLLAPSE
+#use this template to automatically collapse clades. All IDs listed below DATA line will be collapsed.
+#lines starting with a hash are comments and ignored during parsing
+
+#Internal tree nodes can be specified using IDs directly, or using the 'last common ancestor' method described in iTOL help pages
+#=================================================================#
+#       Actual data follows after the "DATA" keyword              #
+#=================================================================#
+DATA
+#NODE_ID
+#Examples
+
+#9606|9031
+#I121
+
+# Spirodela intermedia (8)
+I251
+
+# Spirodela polyrhiza (6)
+I266
+
+# Wolffia australiana (2)
+I169
+
+# Wolffia microscopica (7)
+I172
+
+# Wolffia columbiana (5)
+I158
+
+# Wolffia borealis (2), Wolffia globosa (7), Wolffia neglecta (1)
+I134
+
+# Wolffia brasiliensis (3)
+I187
+
+# Wolffiella rotunda (2)
+I194
+
+# Wolffiella neotropica (3)
+I244
+
+# Wolffiella welwitschii (3)
+I239
+
+# Wolffiella caudata (3), Wolfiella gladiata (5), Wolfiella lingulata (4), Wolfiella oblonga (5), Wolffiella repanda (3)
+I200
+
+# Landoltia punctata (6)
+I3
+
+# Lemna trisulca (2)
+I126
+
+# Lemna turionifera (2)
+I123
+
+# Lemna gibba (4)
+I94
+
+# Lemna japonica (4)
+I102
+
+# Lemna minor (6)
+I109
+
+# Lemna tenera (2)
+I24
+
+# Lemna aequinoctialis (3), Lemna perpusilla (1)
+I17
+
+# Lemna minuta (16), Lemna valdiviana (16)
+I27
+
+
+
+
+

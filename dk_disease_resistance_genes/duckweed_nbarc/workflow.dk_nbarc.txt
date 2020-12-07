@@ -1,0 +1,423 @@
+TPC2020_DIR="/home/microbiome/data/el_projects/tpc_dw_review/dk_disease_resistance_genes"
+WORK_DIR="$TPC2020_DIR/duckweed_nbarc"
+DK_GENOMES="/home/microbiome/data/duckweed_genomics"
+
+SP9509="$DK_GENOMES/Sp9509/Sp9509_oxford_v3.proteins.fasta"
+SP7498="$DK_GENOMES/Sp7498v3/Sp7498_pacbio.protein.fasta"
+WA8730="$DK_GENOMES/Wa8730/wa8730.asm201904v2.ann1.proteins.fasta"
+WA7733="$DK_GENOMES/Wa7733/wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta"
+
+BRACHY="$WORK_DIR/proteome.all_transcripts.bdi.fasta"
+RICE="$WORK_DIR/proteome.all_transcripts.osa.fasta"
+ARABIDOPSIS="$WORK_DIR/proteome.all_transcripts.ath.fasta"
+MEDICAGO="$WORK_DIR/proteome.all_transcripts.mtr.fasta"
+
+
+# load path to directories
+source ~/.bashprofile
+
+
+##################################################
+# Sp9509
+##################################################
+
+
+# find Sp9509 hits
+hmmsearch \
+--cut_ga \
+--tblout Sp9509-nbarc.hmm.out \
+NB-ARC.hmm \
+$SP9509 
+
+# count Sp9509 hits
+awk '$0 !~ /#/' Sp9509-nbarc.hmm.out | wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Sp9509-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Sp9509-nbarc.ids
+
+# extract protein sequences
+extract_fastaseqs.py \
+-f Sp9509-nbarc.ids \
+-i $SP9509 \
+-z \
+> Sp9509-nbarc.fasta
+
+
+##################################################
+# Sp7498v3
+##################################################
+
+
+# find Sp7498 hits
+hmmsearch \
+--cut_ga \
+--tblout Sp7498-nbarc.hmm.out \
+NB-ARC.hmm \
+$SP7498 
+
+# count Sp7498 hits
+awk '$0 !~ /#/' Sp7498-nbarc.hmm.out | wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Sp7498-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Sp7498-nbarc.ids
+
+# extract protein sequences
+extract_fastaseqs.py \
+-f Sp7498-nbarc.ids \
+-i $SP7498 \
+-z \
+> Sp7498-nbarc.fasta
+
+
+##################################################
+# Wa8730
+##################################################
+
+
+# find Wa8730 hits
+hmmsearch \
+--cut_ga \
+--tblout Wa8730-nbarc.hmm.out \
+NB-ARC.hmm \
+$WA8730 
+
+# count Wa8730 hits
+awk '$0 !~ /#/' Wa8730-nbarc.hmm.out | wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Wa8730-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Wa8730-nbarc.ids
+
+# extract tm protein sequences
+extract_fastaseqs.py \
+-f Wa8730-nbarc.ids \
+-i $WA8730 \
+-z \
+> Wa8730-nbarc.fasta
+
+
+##################################################
+# Wa7733
+##################################################
+
+
+# find Wa7733 hits
+hmmsearch \
+--cut_ga \
+--tblout Wa7733-nbarc.hmm.out \
+NB-ARC.hmm \
+$WA7733 
+
+# count Wa7733 hits
+awk '$0 !~ /#/' Wa7733-nbarc.hmm.out | wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Wa7733-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Wa7733-nbarc.ids
+
+# extract tm protein sequences
+extract_fastaseqs.py \
+-f Wa7733-nbarc.ids \
+-i $WA7733 \
+-z \
+> Wa7733-nbarc.fasta
+
+
+##################################################
+# Brachypodium
+##################################################
+
+
+# find Brachy hits
+hmmsearch \
+--cut_ga \
+--tblout Brachy-nbarc.hmm.out \
+NB-ARC.hmm \
+$BRACHY 
+
+# count Brachy hits (combine isoforms)
+awk '$0 !~ /#/' Brachy-nbarc.hmm.out | 
+cut -d " " -f 1 |
+sed 's/.\d*$//g' |
+sort | 
+uniq |
+wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Brachy-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Brachy-nbarc.ids
+
+# extract tm protein sequences
+extract_fastaseqs.py \
+-f Brachy-nbarc.ids \
+-i $BRACHY \
+-z \
+> Brachy-nbarc.fasta
+
+
+##################################################
+# Rice
+##################################################
+
+
+# find Rice hits
+hmmsearch \
+--cut_ga \
+--tblout Rice-nbarc.hmm.out \
+NB-ARC.hmm \
+$RICE 
+
+# count Rice hits (combine isoforms)
+awk '$0 !~ /#/' Rice-nbarc.hmm.out | 
+cut -d " " -f 1 |
+sed 's/.\d*$//g' |
+sort | 
+uniq |
+wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Rice-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Rice-nbarc.ids
+
+# extract tm protein sequences
+extract_fastaseqs.py \
+-f Rice-nbarc.ids \
+-i $RICE \
+-z \
+> Rice-nbarc.fasta
+
+
+##################################################
+# Arabidopsis
+##################################################
+
+
+# find Arabidopsis hits
+hmmsearch \
+--cut_ga \
+--tblout Arabidopsis-nbarc.hmm.out \
+NB-ARC.hmm \
+$ARABIDOPSIS 
+
+# count Arabidopsis hits (combine isoforms)
+awk '$0 !~ /#/' Arabidopsis-nbarc.hmm.out | 
+cut -d " " -f 1 |
+sed 's/.\d*$//g' |
+sort | 
+uniq |
+wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Arabidopsis-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Arabidopsis-nbarc.ids
+
+# extract tm protein sequences
+extract_fastaseqs.py \
+-f Arabidopsis-nbarc.ids \
+-i $ARABIDOPSIS \
+-z \
+> Arabidopsis-nbarc.fasta
+
+
+##################################################
+# Medicago
+##################################################
+
+
+# find Medicago hits
+hmmsearch \
+--cut_ga \
+--tblout Medicago-nbarc.hmm.out \
+NB-ARC.hmm \
+$MEDICAGO 
+
+# count Medicago hits (combine isoforms)
+awk '$0 !~ /#/' Medicago-nbarc.hmm.out |
+cut -d " " -f 1 |
+sed 's/.\d*$//g' |
+sort | 
+uniq |
+wc -l
+
+# extract ids 
+awk '$0 !~ /#/' Medicago-nbarc.hmm.out | 
+cut -d " " -f 1 \
+> Medicago-nbarc.ids
+
+# extract tm protein sequences
+extract_fastaseqs.py \
+-f Medicago-nbarc.ids \
+-i $MEDICAGO \
+-z \
+> Medicago-nbarc.fasta
+
+
+##################################################
+# compare Wa8730 NLRs across duckweed
+##################################################
+
+
+# created dk_proteome folder and fasta
+# contained: $SP9509,$SP7498,$WA8730,$WA7733
+orthofinder -f $WORK_DIR/dk_proteomes
+
+
+# search for dk orthologs of Wa8730 NLRs
+grep \
+-f \
+$WORK_DIR/Wa8730-nbarc.ids \
+$WORK_DIR/dk_proteomes/OrthoFinder/Results_Oct25/Orthogroups/Orthogroups.tsv 
+
+
+# msa of 3 Wa8730 NLRs show many differences
+# global
+muscle \
+-in $WORK_DIR/Wa8730-nbarc.fasta \
+-out $WORK_DIR/Wa8730-nbarc.alnfasta
+# local
+mafft \
+--localpair \
+--maxiterate 1000 \
+$WORK_DIR/Wa8730-nbarc.fasta \
+> $WORK_DIR/Wa8730-nbarc.alnfasta
+
+
+# search for matches in other duckweed using BLASTP
+makeblastdb \
+-in $WORK_DIR/dk_proteomes.fasta \
+-dbtype prot \
+-parse_seqids
+
+
+# why did HMM search only show 1 TIR-NBS in Wa7733 \
+# but BLAST show 4?
+# visuallized MSA using MView (https://www.ebi.ac.uk/Tools/msa/mview/)
+
+
+# Wa8730a015g005850 (TIR-NBS)
+# Wa7733: wa7733.asm1v1.ann1.run1_007920_1,wa7733.asm1v1.ann1.run1_007922_1,wa7733.asm1v1.ann1.run1_007921_1,wa7733.asm1v1.ann1.run1_013065_1
+# build fasta
+extract_fastaseqs.py \
+-l Wa8730a015g005850,wa7733.asm1v1.ann1.run1_007920_1,wa7733.asm1v1.ann1.run1_007922_1,wa7733.asm1v1.ann1.run1_007921_1,wa7733.asm1v1.ann1.run1_013065_1 \
+-i $WORK_DIR/dk_proteomes.fasta \
+-z \
+> $WORK_DIR/WaTIRclass.fasta
+# build msa
+muscle \
+-in $WORK_DIR/WaTIRclass.fasta \
+-out $WORK_DIR/WaTIRclass.galnfasta
+
+
+# homology searches were confusing; BLAST hits showed high homology
+# did a motif search using https://www.genome.jp/tools/motif/ (Pfam; evalue = 0.01)
+# many blast matches do not contain the NB-ARC motif \
+# so that's why HMM and BLASTP/Orthofinder results did not match up
+
+
+# Wa8730a015g005850 (TIR-NBS)
+# Wa7733: wa7733.asm1v1.ann1.run1_007921_1
+# Sp9509: Sp12g00091,Sp01g00208,Sp09g00118
+# Sp7498: g14417.t1,g4718.t1,g9380.t1
+blastp \
+-query $WORK_DIR/Wa8730-TIRclass.fasta \
+-db $WORK_DIR/dk_proteomes.fasta \
+-outfmt "6 qseqid sseqid qlen length pident qcovs evalue bitscore"
+# check blast hits for motifs
+extract_fastaseqs.py \
+-l Wa8730a015g005850,wa7733.asm1v1.ann1.run1_007921_1,Sp12g00091,Sp01g00208,Sp09g00118,g14417.t1,g4718.t1,g9380.t1 \
+-i $WORK_DIR/dk_proteomes.fasta \
+-z \
+> $WORK_DIR/dkTIRclass.fasta
+# build msa
+extract_fastaseqs.py \
+-l Wa8730a015g005850,wa7733.asm1v1.ann1.run1_007921_1,Sp12g00091,g14417.t1 \
+-i $WORK_DIR/dk_proteomes.fasta \
+-z \
+> $WORK_DIR/dkTIRclass-nbarc.fasta
+muscle \
+-in $WORK_DIR/dkTIRclass-nbarc.fasta \
+-out $WORK_DIR/dkTIRclass-nbarc.galnfasta
+
+
+
+# Wa8730a008g005500 (RPS2)
+# Wa7733: wa7733.asm1v1.ann1.run1_014025_1
+# Sp9509: Sp16g00660
+# Sp7498: g6476.t1
+blastp \
+-query $WORK_DIR/Wa8730-RPS2.fasta \
+-db $WORK_DIR/dk_proteomes.fasta \
+-outfmt "6 qseqid sseqid qlen length pident qcovs evalue bitscore"
+# build fasta
+extract_fastaseqs.py \
+-l Wa8730a008g005500,wa7733.asm1v1.ann1.run1_014025_1,Sp16g00660,g6476.t1 \
+-i $WORK_DIR/dk_proteomes.fasta \
+-z \
+> $WORK_DIR/dkRPS2.fasta
+# build msa
+muscle \
+-in $WORK_DIR/dkRPS2.fasta \
+-out $WORK_DIR/dkRPS2.galnfasta
+
+
+# Wa8730a004g003490 (CW9)
+# Wa7733: wa7733.asm1v1.ann1.run1_008996_1
+# Sp9509: Sp13g00676
+# Sp7498: g291.t1
+blastp \
+-query $WORK_DIR/Wa8730-CW9.fasta \
+-db $WORK_DIR/dk_proteomes.fasta \
+-outfmt "6 qseqid sseqid qlen length pident qcovs evalue bitscore"
+# build fasta
+extract_fastaseqs.py \
+-l Wa8730a004g003490,wa7733.asm1v1.ann1.run1_008996_1,Sp13g00676,g291.t1 \
+-i $WORK_DIR/dk_proteomes.fasta \
+-z \
+> $WORK_DIR/dkCW9.fasta
+# no NB-ARC motifs found in Sp9509 and Sp7498 matches
+
+
+##################################################
+# EL_analysis.3
+##################################################
+
+
+# created EL_analysis_3 directory
+# look at email pdf to see analysis goals
+
+
+grep \
+-f Sp9509-nbarc.ids \
+~/data/duckweed_genomics/Sp9509/Sp9509_oxford_v3.gff3 |
+awk '/gene/' |
+sed 's/ID=.*;Name=//g' |
+cut -f 1,4,5,9 > Sp9509-nbarc-gene.bed
+
+
+bedtools getfasta \
+-fi ~/data/duckweed_genomics/Sp9509/Sp9509_oxford_v3.fasta \
+-bed Sp9509-nbarc-gene.bed \
+-fo Sp9509-nbarc-gene.fna \
+-name
+
+
+extract_fastaseqs.py \
+-f ../Sp9509-nbarc.ids \
+-i ~/data/duckweed_genomics/Sp9509/Sp9509_oxford_v3.genes.fasta \
+-z > Sp9509-nbarc-gene.fna
+
+
+blastn \
+-query Sp9509-nbarc-gene.fna \
+-subject ~/data/duckweed_genomics/Wa8730/wa8730.asm201904v2.ann1.transcripts.fasta \
+-outfmt "6 qseqid sseqid qlen length pident qcovs evalue bitscore"
+

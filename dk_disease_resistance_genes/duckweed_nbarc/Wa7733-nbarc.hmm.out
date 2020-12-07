@@ -1,0 +1,17 @@
+#                                                                           --- full sequence ---- --- best 1 domain ---- --- domain number estimation ----
+# target name                    accession  query name           accession    E-value  score  bias   E-value  score  bias   exp reg clu  ov env dom rep inc description of target
+#            ------------------- ---------- -------------------- ---------- --------- ------ ----- --------- ------ -----   --- --- --- --- --- --- --- --- ---------------------
+wa7733.asm1v1.ann1.run1_014025_1 -          NB-ARC               PF00931.23   2.1e-37  128.4   0.0     3e-37  128.0   0.0   1.2   1   0   0   1   1   1   1 protein Name:"Similar to At5g63020 Probable disease resistance protein At5g63020 (Arabidopsis thaliana OX=3702)" AED:0.74 eAED:0.84 QI:0|0|0|1|1|1|2|0|435
+wa7733.asm1v1.ann1.run1_008996_1 -          NB-ARC               PF00931.23   1.6e-26   92.8   0.2   8.3e-26   90.5   0.0   2.2   2   0   0   2   2   1   1 protein Name:"Similar to At1g59620 Probable disease resistance protein At1g59620 (Arabidopsis thaliana OX=3702)" AED:0.19 eAED:0.19 QI:0|0|0|1|1|1|4|0|1037
+wa7733.asm1v1.ann1.run1_007921_1 -          NB-ARC               PF00931.23   1.9e-06   27.1   0.0   2.7e-06   26.5   0.0   1.2   1   0   0   1   1   1   1 protein Name:"Protein of unknown function" AED:0.29 eAED:0.35 QI:0|-1|0|1|-1|1|1|0|223
+wa7733.asm1v1.ann1.run1_010299_1 -          NB-ARC               PF00931.23   1.6e-05   24.0   0.0      0.11   11.4   0.0   2.9   3   1   0   3   3   0   0 protein Name:"Similar to CDC48C Cell division control protein 48 homolog C (Arabidopsis thaliana OX=3702)" AED:0.01 eAED:0.01 QI:0|1|0.6|1|1|1|5|0|392
+#
+# Program:         hmmsearch
+# Version:         3.1b2 (February 2015)
+# Pipeline mode:   SEARCH
+# Query file:      NB-ARC.hmm
+# Target file:     /home/microbiome/data/duckweed_genomics/Wa7733/wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta
+# Option settings: hmmsearch --tblout Wa7733-nbarc.hmm.out --cut_ga NB-ARC.hmm /home/microbiome/data/duckweed_genomics/Wa7733/wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta 
+# Current dir:     /media/lamdata/microbiome/el_projects/plant_cell_searches/duckweed_nbarc
+# Date:            Fri Sep 11 19:56:18 2020
+# [ok]

@@ -1,0 +1,791 @@
+##################################################
+# Version 3
+##################################################
+
+
+library(ggplot2)
+
+
+# load table
+# change order of genera
+SIZE.TABLE <- read.table(
+                         "dw_genome_size.tsv",
+                         sep = "\t",
+                         header = T,
+                         check.names = FALSE
+                         )
+SIZE.TABLE$Genus <- factor(
+                           SIZE.TABLE$Genus,
+                           levels = c(
+                                      "Spirodela",
+                                      "Landoltia",
+                                      "Lemna",
+                                      "Wolffiella",
+                                      "Wolffia"
+                                      )
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Spirodela",
+                           "Sp.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Landoltia",
+                           "La.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Lemna",
+                           "Le.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Wolffiella",
+                           "We.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Wolffia",
+                           "Wa.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "yungensis",
+                           "valdiviana",
+                           SIZE.TABLE$Species
+                           )
+
+
+# add species count and label
+SIZE.TABLE$Species_Count <- sapply(
+                                   SIZE.TABLE$Species,
+                                   function (x) table(SIZE.TABLE$Species == x)["TRUE"]
+                                   )
+SIZE.TABLE$Species_Label <- as.factor(
+                                      paste0(
+                                             SIZE.TABLE$Species,
+                                             " (",
+                                             SIZE.TABLE$Species_Count,
+                                             ")"
+                                             )
+                                      )
+AVG.SIZE <- sort(
+                 tapply(
+                        SIZE.TABLE$GenomeSize_Mb,
+                        SIZE.TABLE$Species_Label,
+                        mean
+                        ),
+                 decreasing = TRUE
+                 )
+
+SIZE.TABLE$Species_Label <- factor(
+                                   SIZE.TABLE$Species_Label,
+                                   levels = names(AVG.SIZE)
+                                   )
+
+
+
+# create color and shape values
+KEN.FILL <- c(
+              "Bog et al., 2015" = "darkorchid1",
+              "Bog et al., 2020" = "chocolate1",
+              "Hoang et al., 2019" = "deepskyblue",
+              "Michael et al., 2020" = "yellow",
+              "Smarda et al., 2014" = "black",
+              "Van Hoeck et al., 2015" = "gray",
+              "Wang et al., 2011" = "chartreuse"
+              )
+KEN.COLOR <- c(
+               "FC" = "black",
+               "kmer" = "red"
+               )
+
+
+# create ggplot object
+# specify plot traits
+SIZE.PLOT <- ggplot(
+                    SIZE.TABLE,
+                    aes(
+                        Species_Label,
+                        GenomeSize_Mb,
+                        fill = Study,
+                        color = Method
+                        )
+                    )
+BASE.FIG <- SIZE.PLOT + 
+            labs(
+                 y = "\nGenome Size (Mb)"
+                 ) +
+            scale_y_continuous(
+                               breaks = seq(0,2300,100), 
+                               labels = c(rep("",5),500,rep("",4),1000,rep("",4),1500,rep("",4),2000,rep("",3)),
+                               limits = c(0,2300),
+                               expand = c(0,0)
+                               ) +
+            theme(
+                  axis.title.x = element_text(
+                                              face = "bold",
+                                              size = 18
+                                              ),
+                  axis.title.y = element_blank(),
+                  axis.text.x = element_text(
+                                             face = "bold",
+                                             color = "black",
+                                             size = 14
+                                             ),
+                  axis.text.y = element_text(
+                                             face = "bold.italic",
+                                             color = "black",
+                                             vjust = 0.4,
+                                             hjust = 1,
+                                             size = 14
+                                             ),
+                  axis.line.y = element_line(
+                                             color = "black",
+                                             size = 2
+                                             ),
+                  axis.line.x = element_line(
+                                             color = "black",
+                                             size = 1.5
+                                             ),
+                  axis.ticks.y = element_blank(),
+                  axis.ticks.x = element_line(
+                                             color = "black",
+                                             size = 1.5
+                                             ),
+                  axis.ticks.length.x = unit(0.25,"cm"),
+                  legend.title = element_text(
+                                              face = "bold",
+                                              size = 18
+                                              ),
+                  legend.text = element_text(
+                                             size = 14
+                                             ),
+                  legend.key = element_rect(
+                                            fill = NA
+                                            ),
+                  panel.background = element_blank(),
+                  panel.grid.major.x = element_line(
+                                                    color = "gray",
+                                                    size = 1
+                                                    ),
+                  panel.grid.major.y = element_line(
+                                                    color = "gray",
+                                                    size = 1
+                                                    ),
+                  strip.background = element_blank(),
+                  strip.text.y = element_blank()
+
+                  ) +
+                  scale_fill_manual(
+                                    name = "Study",
+                                    values = KEN.FILL
+                                    ) +
+                  scale_color_manual(
+                                     name = "Method",
+                                     values = KEN.COLOR
+                                     ) +
+                  guides(
+                         fill = guide_legend(
+                                             order = 1,
+                                             override.aes = list(
+                                                                 shape = 21,
+                                                                 size = 5,
+                                                                 stroke = 1,
+                                                                 color = "black",
+                                                                 fill = c(
+                                                                          "darkorchid1",
+                                                                          "chocolate1",
+                                                                          "deepskyblue",
+                                                                          "yellow",
+                                                                          "black",
+                                                                          "gray",
+                                                                          "chartreuse"
+                                                                          )
+                                                                 ),
+                                             label.theme = element_text(
+                                                                        size = 14,
+                                                                        family = "URWGothic"
+                                                                        )
+                                             ),
+                         color = guide_legend(
+                                              override.aes = list(
+                                                                  shape = 21,
+                                                                  size = 5,
+                                                                  stroke = 1,
+                                                                  fill = "white"
+                                                                  )
+                                              )
+                         ) +
+                  facet_grid(
+                             Species~.,
+                             scales = "free_y",
+                             space = "free_y"
+                             ) +
+                  coord_flip() 
+
+# library(ggbeeswarm)
+# https://github.com/eclarke/ggbeeswarm
+#SIZE.FIG <- BASE.FIG +            
+#            geom_quasirandom(
+#                             shape = 21,
+#                             stroke = 0.65,
+#                             size = 2.5,
+#                             width = 0.5,
+#                             varwidth = TRUE,
+#                             dodge.width = 0.15,
+#                             groupOnX = TRUE
+#                             )
+#BASE.FIG +            
+#geom_beeswarm(
+#              shape = 21,
+#              size = 2.5,
+#              cex = 2,
+#              groupOnX = TRUE,
+#              priority = "descending",
+#              dodge.width = 0.1
+#              )
+#SIZE.FIG <- BASE.FIG +            
+#            geom_tile(
+#                      width = 0.75,
+#                      height = 4.5,
+#                      size = 0.25
+#                      ) 
+# size = 3
+# width = 0.5
+SIZE.FIG <- BASE.FIG +            
+            geom_jitter(
+                        shape = 21,
+                        size = 5,
+                        stroke = 0.7,
+                        width = 0.4,
+                        height = 0.5
+                        )
+
+# 20 x 15
+ggsave(
+       "dw_genome_size.pdf",
+       SIZE.FIG + theme(text = element_text(family = "URWGothic")),
+       device = "pdf",
+       units = "in",
+       height = 20,
+       width = 25
+       )
+
+
+##################################################
+# Version 2
+me_size.pdf",
+       SIZE.FIG + theme(text = element_text(family = "URWGothic")),
+       device = "pdf",
+       units = "in",
+       height = 12,
+       width = 12
+       )
+
+
+##################################################
+
+
+library(ggplot2)
+
+
+# load table
+# change order of genera
+SIZE.TABLE <- read.table(
+                         "dw_genome_size.tsv",
+                         sep = "\t",
+                         header = T,
+                         check.names = FALSE
+                         )
+SIZE.TABLE$Genus <- factor(
+                           SIZE.TABLE$Genus,
+                           levels = c(
+                                      "Spirodela",
+                                      "Landoltia",
+                                      "Lemna",
+                                      "Wolffiella",
+                                      "Wolffia"
+                                      )
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Spirodela",
+                           "Sp.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Landoltia",
+                           "La.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Lemna",
+                           "Le.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Wolffiella",
+                           "We.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "Wolffia",
+                           "Wa.",
+                           SIZE.TABLE$Species
+                           )
+SIZE.TABLE$Species <- gsub(
+                           "yungensis",
+                           "valdiviana",
+                           SIZE.TABLE$Species
+                           )
+
+
+# add species count and label
+SIZE.TABLE$Species_Count <- sapply(
+                                   SIZE.TABLE$Species,
+                                   function (x) table(SIZE.TABLE$Species == x)["TRUE"]
+                                   )
+SIZE.TABLE$Species_Label <- as.factor(
+                                      paste0(
+                                             SIZE.TABLE$Species,
+                                             " (",
+                                             SIZE.TABLE$Species_Count,
+                                             ")"
+                                             )
+                                      )
+AVG.SIZE <- sort(
+                 tapply(
+                        SIZE.TABLE$GenomeSize_Mb,
+                        SIZE.TABLE$Species_Label,
+                        mean
+                        ),
+                 decreasing = TRUE
+                 )
+
+SIZE.TABLE$Species_Label <- factor(
+                                   SIZE.TABLE$Species_Label,
+                                   levels = names(AVG.SIZE)
+                                   )
+
+
+
+# create color and shape values
+KEN.FILL <- c(
+              "Bog et al., 2015" = "darkorchid1",
+              "Bog et al., 2020" = "chocolate1",
+              "Hoang et al., 2019" = "deepskyblue",
+              "Michael et al., 2020" = "yellow",
+              "Smarda et al., 2014" = "black",
+              "Van Hoeck et al., 2015" = "gray",
+              "Wang et al., 2011" = "chartreuse"
+              )
+KEN.COLOR <- c(
+               "FC" = "black",
+               "kmer" = "red"
+               )
+
+
+# create ggplot object
+# specify plot traits
+SIZE.PLOT <- ggplot(
+                    SIZE.TABLE,
+                    aes(
+                        Species_Label,
+                        GenomeSize_Mb,
+                        fill = Study,
+                        color = Method
+                        )
+                    )
+BASE.FIG <- SIZE.PLOT + 
+            labs(
+                 y = "\nGenome Size (Mb)"
+                 ) +
+            scale_y_continuous(
+                               breaks = seq(0,2300,100), 
+                               labels = c(rep("",5),500,rep("",4),1000,rep("",4),1500,rep("",4),2000,rep("",3)),
+                               limits = c(0,2300),
+                               expand = c(0,0)
+                               ) +
+            theme(
+                  axis.title.x = element_text(
+                                              face = "bold",
+                                              size = 18
+                                              ),
+                  axis.title.y = element_blank(),
+                  axis.text.x = element_text(
+                                             face = "bold",
+                                             color = "black",
+                                             size = 14
+                                             ),
+                  axis.text.y = element_text(
+                                             face = "bold.italic",
+                                             color = "black",
+                                             vjust = 0.4,
+                                             hjust = 1,
+                                             size = 14
+                                             ),
+                  axis.line = element_line(
+                                           color = "black"
+                                           ),
+                  axis.ticks.y = element_blank(),
+                  axis.line.x = element_line(color = "black"),
+                  legend.title = element_text(
+                                              face = "bold",
+                                              size = 18
+                                              ),
+                  legend.text = element_text(
+                                             size = 14
+                                             ),
+                  legend.key = element_rect(
+                                            fill = NA
+                                            ),
+                  panel.background = element_blank(),
+                  panel.grid.major.y = element_line(
+                                                    color = "gray",
+                                                    size = 1
+                                                    ),
+                  strip.background = element_blank(),
+                  strip.text.y = element_blank()
+                  ) +
+                  scale_fill_manual(
+                                    name = "Study",
+                                    values = KEN.FILL
+                                    ) +
+                  scale_color_manual(
+                                     name = "Method",
+                                     values = KEN.COLOR
+                                     ) +
+                  guides(
+                         fill = guide_legend(
+                                             order = 1,
+                                             override.aes = list(
+                                                                 shape = 21,
+                                                                 size = 5,
+                                                                 stroke = 1,
+                                                                 color = "black",
+                                                                 fill = c(
+                                                                          "darkorchid1",
+                                                                          "chocolate1",
+                                                                          "deepskyblue",
+                                                                          "yellow",
+                                                                          "black",
+                                                                          "gray",
+                                                                          "chartreuse"
+                                                                          )
+                                                                 ),
+                                             label.theme = element_text(
+                                                                        size = 14,
+                                                                        family = "URWGothic"
+                                                                        )
+                                             ),
+                         color = guide_legend(
+                                              override.aes = list(
+                                                                  shape = 21,
+                                                                  size = 5,
+                                                                  stroke = 1,
+                                                                  fill = "white"
+                                                                  )
+                                              )
+                         ) +
+                  facet_grid(
+                             Genus~.,
+                             scales = "free_y",
+                             space = "free_y"
+                             ) +
+                  coord_flip() 
+
+# library(ggbeeswarm)
+# https://github.com/eclarke/ggbeeswarm
+#SIZE.FIG <- BASE.FIG +            
+#            geom_quasirandom(
+#                             shape = 21,
+#                             stroke = 0.65,
+#                             size = 2.5,
+#                             width = 0.425,
+#                             varwidth = TRUE,
+#                             dodge.width = 0.1,
+#                             groupOnX = TRUE
+#                             )
+#BASE.FIG +            
+#geom_beeswarm(
+#              shape = 21,
+#              size = 2.5,
+#              cex = 2,
+#              groupOnX = TRUE,
+#              priority = "descending",
+#              dodge.width = 0.1
+#              )
+#SIZE.FIG <- BASE.FIG +            
+#            geom_tile(
+#                      width = 0.75,
+#                      height = 4.5,
+#                      size = 0.25
+#                      ) 
+SIZE.FIG <- BASE.FIG +            
+            geom_jitter(
+                        shape = 21,
+                        size = 2.5,
+                        stroke = 0.7,
+                        width = 0.29,
+                        height = 0
+                        )
+
+
+ggsave(
+       "dw_genome_size.png",
+       SIZE.FIG + theme(text = element_text(family = "URWGothic")),
+       device = "png",
+       dpi = 1000,
+       units = "in",
+       height = 8,
+       width = 15
+       )
+
+
+##################################################
+# Version 1
+##################################################
+
+library(ggplot2)
+
+
+# load table
+# change order of genera
+SIZE.TABLE <- read.table(
+                         "dw_genome_size.tsv",
+                         sep = "\t",
+                         header = T,
+                         check.names = FALSE
+                         )
+SIZE.TABLE$Genus <- factor(
+                           SIZE.TABLE$Genus,
+                           levels = c(
+                                      "Spirodela",
+                                      "Landoltia",
+                                      "Lemna",
+                                      "Wolffiella",
+                                      "Wolffia"
+                                      )
+                           )
+#SIZE.TABLE$Species <- factor(
+#                             SIZE.TABLE$Species,
+#                             levels = c(
+#                                        "Spirodela intermedia",
+#                                        "Spirodela polyrhiza",
+#                                        "Landoltia punctata",
+#                                        "Lemna aequinoctialis",
+#                                        "Lemna disperma",
+#                                        "Lemna trisulca",
+#                                        "Lemna japonica", 
+#                                        "Lemna obscura",
+#                                        "Lemna gibba",
+#                                        "Lemna minor", 
+#                                        "Lemna valdiviana",
+#                                        "Wolffiella rotunda",
+#                                        "Wolffiella hyalina",
+#                                        "Wolffiella lingulata",
+#                                        "Wolffiella gladiata",
+#                                        "Wolffia arrhiza",
+#                                        "Wolffia angusta", 
+#                                        "Wolffia globosa",
+#                                        "Wolffia microscopica",
+#                                        "Wolffia neglecta", 
+#                                        "Wolffia cylindracea",
+#                                        "Wolffia borealis",  
+#                                        "Wolffia columbiana",
+#                                        "Wolffia elongata",
+#                                        "Wolffia brasiliensis",
+                 decreasing = TRUE
+                 )                                        
+SIZE.TABLE$Species_Label <- factor(
+                                   SIZE.TABLE$Species_Label,
+                                   levels = names(AVG.SIZE)
+                                   )
+
+
+# create color and shape values
+KEN.FILL <- c(
+              "Spirodela" = "darkorchid1",
+              "Landoltia" = "black",
+              "Lemna" = "chartreuse",
+              "Wolffiella" = "yellow",
+              "Wolffia" = "deepskyblue"
+              )
+KEN.SHAPE <- c(
+               "bog" = 21,
+               "hoang" = 22,
+               "wang" = 24,
+               "michael" = 23
+               )
+KEN.COLOR <- c(
+               "Flow Cytometry" = "black",
+               "k-mer" = "red"
+               )
+
+
+# geom_tile(height to control width, size controls border)
+# color by study; remove black color
+
+# create ggplot object
+# specify plot traits
+SIZE.PLOT <- ggplot(
+                    SIZE.TABLE,
+                    aes(
+                        Species_Label,
+                        GenomeSize_Mb,
+                        fill = Genus,
+                        shape = Study,
+                        color = Method
+                        )
+                    )
+SIZE.FIG <- SIZE.PLOT + 
+            geom_jitter(
+                        width = 0.1,
+                        stroke = 1,
+                        size = 4
+                        ) +
+            labs(
+                 y = "\nGenome Size (Mb)"
+                 ) +
+            scale_y_continuous(
+                               breaks = seq(0,2300,100), 
+                               labels = c(rep("",5),500,rep("",4),1000,rep("",4),1500,rep("",4),2000,rep("",3)),
+                               limits = c(0,2300),
+                               expand = c(0,0)
+                               ) +
+            theme(
+                  axis.title.x = element_text(
+                                              face = "bold",
+                                              size = 18
+                                              ),
+                  axis.title.y = element_blank(),
+                  axis.text.x = element_text(
+                                             color = "black",
+                                             size = 14
+                                             ),
+                  axis.text.y = element_text(
+                                             face = "bold.italic",
+                                             color = "black",
+                                             vjust = 0.4,
+                                             hjust = 1,
+                                             size = 12
+                                             ),
+                  axis.line = element_line(
+                                           color = "black"
+                                           ),
+                  axis.ticks.y = element_blank(),
+                  axis.line.x = element_line(color = "black"),
+                  legend.title = element_text(
+                                              face = "bold",
+                                              size = 18
+                                              ),
+                  legend.text = element_text(
+                                             size = 14
+                                             ),
+                  legend.key = element_rect(
+                                            fill = NA
+                                            ),
+                  panel.background = element_blank(),
+                  panel.grid.major.y = element_line(
+                                                    color = "gray",
+                                                    size = 1
+                                                    ),
+                  strip.background = element_blank(),
+                  strip.text.y = element_blank()
+                  ) +
+                  scale_fill_manual(
+                                    name = "Genus",
+                                    values = KEN.FILL
+                                    ) +
+                  scale_shape_manual(
+                                     name = "Study",
+                                     label = c(
+                                               "Bog",
+                                               "Hoang",
+                                               "Michael",
+                                               "Wang"
+                                               ),
+                                     values = KEN.SHAPE
+                                     ) +
+                  scale_color_manual(
+                                     name = "Method",
+                                     values = KEN.COLOR
+                                     ) +
+                  guides(
+                         fill = guide_legend(
+                                             override.aes = list(
+                                                                 shape = 21,
+                                                                 size = 5,
+                                                                 color = "black",
+                                                                 fill = c(
+                                                                          "darkorchid1",
+                                                                          "black",
+                                                                          "chartreuse",
+                                                                          "yellow",
+                                                                          "deepskyblue"
+                                                                          )
+                                                                 ),
+                                             label.theme = element_text(
+                                                                        face = "italic",
+                                                                        size = 14,
+                                                                        family = "URWGothic"
+                                                                        )
+                                             ),
+                         shape = guide_legend(
+                                              override.aes = list(
+                                                                  size = 5
+                                                                  )
+                                              ),
+                         color = guide_legend(
+                                              override.aes = list(
+                                                                  shape = 21,
+                                                                  size = 5,
+                                                                  fill = "white"
+                                                                  )
+                                              )
+                         ) +
+                  facet_grid(
+                             Genus~.,
+                             scales = "free_y",
+                             space = "free_y"
+                             ) +
+                  coord_flip() 
+
+
+ggsave(
+       "dw_genome_size.png",
+       SIZE.FIG + theme(text = element_text(family = "URWGothic")),
+       device = "png",
+       dpi = 1200,
+       units = "in",
+       height = 7,
+                         shape = guide_legend(
+                                              override.aes = list(
+                                                                  size = 5
+                                                                  )
+                                              ),
+                         color = guide_legend(
+                                              override.aes = list(
+                                                                  shape = 21,
+                                                                  size = 5,
+                                                                  fill = "white"
+                                                                  )
+                                              )
+                         ) +
+                  facet_grid(
+                             Genus~.,
+                             scales = "free_y",
+                             space = "free_y"
+                             ) +
+                  coord_flip() 
+
+
+ggsave(
+       "dw_genome_size.png",
+       SIZE.FIG + theme(text = element_text(family = "URWGothic")),
+       device = "png",
+       dpi = 1200,
+       units = "in",
+       height = 7,
+       width = 12
+       )

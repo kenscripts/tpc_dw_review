@@ -1,0 +1,503 @@
+IQ-TREE multicore version 1.6.12 for Linux 64-bit built Aug 15 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    epigenome (SSE4.2, 94 GB RAM)
+Command: iqtree -s dw-psbk-fmt.alnfa
+Seed:    564019 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Nov  5 01:03:06 2020
+Kernel:  SSE2 - 1 threads (24 CPU cores detected)
+
+HINT: Use -nt option to specify number of threads because your CPU has 24 cores!
+HINT: -nt AUTO will automatically determine the best number of threads to use.
+
+Reading alignment file dw-psbk-fmt.alnfa ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 149 sequences with 882 columns, 614 distinct patterns
+373 parsimony-informative, 95 singleton sites, 414 constant sites
+                                    Gap/Ambiguity  Composition  p-value
+   1  Landoltia_punctata_strain_7248       48.07%    passed     98.03%
+   2  Landoltia_punctata_strain_7260       48.07%    passed     98.03%
+   3  Landoltia_punctata_strain_7449       48.07%    passed     98.03%
+   4  Landoltia_punctata_strain_7487       48.07%    passed     98.03%
+   5  Landoltia_punctata_strain_8721       48.07%    passed     98.03%
+   6  Landoltia_punctata_strain_9278       48.07%    passed     98.03%
+   7  Lemna_aequinoctialis_strain_6612     44.90%    passed     93.59%
+   8  Lemna_aequinoctialis_strain_6746     48.07%    passed     99.90%
+   9  Lemna_aequinoctialis_strain_7126     47.96%    passed     99.81%
+  10  Lemna_disperma_strain_7269           46.37%    passed     92.13%
+  11  Lemna_gibba_strain_7589              46.26%    passed     95.34%
+  12  Lemna_gibba_strain_7741              46.26%    passed     95.34%
+  13  Lemna_gibba_strain_7784              46.26%    passed     95.34%
+  14  Lemna_gibba_strain_8703              46.26%    passed     95.34%
+  15  Lemna_japonica_strain_0189           38.32%    passed     78.66%
+  16  Lemna_japonica_strain_0216           38.10%    passed     74.82%
+  17  Lemna_japonica_strain_7182           45.35%    passed     98.77%
+  18  Lemna_japonica_strain_8695           39.00%    passed     84.13%
+  19  Lemna_japonica_strain_9017           38.66%    passed     79.54%
+  20  Lemna_japonica_strain_9250           39.12%    passed     85.97%
+  21  Lemna_minor_strain_7018              45.58%    passed     98.43%
+  22  Lemna_minor_strain_7136              45.35%    passed     98.77%
+  23  Lemna_minor_strain_7210              45.35%    passed     98.77%
+  24  Lemna_minor_strain_9016              45.35%    passed     98.77%
+  25  Lemna_minor_strain_9253              45.35%    passed     99.35%
+  26  Lemna_minor_strain_9417              45.35%    passed     98.77%
+  27  Lemna_minuta_clone_5571              46.83%    passed     95.84%
+  28  Lemna_minuta_clone_5572              46.83%    passed     95.84%
+  29  Lemna_minuta_clone_5573              46.83%    passed     95.84%
+  30  Lemna_minuta_clone_6717              46.94%    passed     95.51%
+  31  Lemna_minuta_clone_7612              46.71%    passed     96.03%
+  32  Lemna_minuta_clone_8699              46.83%    passed     95.84%
+  33  Lemna_minuta_clone_9226              46.71%    passed     96.03%
+  34  Lemna_minuta_clone_9414              46.83%    passed     95.84%
+  35  Lemna_minuta_clone_9473              46.83%    passed     95.84%
+  36  Lemna_minuta_clone_9474              46.83%    passed     95.84%
+  37  Lemna_minuta_clone_9476              46.83%    passed     95.84%
+  38  Lemna_minuta_clone_9484              46.83%    passed     95.84%
+  39  Lemna_minuta_clone_9581              46.83%    passed     95.84%
+  40  Lemna_minuta_strain_7284             48.53%    passed     90.98%
+  41  Lemna_minuta_strain_7726             48.64%    passed     92.54%
+  42  Lemna_minuta_strain_8065             48.53%    passed     91.50%
+  43  Lemna_minuta_strain_8634             48.53%    passed     91.50%
+  44  Lemna_obscura_strain_7856            46.83%    passed     98.19%
+  45  Lemna_perpusilla_strain_8473         46.26%    passed     94.13%
+  46  Lemna_perpusilla_strain_8539         46.03%    passed     93.43%
+  47  Lemna_tenera_strain_9020             44.33%    passed     86.97%
+  48  Lemna_tenera_strain_9024             47.51%    passed     68.63%
+  49  Lemna_trisulca_strain_7579           43.08%    passed     96.48%
+  50  Lemna_trisulca_strain_8137           43.08%    passed     96.48%
+  51  Lemna_turionifera_strain_8339        46.03%    passed     97.75%
+  52  Lemna_turionifera_strain_8760        46.03%    passed     97.75%
+  53  Lemna_valdiviana_clone_9228          46.26%    passed     98.13%
+  54  Lemna_valdiviana_clone_9229          46.71%    passed     93.22%
+  55  Lemna_valdiviana_clone_9233          46.83%    passed     95.74%
+  56  Lemna_valdiviana_clone_9267          43.76%    passed     88.18%
+  57  Lemna_valdiviana_clone_9395          46.94%    passed     95.63%
+  58  Lemna_valdiviana_clone_9401          46.94%    passed     95.63%
+  59  Lemna_valdiviana_clone_9442          46.94%    passed     95.63%
+  60  Lemna_valdiviana_clone_9443          46.94%    passed     95.63%
+  61  Lemna_valdiviana_clone_9475          46.71%    passed     91.02%
+  62  Lemna_valdiviana_strain_7288         48.64%    passed     94.78%
+  63  Lemna_valdiviana_strain_9229         48.41%    passed     88.16%
+  64  Lemna_valdiviana_strain_9232         48.41%    passed     90.26%
+  65  Lemna_yungensis_clone_9208           46.26%    passed     98.13%
+  66  Lemna_yungensis_clone_9209           46.83%    passed     96.85%
+  67  Lemna_yungensis_strain_9207          41.72%    passed     92.57%
+  68  Lemna_yungensis_strain_9208          41.84%    passed     87.76%
+  69  Lemna_yungensis_strain_9210          42.18%    passed     87.13%
+  70  Spirodela_intermedia_strain_7125     78.91%    passed     57.99%
+  71  Spirodela_intermedia_strain_7178     78.91%    passed     57.99%
+  72  Spirodela_intermedia_strain_7291     78.91%    passed     57.99%
+  73  Spirodela_intermedia_strain_7355     78.91%    passed     57.99%
+  74  Spirodela_intermedia_strain_7450     79.02%    passed     62.05%
+  75  Spirodela_intermedia_strain_7747     78.91%    passed     57.99%
+  76  Spirodela_intermedia_strain_8410     78.91%    passed     57.99%
+  77  Spirodela_polyrhiza_strain_7205      46.03%    passed     84.84%
+  78  Spirodela_polyrhiza_strain_7212      46.15%    passed     75.54%
+  79  Spirodela_polyrhiza_strain_7222      45.69%    passed     84.33%
+  80  Spirodela_polyrhiza_strain_7498      45.92%    passed     90.16%
+  81  Spirodela_polyrhiza_strain_7657      45.92%    passed     90.16%
+  82  Spirodela_polyrhiza_strain_8790      45.92%    passed     90.16%
+  83  Spirodela_polyrhiza_strain_9203      78.91%    passed     57.99%
+  84  Wolffia_angusta_strain_7476          36.51%    passed     34.16%
+  85  Wolffia_arrhiza_strain_8872          34.81%    passed     40.50%
+  86  Wolffia_australiana_strain_7733      42.52%    passed     61.58%
+  87  Wolffia_australiana_strain_8730      42.06%    passed     59.58%
+  88  Wolffia_borealis_strain_9123         36.85%    passed     48.22%
+  89  Wolffia_borealis_strain_9144         37.98%    passed     23.22%
+  90  Wolffia_borealis_strain_9147         37.98%    passed     26.72%
+  91  Wolffia_brasiliensis_strain_7150     43.76%    passed     81.97%
+  92  Wolffia_brasiliensis_strain_7306     45.69%    passed     82.39%
+  93  Wolffia_brasiliensis_strain_8743     43.65%    passed     82.80%
+  94  Wolffia_columbiana_strain_7310       35.83%    passed     70.58%
+  95  Wolffia_columbiana_strain_7972       35.83%    passed     66.92%
+  96  Wolffia_columbiana_strain_8265       35.15%    passed     63.74%
+  97  Wolffia_columbiana_strain_8856       35.83%    passed     66.92%
+  98  Wolffia_columbiana_strain_8890       35.83%    passed     66.92%
+  99  Wolffia_cylindracea_strain_9080      40.25%    passed     77.81%
+ 100  Wolffia_elongata_strain_9188         36.62%    passed     57.10%
+ 101  Wolffia_globosa_strain_8152          37.07%    passed     47.32%
+ 102  Wolffia_globosa_strain_8441          37.19%    passed     56.99%
+ 103  Wolffia_globosa_strain_8691          37.07%    passed     48.13%
+ 104  Wolffia_globosa_strain_8789          37.07%    passed     43.62%
+ 105  Wolffia_globosa_strain_8973          37.30%    passed     48.56%
+ 106  Wolffia_globosa_strain_9196          37.07%    passed     42.56%
+ 107  Wolffia_globosa_strain_9317          36.96%    passed     61.95%
+ 108  Wolffia_microscopica_strain_2000     36.73%    passed     65.76%
+ 109  Wolffia_microscopica_strain_2001     35.71%    passed     75.62%
+ 110  Wolffia_microscopica_strain_2002     36.05%    passed     71.40%
+ 111  Wolffia_microscopica_strain_2005     36.73%    passed     65.76%
+ 112  Wolffia_microscopica_strain_2006     36.05%    passed     71.40%
+ 113  Wolffia_microscopica_strain_2007     36.62%    passed     65.75%
+ 114  Wolffia_microscopica_strain_2008     36.62%    passed     65.75%
+ 115  Wolffia_microscopica_strain_9276     36.62%    passed     46.58%
+ 116  Wolffia_neglecta_strain_9149         36.96%    passed     78.91%
+ 117  Wolffiella_caudata_strain_9139       47.39%    passed     85.43%
+ 118  Wolffiella_caudata_strain_9165       39.46%    passed     18.90%
+ 119  Wolffiella_caudata_strain_9214       39.68%    passed     38.59%
+ 120  Wolffiella_denticulata_strain_8221   41.27%    passed     94.86%
+ 121  Wolffiella_gladiata_strain_7595      68.93%    passed     74.01%
+ 122  Wolffiella_gladiata_strain_7852      68.82%    passed     74.90%
+ 123  Wolffiella_gladiata_strain_8066      68.82%    passed     74.90%
+ 124  Wolffiella_gladiata_strain_8261      68.93%    passed     74.01%
+ 125  Wolffiella_gladiata_strain_8350      70.86%    passed     57.43%
+ 126  Wolffiella_hyalina_strain_8640       44.90%    passed     65.69%
+ 127  Wolffiella_lingulata_strain_7289     45.92%    passed     85.55%
+ 128  Wolffiella_lingulata_strain_7464     45.92%    passed     85.55%
+ 129  Wolffiella_lingulata_strain_7655     45.46%    passed     70.05%
+ 130  Wolffiella_lingulata_strain_7725     45.46%    passed     70.05%
+ 131  Wolffiella_lingulata_strain_8742     49.09%    passed     79.07%
+ 132  Wolffiella_neotropica_strain_7290    46.03%    passed     88.35%
+ 133  Wolffiella_neotropica_strain_7609    46.03%    passed     88.35%
+ 134  Wolffiella_neotropica_strain_8848    46.03%    passed     88.35%
+ 135  Wolffiella_oblonga_strain_7164       68.59%    passed     77.27%
+ 136  Wolffiella_oblonga_strain_7201       68.71%    passed     75.56%
+ 137  Wolffiella_oblonga_strain_7343       48.64%    passed     89.86%
+ 138  Wolffiella_oblonga_strain_8072       68.71%    passed     80.16%
+ 139  Wolffiella_oblonga_strain_9136       48.98%    passed     90.22%
+ 140  Wolffiella_repanda_strain_9062       41.72%    passed     17.79%
+ 141  Wolffiella_repanda_strain_9107       45.01%    passed     24.86%
+ 142  Wolffiella_repanda_strain_9122       39.57%    passed     42.69%
+ 143  Wolffiella_rotunda_strain_9072       47.17%    passed     89.11%
+ 144  Wolffiella_rotunda_strain_9121       45.01%    passed     88.40%
+ 145  Wolffiella_welwitschii_strain_7468   39.46%    passed     47.09%
+ 146  Wolffiella_welwitschii_strain_7644   39.23%    passed     70.53%
+ 147  Wolffiella_welwitschii_strain_9086   39.80%    passed     68.38%
+ 148  Wolffiella_welwitschii_strain_9381   39.23%    passed     49.69%
+ 149  Wolffiella_welwitschii_strain_9466   39.46%    passed     38.16%
+WARNING: 16 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                                46.75%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+NOTE: Landoltia_punctata_strain_7260 is identical to Landoltia_punctata_strain_7248 but kept for subsequent analysis
+NOTE: Lemna_gibba_strain_7784 is identical to Lemna_gibba_strain_7741 but kept for subsequent analysis
+NOTE: Lemna_minor_strain_7136 is identical to Lemna_japonica_strain_7182 but kept for subsequent analysis
+NOTE: Lemna_minuta_clone_5572 is identical to Lemna_minuta_clone_5571 but kept for subsequent analysis
+NOTE: Lemna_minuta_clone_9226 is identical to Lemna_minuta_clone_7612 but kept for subsequent analysis
+NOTE: Lemna_minuta_strain_8634 is identical to Lemna_minuta_strain_8065 but kept for subsequent analysis
+NOTE: Lemna_trisulca_strain_8137 is identical to Lemna_trisulca_strain_7579 but kept for subsequent analysis
+NOTE: Lemna_turionifera_strain_8760 is identical to Lemna_turionifera_strain_8339 but kept for subsequent analysis
+NOTE: Lemna_valdiviana_clone_9401 is identical to Lemna_valdiviana_clone_9395 but kept for subsequent analysis
+NOTE: Spirodela_intermedia_strain_7178 is identical to Spirodela_intermedia_strain_7125 but kept for subsequent analysis
+NOTE: Spirodela_polyrhiza_strain_7657 is identical to Spirodela_polyrhiza_strain_7498 but kept for subsequent analysis
+NOTE: Wolffia_columbiana_strain_8856 is identical to Wolffia_columbiana_strain_7972 but kept for subsequent analysis
+NOTE: Wolffia_microscopica_strain_2005 is identical to Wolffia_microscopica_strain_2000 but kept for subsequent analysis
+NOTE: Wolffia_microscopica_strain_2006 is identical to Wolffia_microscopica_strain_2002 but kept for subsequent analysis
+NOTE: Wolffiella_gladiata_strain_8261 is identical to Wolffiella_gladiata_strain_7595 but kept for subsequent analysis
+NOTE: Wolffiella_gladiata_strain_8066 is identical to Wolffiella_gladiata_strain_7852 but kept for subsequent analysis
+NOTE: Wolffiella_lingulata_strain_7464 is identical to Wolffiella_lingulata_strain_7289 but kept for subsequent analysis
+NOTE: Wolffiella_neotropica_strain_7609 is identical to Wolffiella_neotropica_strain_7290 but kept for subsequent analysis
+NOTE: 26 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Landoltia_punctata_strain_7449 (identical to Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Landoltia_punctata_strain_7487 (identical to Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Landoltia_punctata_strain_8721 (identical to Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Landoltia_punctata_strain_9278 (identical to Landoltia_punctata_strain_7248) is ignored but added at the end
+NOTE: Lemna_gibba_strain_8703 (identical to Lemna_gibba_strain_7741) is ignored but added at the end
+NOTE: Lemna_minor_strain_7210 (identical to Lemna_japonica_strain_7182) is ignored but added at the end
+NOTE: Lemna_minor_strain_9016 (identical to Lemna_japonica_strain_7182) is ignored but added at the end
+NOTE: Lemna_minor_strain_9417 (identical to Lemna_japonica_strain_7182) is ignored but added at the end
+NOTE: Lemna_minuta_clone_5573 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_8699 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9414 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9473 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9474 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9476 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9484 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_minuta_clone_9581 (identical to Lemna_minuta_clone_5571) is ignored but added at the end
+NOTE: Lemna_valdiviana_clone_9442 (identical to Lemna_valdiviana_clone_9395) is ignored but added at the end
+NOTE: Lemna_valdiviana_clone_9443 (identical to Lemna_valdiviana_clone_9395) is ignored but added at the end
+NOTE: Spirodela_intermedia_strain_7291 (identical to Spirodela_intermedia_strain_7125) is ignored but added at the end
+NOTE: Spirodela_intermedia_strain_7355 (identical to Spirodela_intermedia_strain_7125) is ignored but added at the end
+NOTE: Spirodela_intermedia_strain_7747 (identical to Spirodela_intermedia_strain_7125) is ignored but added at the end
+NOTE: Spirodela_intermedia_strain_8410 (identical to Spirodela_intermedia_strain_7125) is ignored but added at the end
+NOTE: Spirodela_polyrhiza_strain_9203 (identical to Spirodela_intermedia_strain_7125) is ignored but added at the end
+NOTE: Spirodela_polyrhiza_strain_8790 (identical to Spirodela_polyrhiza_strain_7498) is ignored but added at the end
+NOTE: Wolffia_columbiana_strain_8890 (identical to Wolffia_columbiana_strain_7972) is ignored but added at the end
+NOTE: Wolffiella_neotropica_strain_8848 (identical to Wolffiella_neotropica_strain_7290) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to dw-psbk-fmt.alnfa.uniqueseq.phy
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.013 seconds
+NOTE: ModelFinder requires 24 MB RAM!
+ModelFinder will test 286 DNA models (sample size: 882) ...
+ No. Model         -LnL         df  AIC          AICc         BIC
+  1  JC            6654.382     243 13794.763    13980.632    14956.836
+  2  JC+I          6584.055     244 13656.110    13843.803    14822.965
+  3  JC+G4         6549.967     244 13587.935    13775.627    14754.790
+  4  JC+I+G4       6551.103     245 13592.206    13781.734    14763.843
+  5  JC+R2         6553.661     245 13597.323    13786.851    14768.960
+  6  JC+R3         6549.153     247 13592.307    13785.543    14773.508
+ 14  F81+F         6462.887     246 13417.773    13609.150    14594.193
+ 15  F81+F+I       6405.415     247 13304.829    13498.066    14486.031
+ 16  F81+F+G4      6374.351     247 13242.702    13435.938    14423.903
+ 17  F81+F+I+G4    6375.289     248 13246.578    13441.687    14432.561
+ 18  F81+F+R2      6378.709     248 13253.418    13448.527    14439.402
+ 19  F81+F+R3      6366.617     250 13233.233    13432.124    14428.781
+ 20  F81+F+R4      6366.329     252 13236.657    13439.379    14441.770
+ 27  K2P           6642.298     244 13772.595    13960.287    14939.450
+ 28  K2P+I         6571.821     245 13633.641    13823.170    14805.279
+ 29  K2P+G4        6537.362     245 13564.723    13754.252    14736.360
+ 30  K2P+I+G4      6538.136     246 13568.272    13759.648    14744.691
+ 31  K2P+R2        6540.876     246 13573.752    13765.129    14750.172
+ 32  K2P+R3        6534.792     248 13565.584    13760.693    14751.567
+ 40  HKY+F         6462.566     247 13419.131    13612.368    14600.332
+ 41  HKY+F+I       6404.317     248 13304.634    13499.743    14490.617
+ 42  HKY+F+G4      6373.216     248 13242.432    13437.541    14428.416
+ 43  HKY+F+I+G4    6373.902     249 13245.804    13442.798    14436.570
+ 44  HKY+F+R2      6377.282     249 13252.565    13449.559    14443.331
+ 45  HKY+F+R3      6365.734     251 13233.469    13434.269    14433.799
+ 46  HKY+F+R4      6365.431     253 13236.861    13441.517    14446.756
+ 53  TNe           6641.148     245 13772.296    13961.824    14943.933
+ 54  TNe+I         6570.789     246 13633.579    13824.955    14809.998
+ 55  TNe+G4        6536.759     246 13565.518    13756.894    14741.937
+ 56  TNe+I+G4      6537.344     247 13568.687    13761.924    14749.889
+ 57  TNe+R2        6540.239     247 13574.479    13767.715    14755.680
+ 58  TNe+R3        6534.218     249 13566.436    13763.430    14757.202
+ 66  TN+F          6460.707     248 13417.415    13612.524    14603.398
+ 67  TN+F+I        6402.679     249 13303.358    13500.351    14494.123
+ 68  TN+F+G4       6371.561     249 13241.123    13438.116    14431.888
+ 69  TN+F+I+G4     6372.095     250 13244.190    13443.080    14439.738
+ 70  TN+F+R2       6375.503     250 13251.005    13449.896    14446.553
+ 71  TN+F+R3       6363.418     252 13230.836    13433.558    14435.949
+ 72  TN+F+R4       6362.488     254 13232.977    13439.580    14447.654
+ 79  K3P           6639.865     245 13769.729    13959.258    14941.366
+ 80  K3P+I         6569.409     246 13630.818    13822.195    14807.237
+ 81  K3P+G4        6535.018     246 13562.035    13753.412    14738.454
+ 82  K3P+I+G4      6535.515     247 13565.029    13758.266    14746.231
+ 83  K3P+R2        6538.553     247 13571.106    13764.343    14752.308
+ 84  K3P+R3        6532.549     249 13563.099    13760.092    14753.864
+ 92  K3Pu+F        6451.438     248 13398.875    13593.984    14584.859
+ 93  K3Pu+F+I      6397.021     249 13292.043    13489.037    14482.809
+ 94  K3Pu+F+G4     6365.355     249 13228.709    13425.703    14419.475
+ 95  K3Pu+F+I+G4   6365.869     250 13231.739    13430.630    14427.287
+ 96  K3Pu+F+R2     6369.635     250 13239.270    13438.161    14434.818
+ 97  K3Pu+F+R3     6355.670     252 13215.341    13418.063    14420.453
+ 98  K3Pu+F+R4     6353.442     254 13214.884    13421.487    14429.561
+105  TPM2+F        6443.938     248 13383.876    13578.985    14569.860
+106  TPM2+F+I      6391.797     249 13281.595    13478.588    14472.361
+107  TPM2+F+G4     6356.570     249 13211.140    13408.134    14401.906
+108  TPM2+F+I+G4   6357.361     250 13214.722    13413.613    14410.270
+109  TPM2+F+R2     6361.063     250 13222.126    13421.017    14417.674
+110  TPM2+F+R3     6343.266     252 13190.532    13393.253    14395.644
+111  TPM2+F+R4     6341.896     254 13191.793    13398.395    14406.469
+118  TPM2u+F       6443.951     248 13383.902    13579.011    14569.886
+119  TPM2u+F+I     6391.808     249 13281.616    13478.610    14472.382
+120  TPM2u+F+G4    6356.579     249 13211.159    13408.153    14401.925
+121  TPM2u+F+I+G4  6357.327     250 13214.653    13413.544    14410.201
+122  TPM2u+F+R2    6361.041     250 13222.081    13420.972    14417.629
+123  TPM2u+F+R3    6343.217     252 13190.434    13393.156    14395.547
+124  TPM2u+F+R4    6341.787     254 13191.575    13398.178    14406.252
+131  TPM3+F        6455.478     248 13406.957    13602.066    14592.940
+132  TPM3+F+I      6400.268     249 13298.537    13495.530    14489.302
+133  TPM3+F+G4     6369.624     249 13237.248    13434.242    14428.014
+134  TPM3+F+I+G4   6369.945     250 13239.891    13438.782    14435.439
+135  TPM3+F+R2     6373.833     250 13247.666    13446.556    14443.214
+136  TPM3+F+R3     6360.432     252 13224.863    13427.585    14429.975
+137  TPM3+F+R4     6358.743     254 13225.486    13432.089    14440.163
+144  TPM3u+F       6455.473     248 13406.947    13602.056    14592.930
+145  TPM3u+F+I     6400.262     249 13298.524    13495.518    14489.290
+146  TPM3u+F+G4    6369.618     249 13237.237    13434.230    14428.002
+147  TPM3u+F+I+G4  6369.922     250 13239.845    13438.736    14435.393
+148  TPM3u+F+R2    6373.825     250 13247.650    13446.541    14443.198
+149  TPM3u+F+R3    6360.352     252 13224.705    13427.426    14429.817
+150  TPM3u+F+R4    6358.693     254 13225.387    13431.990    14440.063
+157  TIMe          6638.720     246 13769.441    13960.817    14945.860
+158  TIMe+I        6568.384     247 13630.768    13824.004    14811.969
+159  TIMe+G4       6534.424     247 13562.848    13756.084    14744.049
+160  TIMe+I+G4     6534.737     248 13565.474    13760.583    14751.458
+161  TIMe+R2       6538.053     248 13572.105    13767.214    14758.089
+162  TIMe+R3       6532.052     250 13564.104    13762.995    14759.652
+170  TIM+F         6449.587     249 13397.174    13594.168    14587.940
+171  TIM+F+I       6395.395     250 13290.790    13489.681    14486.338
+172  TIM+F+G4      6363.742     250 13227.485    13426.376    14423.033
+173  TIM+F+I+G4    6364.074     251 13230.148    13430.948    14430.478
+174  TIM+F+R2      6368.008     251 13238.016    13438.816    14438.346
+175  TIM+F+R3      6353.038     253 13212.077    13416.733    14421.971
+176  TIM+F+R4      6351.230     255 13212.460    13421.022    14431.919
+183  TIM2e         6640.341     246 13772.681    13964.058    14949.101
+184  TIM2e+I       6567.334     247 13628.668    13821.904    14809.869
+185  TIM2e+G4      6532.675     247 13559.351    13752.587    14740.552
+186  TIM2e+I+G4    6532.856     248 13561.711    13756.820    14747.695
+187  TIM2e+R2      6536.491     248 13568.983    13764.092    14754.966
+188  TIM2e+R3      6531.078     250 13562.157    13761.048    14757.705
+196  TIM2+F        6442.103     249 13382.206    13579.199    14572.972
+197  TIM2+F+I      6390.263     250 13280.526    13479.417    14476.074
+198  TIM2+F+G4     6354.350     250 13208.699    13407.590    14404.247
+199  TIM2+F+I+G4   6354.913     251 13211.826    13412.626    14412.157
+200  TIM2+F+R2     6358.972     251 13219.945    13420.745    14420.275
+201  TIM2+F+R3     6340.551     253 13187.102    13391.758    14396.997
+202  TIM2+F+R4     6339.167     255 13188.334    13396.896    14407.793
+209  TIM3e         6636.020     246 13764.040    13955.416    14940.459
+210  TIM3e+I       6560.615     247 13615.230    13808.467    14796.432
+211  TIM3e+G4      6517.936     247 13529.872    13723.109    14711.074
+212  TIM3e+I+G4    6518.465     248 13532.930    13728.039    14718.913
+213  TIM3e+R2      6521.568     248 13539.137    13734.246    14725.120
+214  TIM3e+R3      6516.433     250 13532.867    13731.757    14728.415
+222  TIM3+F        6453.516     249 13405.033    13602.026    14595.798
+223  TIM3+F+I      6398.494     250 13296.988    13495.878    14492.536
+224  TIM3+F+G4     6368.171     250 13236.342    13435.232    14431.890
+225  TIM3+F+I+G4   6368.310     251 13238.620    13439.420    14438.950
+226  TIM3+F+R2     6372.379     251 13246.758    13447.558    14447.088
+227  TIM3+F+R3     6359.124     253 13224.247    13428.903    14434.142
+228  TIM3+F+R4     6357.008     255 13224.016    13432.578    14443.475
+235  TVMe          6635.626     247 13765.251    13958.488    14946.453
+236  TVMe+I        6557.632     248 13611.264    13806.373    14797.248
+237  TVMe+G4       6513.730     248 13523.460    13718.569    14709.444
+238  TVMe+I+G4     6514.154     249 13526.307    13723.301    14717.073
+239  TVMe+R2       6517.642     249 13533.285    13730.279    14724.051
+240  TVMe+R3       6512.890     251 13527.780    13728.580    14728.110
+248  TVM+F         6436.390     250 13372.779    13571.670    14568.327
+249  TVM+F+I       6387.049     251 13276.098    13476.898    14476.428
+250  TVM+F+G4      6352.293     251 13206.587    13407.387    14406.917
+251  TVM+F+I+G4    6352.677     252 13209.355    13412.076    14414.467
+252  TVM+F+R2      6356.904     252 13217.809    13420.531    14422.921
+253  TVM+F+R3      6337.378     254 13182.756    13389.359    14397.433
+254  TVM+F+R4      6334.546     256 13181.092    13391.626    14405.333
+261  SYM           6634.453     248 13764.906    13960.015    14950.890
+262  SYM+I         6556.680     249 13611.360    13808.354    14802.126
+263  SYM+G4        6513.313     249 13524.625    13721.619    14715.391
+264  SYM+I+G4      6513.676     250 13527.351    13726.242    14722.899
+265  SYM+R2        6517.160     250 13534.320    13733.211    14729.868
+266  SYM+R3        6512.551     252 13529.102    13731.824    14734.215
+274  GTR+F         6434.559     251 13371.117    13571.917    14571.448
+275  GTR+F+I       6385.492     252 13274.984    13477.705    14480.096
+276  GTR+F+G4      6350.405     252 13204.809    13407.531    14409.921
+277  GTR+F+I+G4    6350.741     253 13207.483    13412.139    14417.377
+278  GTR+F+R2      6355.180     253 13216.360    13421.016    14426.255
+279  GTR+F+R3      6335.617     255 13181.234    13389.797    14400.693
+280  GTR+F+R4      6332.598     257 13179.197    13391.716    14408.220
+Akaike Information Criterion:           GTR+F+R4
+Corrected Akaike Information Criterion: TVM+F+R3
+Bayesian Information Criterion:         TPM2u+F+R3
+Best-fit model: TPM2u+F+R3 chosen according to BIC
+
+All model information printed to dw-psbk-fmt.alnfa.model.gz
+CPU time for ModelFinder: 76.736 seconds (0h:1m:16s)
+Wall-clock time for ModelFinder: 76.790 seconds (0h:1m:16s)
+
+NOTE: 7 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -6389.595
+2. Current log-likelihood: -6358.483
+3. Current log-likelihood: -6357.319
+4. Current log-likelihood: -6356.590
+5. Current log-likelihood: -6355.807
+6. Current log-likelihood: -6354.958
+7. Current log-likelihood: -6354.022
+8. Current log-likelihood: -6352.986
+9. Current log-likelihood: -6351.828
+10. Current log-likelihood: -6350.481
+11. Current log-likelihood: -6349.104
+12. Current log-likelihood: -6347.652
+13. Current log-likelihood: -6346.360
+14. Current log-likelihood: -6345.297
+15. Current log-likelihood: -6344.542
+16. Current log-likelihood: -6344.053
+17. Current log-likelihood: -6343.751
+18. Current log-likelihood: -6343.567
+19. Current log-likelihood: -6343.452
+Optimal log-likelihood: -6343.372
+Rate parameters:  A-C: 0.53273  A-G: 0.60033  A-T: 0.53273  C-G: 1.00000  C-T: 0.60033  G-T: 1.00000
+Base frequencies:  A: 0.365  C: 0.131  G: 0.125  T: 0.379
+Site proportion and rates:  (0.450,0.225) (0.474,1.006) (0.075,5.607)
+Parameters optimization took 19 rounds (4.332 sec)
+Computing ML distances based on estimated model parameters... 0.172 sec
+Computing BIONJ tree...
+0.008 seconds
+Log-likelihood of BIONJ tree: -6363.784
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 1.339 second
+Computing log-likelihood of 98 initial trees ... 5.570 seconds
+Current best score: -6334.867
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -6323.900
+BETTER TREE FOUND at iteration 2: -6323.895
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 9: -6323.650
+Iteration 10 / LogL: -6324.947 / Time: 0h:0m:18s
+Iteration 20 / LogL: -6323.787 / Time: 0h:0m:23s
+Finish initializing candidate tree set (20)
+Current best tree score: -6323.650 / CPU time: 19.201
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 30 / LogL: -6326.120 / Time: 0h:0m:32s (0h:1m:28s left)
+Iteration 40 / LogL: -6336.901 / Time: 0h:0m:40s (0h:1m:10s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 44: -6323.479
+BETTER TREE FOUND at iteration 47: -6323.474
+BETTER TREE FOUND at iteration 48: -6323.474
+Iteration 50 / LogL: -6323.475 / Time: 0h:0m:48s (0h:1m:36s left)
+Iteration 60 / LogL: -6341.654 / Time: 0h:0m:56s (0h:1m:23s left)
+Iteration 70 / LogL: -6341.061 / Time: 0h:1m:3s (0h:1m:12s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 77: -6323.074
+Iteration 80 / LogL: -6332.883 / Time: 0h:1m:12s (0h:1m:29s left)
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 85: -6322.826
+BETTER TREE FOUND at iteration 87: -6322.823
+Iteration 90 / LogL: -6343.168 / Time: 0h:1m:20s (0h:1m:27s left)
+BETTER TREE FOUND at iteration 94: -6322.822
+Iteration 100 / LogL: -6322.997 / Time: 0h:1m:28s (0h:1m:23s left)
+Iteration 110 / LogL: -6339.989 / Time: 0h:1m:35s (0h:1m:13s left)
+Iteration 120 / LogL: -6324.712 / Time: 0h:1m:43s (0h:1m:4s left)
+Iteration 130 / LogL: -6330.564 / Time: 0h:1m:51s (0h:0m:55s left)
+BETTER TREE FOUND at iteration 137: -6322.821
+Iteration 140 / LogL: -6325.136 / Time: 0h:1m:59s (0h:1m:23s left)
+Iteration 150 / LogL: -6500.459 / Time: 0h:2m:6s (0h:1m:13s left)
+BETTER TREE FOUND at iteration 154: -6322.821
+Iteration 160 / LogL: -6322.996 / Time: 0h:2m:14s (0h:1m:19s left)
+Iteration 170 / LogL: -6356.383 / Time: 0h:2m:21s (0h:1m:10s left)
+Iteration 180 / LogL: -6333.676 / Time: 0h:2m:29s (0h:1m:1s left)
+Iteration 190 / LogL: -6332.319 / Time: 0h:2m:36s (0h:0m:53s left)
+Iteration 200 / LogL: -6336.932 / Time: 0h:2m:44s (0h:0m:44s left)
+Iteration 210 / LogL: -6336.714 / Time: 0h:2m:52s (0h:0m:36s left)
+Iteration 220 / LogL: -6322.822 / Time: 0h:2m:59s (0h:0m:27s left)
+Iteration 230 / LogL: -6330.654 / Time: 0h:3m:7s (0h:0m:19s left)
+Iteration 240 / LogL: -6323.316 / Time: 0h:3m:15s (0h:0m:11s left)
+Iteration 250 / LogL: -6324.842 / Time: 0h:3m:23s (0h:0m:3s left)
+TREE SEARCH COMPLETED AFTER 255 ITERATIONS / Time: 0h:3m:27s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -6322.821
+2. Current log-likelihood: -6322.782
+3. Current log-likelihood: -6322.720
+4. Current log-likelihood: -6322.669
+5. Current log-likelihood: -6322.625
+6. Current log-likelihood: -6322.587
+7. Current log-likelihood: -6322.555
+8. Current log-likelihood: -6322.528
+9. Current log-likelihood: -6322.506
+10. Current log-likelihood: -6322.491
+11. Current log-likelihood: -6322.477
+12. Current log-likelihood: -6322.466
+13. Current log-likelihood: -6322.455
+Optimal log-likelihood: -6322.442
+Rate parameters:  A-C: 0.56408  A-G: 0.62787  A-T: 0.56408  C-G: 1.00000  C-T: 0.62787  G-T: 1.00000
+Base frequencies:  A: 0.365  C: 0.131  G: 0.125  T: 0.379
+Site proportion and rates:  (0.560,0.248) (0.380,1.058) (0.060,7.641)
+Parameters optimization took 13 rounds (2.723 sec)
+BEST SCORE FOUND : -6322.442
+Total tree length: 3.380
+
+Total number of iterations: 255
+CPU time used for tree search: 202.500 sec (0h:3m:22s)
+Wall-clock time used for tree search: 202.573 sec (0h:3m:22s)
+Total CPU time used: 209.984 sec (0h:3m:29s)
+Total wall-clock time used: 210.063 sec (0h:3m:30s)
+
+Analysis results written to: 
+  IQ-TREE report:                dw-psbk-fmt.alnfa.iqtree
+  Maximum-likelihood tree:       dw-psbk-fmt.alnfa.treefile
+  Likelihood distances:          dw-psbk-fmt.alnfa.mldist
+  Screen log file:               dw-psbk-fmt.alnfa.log
+
+Date and Time: Thu Nov  5 01:07:53 2020

@@ -1,0 +1,1 @@
+((Sp9509_oxford_v3_proteins_Sp11g00349:9.52137e-07,Sp7498_pacbio_protein_g15726.t1:0.276987)n1:0.396969,(wa7733_asm1v1_ann1_run1_all_std_maker_proteins_func_wa7733.asm1v1.ann1.run1_000293_1:0.003222,wa8730_asm201904v2_ann1_proteins_Wa8730a011g002180_P001:0.001913)n2:0.396969)n0;
