@@ -22,9 +22,9 @@ PRRs were defined as illustrated in Boutret and Zipfel (2017).
  
 To find PRRs, TMHMM2.0 was used to find transmembrane proteins in the proteomes specified in Table 1.
 
-To find LRR-type PRRs, transmembrane proteins were scanned with the following LRR HMM models: PF00560.34, PF07723.14, PF07725.13, PF12799.8, PF13306.7, PF07723.14, PF07723.14, PF07723.14, PF18831.2, and PF18805.2 . These LRR-containing transmembrane proteins where then scanned for a kinase domain (PF00069.26) to find LRR-RKs. Those LRR-containing transmembrane proteins without a kinase domain were designated as LRR-RPs.
+To find LRR-type PRRs, transmembrane proteins were scanned with the following LRR HMM models: PF00560.34, PF07723.14, PF07725.13, PF12799.8, PF13306.7, PF07723.14, PF07723.14, PF07723.14, PF18831.2, and PF18805.2 . These LRR-containing transmembrane proteins were then scanned for a kinase domain (PF00069.26) to find LRR-RKs. Those LRR-containing transmembrane proteins without a kinase domain were designated as LRR-RPs.
 
-To find LysM-type PRRs, transmembrane proteins were scanned for the 
+To find LysM-type PRRs, transmembrane proteins were scanned for the LysM domain (PF01476.21). These LysM-containing transmembrane proteins were then scanned for a kinase domain (PF00069.26) to find LysM-RKs. Those LysM-containing transmembrane proteins without a kinase domain were designated as LysM-RPs.
 
 
 ## (References)
