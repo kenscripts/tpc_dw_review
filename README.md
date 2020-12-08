@@ -6,13 +6,11 @@
 
 To find NLRs, the NB-ARC domain (PF00931) was used to scan the proteomes specified in Table 1 with HMMR version 3.1b2 using the gathering bit score threshold.
 
-
 ## (AMPs)
 
 `working directory: ./dk_disease_resistance genes/duckweed_amp/`
 
 A total of 268 antimicrobial peptide sequences were analyzed from the PhytAMP database (Hammami et al., 2009). These peptide sequences were comprised of cyclotides, defensins, heveins, impatiens, knottins, lipid transfer proteins, sheperins, thionins, and vicilins. HMMR version 3.1b2 was used to build HMMs for each peptide family. These HMMs were then used to search the proteomes specified in Table 1 using the gathering bit score threshold.
-
  
 ## (PRRs)
 
@@ -26,7 +24,6 @@ To find LRR-type PRRs, transmembrane proteins were scanned with the following LR
 
 To find LysM-type PRRs, transmembrane proteins were scanned for the LysM domain (PF01476.21). These LysM-containing transmembrane proteins were then scanned for a kinase domain (PF00069.26) to find LysM-RKs. Those LysM-containing transmembrane proteins without a kinase domain were designated as LysM-RPs.
 
-
 ## (References)
 
 Boutrot, F. and Zipfel, C., 2017. Function, discovery, and exploitation of plant pattern recognition receptors for broad-spectrum disease resistance. Annual review of phytopathology, 55, pp.257-286.
@@ -35,4 +32,5 @@ Christopoulou, M., Wo, S.R.C., Kozik, A., McHale, L.K., Truco, M.J., Wroblewski,
 
 Hammami, R., Ben Hamida, J., Vergoten, G. and Fliss, I., 2009. PhytAMP: a database dedicated to antimicrobial plant peptides. Nucleic acids research, 37(suppl_1), pp.D963-D968.
 
-# Disease Resistance Genes
+
+# Lemnaceae Phylogeny Using Plastid Barcodes
