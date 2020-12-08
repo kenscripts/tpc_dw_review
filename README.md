@@ -41,29 +41,29 @@ Krogh, A., Larsson, B., Von Heijne, G. and Sonnhammer, E.L., 2001. Predicting tr
 The following files contain GenBank sequences used in this analysis (GenBank information included below file name):
 
 wang-2010.accessions <br />
-Authors: Wang,W., Wu,Y., Yan,Y., Ermakova,M., Kerstetter,R. and Messing,J.
-Title:   DNA barcoding of the Lemnaceae, a family of aquatic monocots
-Journal: BMC Plant Biol. 10, 205 (2010)
+Authors: Wang,W., Wu,Y., Yan,Y., Ermakova,M., Kerstetter,R. and Messing,J. <br />
+Title:   DNA barcoding of the Lemnaceae, a family of aquatic monocots <br />
+Journal: BMC Plant Biol. 10, 205 (2010) <br />
 
-borisjuk_lam-2014.accessions
-Authors: Borisjuk,N. and Lam,E.
-Title:   DNA barcoding of Lemna and Wolffiella species
-Journal: Unpublished
+borisjuk_lam-2014.accessions <br />
+Authors: Borisjuk,N. and Lam,E. <br />
+Title:   DNA barcoding of Lemna and Wolffiella species <br />
+Journal: Unpublished <br />
 
-borisjuk-2015.accessions
-Authors: Borisjuk,N., Chu,P., Gutierrez,R., Zhang,H., Acosta,K., Friesen,N., Sree,K.S., Garcia,C., Appenroth,K.J. and Lam,E.
-Title:   Assessment, validation and deployment strategy of a two-barcode protocol for facile genotyping of duckweed species
-Journal: Plant Biol. (2014) In press
+borisjuk-2015.accessions <br />
+Authors: Borisjuk,N., Chu,P., Gutierrez,R., Zhang,H., Acosta,K., Friesen,N., Sree,K.S., Garcia,C., Appenroth,K.J. and Lam,E. <br />
+Title:   Assessment, validation and deployment strategy of a two-barcode protocol for facile genotyping of duckweed species <br />
+Journal: Plant Biol. (2014) In press <br />
 
-bog-2018.accessions
-Authors: Bog,M., Appenroth,K.J. and Sree,K.S.
-Title:   Molecular Taxonomy of Lemnaceae - State of Art
-Journal: Unpublished
+bog-2018.accessions <br />
+Authors: Bog,M., Appenroth,K.J. and Sree,K.S. <br />
+Title:   Molecular Taxonomy of Lemnaceae - State of Art <br />
+Journal: Unpublished <br />
 
-bog-2019.accessions
-Authors: Bog,M., Sree,K.S., Xu,S., Himmelbach,A., Brandt,R., Fuchs,J., Hoang,P.T.N., Schubert,I., Kuever,J., Rabenstein,A., Paolacci,S., Jansen,M.A.K. and Appenroth,K.J.
-Title:   A taxonomic revision of the section Uninerves within the genus Lemna
-Journal: Unpublished
+bog-2019.accessions <br />
+Authors: Bog,M., Sree,K.S., Xu,S., Himmelbach,A., Brandt,R., Fuchs,J., Hoang,P.T.N., Schubert,I., Kuever,J., Rabenstein,A., Paolacci,S., Jansen,M.A.K. and Appenroth,K.J. <br />
+Title:   A taxonomic revision of the section Uninerves within the genus Lemna <br />
+Journal: Unpublished <br />
 
 This resulted in 186 _atpF-atpH_ sequences and 153 _psbK-psbI_ sequences.
 
