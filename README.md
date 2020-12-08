@@ -17,11 +17,18 @@ A total of 268 antimicrobial peptide sequences were analyzed from the PhytAMP da
 ## (PRRs)
 
 `working directory: ./dk_disease_resistance genes/duckweed_prr/`
+
+PRRs were defined as illustrated in Boutret and Zipfel (2017).
  
 To find PRRs, TMHMM2.0 was used to find transmembrane proteins in the proteomes specified in Table 1.
 
-To find LRR-type PRRs, transmembrane proteins were scanned for with the following LRR HMM models: PF00560.34, PF07723.14, PF07725.13, PF12799.8, PF13306.7, PF07723.14, PF07723.14, PF07723.14, PF18831.2, and PF18805.2. These LRR-containing transmembrane proteins where then scanned for a kinase domain (PF00069.26) to find LRR-RKs. Those LRR-containing transmembrane proteins without a kinase domain were designated as LRR-RPs.
+To find LRR-type PRRs, transmembrane proteins were scanned with the following LRR HMM models: PF00560.34, PF07723.14, PF07725.13, PF12799.8, PF13306.7, PF07723.14, PF07723.14, PF07723.14, PF18831.2, and PF18805.2 . These LRR-containing transmembrane proteins where then scanned for a kinase domain (PF00069.26) to find LRR-RKs. Those LRR-containing transmembrane proteins without a kinase domain were designated as LRR-RPs.
 
-To find Lys-type PRRs, transmembrane proteins were scanned for the 
+To find LysM-type PRRs, transmembrane proteins were scanned for the 
 
 
+## (References)
+
+Boutrot, F. and Zipfel, C., 2017. Function, discovery, and exploitation of plant pattern recognition receptors for broad-spectrum disease resistance. Annual review of phytopathology, 55, pp.257-286.
+
+Christopoulou, M., Wo, S.R.C., Kozik, A., McHale, L.K., Truco, M.J., Wroblewski, T. and Michelmore, R.W., 2015. Genome-wide architecture of disease resistance genes in lettuce. G3: Genes, Genomes, Genetics, 5(12), pp.2655-2669.
