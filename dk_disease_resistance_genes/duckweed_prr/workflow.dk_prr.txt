@@ -107,7 +107,7 @@ extract_fastaseqs.py \
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# find tm_lrr proteins with kinase domain
+# find tm_lysM proteins with kinase domain
 hmmsearch \
 --cut_ga \
 LysM.hmm \
@@ -116,10 +116,60 @@ awk '/>>/' |
 sed 's/>> //' |
 cut -d " " -f 1 > Sp9509-tm_lysM.proteins;
 
+# remove duplicates
+cat Sp9509-tm_lysM.proteins.tmp |
+sort |
+uniq |
+cut -d " " -f 1 > Sp9509-tm_lysM.proteins;
+
+# extract tm_lysM protein sequences
+extract_fastaseqs.py \
+-f Sp9509-tm_lysM.proteins \
+-i $SP9509 \
+-z \
+> Sp9509-tm_lysM.proteins.fasta;
+
+
+# find tm_lysM proteins with kinase domain
+hmmsearch \
+--cut_ga \
+Pkinase.hmm \
+Sp9509-tm_lysM.proteins.fasta |
+awk '/>>/' |
+sed 's/>> //' |
+cut -d " " -f 1 > Sp9509-tm_lysM_kinase.proteins;
+
+# extract tm_lysM_kinase protein sequences
+extract_fastaseqs.py \
+-f Sp9509-tm_lysM_kinase.proteins \
+-i $SP9509 \
+-z \
+> Sp9509-tm_lysM_kinase.proteins.fasta;
+
+
+# find proteins only with tm_lysM domain
+comm \
+-23 \
+<(sort Sp9509-tm_lysM.proteins) \
+<(sort Sp9509-tm_lysM_kinase.proteins) \
+> Sp9509-tm_lysM_only.proteins
+
+# extract tm_lysM_only protein sequences
+extract_fastaseqs.py \
+-f Sp9509-tm_lysM_only.proteins \
+-i $SP9509 \
+-z \
+> Sp9509-tm_lysM_only.proteins.fasta;
+
 
 ##################################################
 # Sp7498v3
 ##################################################
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# LRRs
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 # find tm proteins
@@ -202,7 +252,7 @@ extract_fastaseqs.py \
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
-# find tm_lrr proteins with kinase domain
+# find tm_lysm proteins with kinase domain
 hmmsearch \
 --cut_ga \
 LysM.hmm \
