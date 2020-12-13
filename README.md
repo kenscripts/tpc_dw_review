@@ -2,19 +2,25 @@
 
 ## (NLRs)
 
-`working directory: ./dk_disease_resistance genes/duckweed_nbarc/`
+`Analysis Directory: ./dk_disease_resistance genes/duckweed_nbarc/`
+
+`Analysis Code: workflow.dk_nbarc.txt` 
 
 To find NLRs, the NB-ARC domain (PF00931) was used to scan the proteomes specified in Table 1 with HMMR (version 3.1b2) using the gathering bit score threshold.
 
 ## (AMPs)
 
-`working directory: ./dk_disease_resistance genes/duckweed_amp/`
+`Analysis Directory: ./dk_disease_resistance genes/duckweed_amp/`
+
+`Analysis Code: workflow.dk_amp.txt`
 
 A total of 268 antimicrobial peptide sequences were analyzed from the PhytAMP database (Hammami et al., 2009). These peptide sequences were comprised of cyclotides, defensins, heveins, impatiens, knottins, lipid transfer proteins, sheperins, thionins, and vicilins. HMMR (version 3.1b2) was used to build HMMs for each peptide family. These HMMs were then used to search the proteomes specified in Table 1 using the gathering bit score threshold.
  
 ## (PRRs)
 
-`working directory: ./dk_disease_resistance genes/duckweed_prr/`
+`Analysis Directory: ./dk_disease_resistance genes/duckweed_prr/`
+
+`Analysis Code: workflow.dk_prr.txt`
 
 PRRs were defined as illustrated in Boutret and Zipfel (2017).
  
@@ -36,7 +42,9 @@ Krogh, A., Larsson, B., Von Heijne, G. and Sonnhammer, E.L., 2001. Predicting tr
 
 # Lemnaceae Phylogeny Using Plastid Barcodes
 
-`working directory: ./dw_barcode_tree/`
+`Analysis Directory: ./dw_barcode_tree/`
+
+`Analysis Code: workflow.dk_spp_tree.txt`
 
 The following files contain GenBank sequences used in this analysis (GenBank information included below file name):
 
