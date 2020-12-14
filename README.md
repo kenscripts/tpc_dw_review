@@ -77,10 +77,14 @@ This resulted in 186 _atpF-atpH_ sequences and 153 _psbK-psbI_ sequences.
 
 Phylogenetic analysis was performed separately on each barcode to determine the best fit evolutionary model (Kalyaanamoorthy et al., 2017). Sequences were aligned using MUSCLE (v3.8.1551) and maximum likelihood was generated using iqtree (version 1.6.12)(Edgar, 2004; Nguyen et al., 2015). These analyses revealed the best fit model for the _atpF-atpH_ barcode was K3Pu+F+R3 and the best fit model for the _psbK-psbI_ barcode was TPM2u+F+R3 (Kalyaanamoorthy et al., 2017).
 
-A total of 139 _atpF-atpH_ and _psbK-psbI_ barcodes were concatenated from the same duckweed clone. _Colocasia esculenta_ (JN105690.1) was used an outgroup. To find the respective barcode sequences for this outgroup, a separate BLASTN search was performed using each set of duckweed barcodes. Each set of barcodes sequences containing the outgroup sequence were aligned using MUSCLE (v3.8.1551)(Edgar, 2004). The alignments were then concatenated using the linux command paste. Phylogeny was performed using concatenated alignments with iqtree (version 1.6.12) with a partition model (part 1: 1-800,K3Pu+F+R3; part 2: 801-1652,TPM2u+F+R3) and 1000 bootstrap replicates (Chernomor et al., 2016).
+A total of 139 _atpF-atpH_ and _psbK-psbI_ barcodes were concatenated from the same duckweed clone. _Colocasia esculenta_ (JN105690.1) was used an outgroup. To find the respective barcode sequences for this outgroup, a separate BLASTN search was performed using each set of duckweed barcodes. Each set of barcodes sequences containing the outgroup sequence were aligned using MUSCLE (v3.8.1551)(Edgar, 2004). The alignments were then concatenated using the linux command paste. Phylogeny was performed using concatenated alignments with iqtree (version 1.6.12) with a partition model (part 1: 1-800,K3Pu+F+R3; part 2: 801-1652,TPM2u+F+R3) and 1000 bootstrap replicates (Chernomor et al., 2016). _Lemna yungensis_ clones were renamed to _Lemna valdiviana_ (Bog et al., 2020) and _Spirodela polyrhiza_ 9203 was renamed to _Spirodela intermedia_ 9203 (Borisjuk et al., 2015).
 
 
 ## (References)
+
+Bog, M., Sree, K.S., Fuchs, J., Hoang, P.T., Schubert, I., Kuever, J., Rabenstein, A., Paolacci, S., Jansen, M.A. and Appenroth, K.J., 2020. A taxonomic revision of Lemna sect. Uninerves (Lemnaceae). Taxon, 69(1), pp.56-66.
+
+Borisjuk, N., Chu, P., Gutierrez, R., Zhang, H., Acosta, K., Friesen, N., Sree, K.S., Garcia, C., Appenroth, K.J. and Lam, E., 2015. Assessment, validation and deployment strategy of a two‐barcode protocol for facile genotyping of duckweed species. Plant Biology, 17, pp.42-49.
 
 Chernomor, O., Von Haeseler, A. and Minh, B.Q., 2016. Terrace aware data structure for phylogenomic inference from supermatrices. Systematic biology, 65(6), pp.997-1008.
 
