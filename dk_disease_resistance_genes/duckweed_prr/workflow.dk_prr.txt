@@ -1,11 +1,12 @@
-TPC2020_DIR="/home/microbiome/data/el_projects/plant_cell_searches"
-PROJ_DIR="$TPC2020_DIR/duckweed_amp_hmm"
+TPC2020_DIR="/home/microbiome/data/el_projects/tpc_dw_review"
+PROJ_DIR="$TPC2020_DIR/dk_disease_resistance_genes/duckweed_prr"
 DK_GENOMES="/home/microbiome/data/duckweed_genomics"
 
 SP9509="$DK_GENOMES/Sp9509/Sp9509_oxford_v3.proteins.fasta"
 SP7498="$DK_GENOMES/Sp7498v3/Sp7498_pacbio.protein.fasta"
 WA8730="$DK_GENOMES/Wa8730/wa8730.asm201904v2.ann1.proteins.fasta"
 WA7733="$DK_GENOMES/Wa7733/wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta"
+WN8848="$DK_GENOMES/Wn8848/Wn8848.a01.proteins.fasta"
 
 BRACHY="$TPC2020_DIR/proteome.all_transcripts.bdi.fasta"
 RICE="$TPC2020_DIR/proteome.all_transcripts.osa.fasta"
@@ -108,6 +109,7 @@ extract_fastaseqs.py \
 
 
 # find tm_lysM proteins with kinase domain
+# none found
 hmmsearch \
 --cut_ga \
 LysM.hmm \
@@ -115,51 +117,6 @@ Sp9509-tm.proteins.fasta |
 awk '/>>/' |
 sed 's/>> //' |
 cut -d " " -f 1 > Sp9509-tm_lysM.proteins;
-
-# remove duplicates
-cat Sp9509-tm_lysM.proteins.tmp |
-sort |
-uniq |
-cut -d " " -f 1 > Sp9509-tm_lysM.proteins;
-
-# extract tm_lysM protein sequences
-extract_fastaseqs.py \
--f Sp9509-tm_lysM.proteins \
--i $SP9509 \
--z \
-> Sp9509-tm_lysM.proteins.fasta;
-
-
-# find tm_lysM proteins with kinase domain
-hmmsearch \
---cut_ga \
-Pkinase.hmm \
-Sp9509-tm_lysM.proteins.fasta |
-awk '/>>/' |
-sed 's/>> //' |
-cut -d " " -f 1 > Sp9509-tm_lysM_kinase.proteins;
-
-# extract tm_lysM_kinase protein sequences
-extract_fastaseqs.py \
--f Sp9509-tm_lysM_kinase.proteins \
--i $SP9509 \
--z \
-> Sp9509-tm_lysM_kinase.proteins.fasta;
-
-
-# find proteins only with tm_lysM domain
-comm \
--23 \
-<(sort Sp9509-tm_lysM.proteins) \
-<(sort Sp9509-tm_lysM_kinase.proteins) \
-> Sp9509-tm_lysM_only.proteins
-
-# extract tm_lysM_only protein sequences
-extract_fastaseqs.py \
--f Sp9509-tm_lysM_only.proteins \
--i $SP9509 \
--z \
-> Sp9509-tm_lysM_only.proteins.fasta;
 
 
 ##################################################
@@ -253,6 +210,7 @@ extract_fastaseqs.py \
 
 
 # find tm_lysm proteins with kinase domain
+# none found
 hmmsearch \
 --cut_ga \
 LysM.hmm \
@@ -1083,6 +1041,143 @@ extract_fastaseqs.py \
 -i $MEDICAGO \
 -z \
 > medicago-tm_lrr_only.proteins.fasta;
+
+
+##################################################
+# Wn8848
+##################################################
+
+
+# find tm proteins
+# this takes a while
+tmhmm \
+$WN8848 \
+-short | 
+awk '$5 !~ /PredHel=0/' |
+cut -f 1 > wn8848-tm.proteins;
+
+# extract tm protein sequences
+# modified file using vim: %s/$/ |/g
+extract_fastaseqs.py \
+-f wn8848-tm.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm.proteins.fasta;
+
+
+# find tm proteins with lrr domain
+for HMM in $(cat LRRhmm.models);
+do 
+echo $HMM;
+hmmsearch \
+--cut_ga \
+$HMM \
+wn8848-tm.proteins.fasta |
+awk '/>>/' |
+sed 's/>> //' \
+>> wn8848-tm_lrr.proteins.tmp;
+done;
+
+# remove duplicates
+cat wn8848-tm_lrr.proteins.tmp |
+sort |
+uniq |
+cut -d " " -f 1 > wn8848-tm_lrr.proteins;
+
+# extract tm_lrr protein sequences
+# modified file using vim: %s/$/ |/g
+extract_fastaseqs.py \
+-f wn8848-tm_lrr.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm_lrr.proteins.fasta;
+
+
+# find tm_lrr proteins with kinase domain
+hmmsearch \
+--cut_ga \
+Pkinase.hmm \
+wn8848-tm_lrr.proteins.fasta |
+awk '/>>/' |
+sed 's/>> //' |
+cut -d " " -f 1 > wn8848-tm_lrr_kinase.proteins;
+
+# extract tm_lrr_kinase protein sequences
+# modified file using vim: %s/$/ |/g
+extract_fastaseqs.py \
+-f wn8848-tm_lrr_kinase.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm_lrr_kinase.proteins.fasta;
+
+# find proteins only with tm_lrr domain
+comm \
+-23 \
+<(sort wn8848-tm_lrr.proteins) \
+<(sort wn8848-tm_lrr_kinase.proteins) \
+> wn8848-tm_lrr_only.proteins
+
+# extract tm_lrr_only protein sequences
+# modified file using vim: %s/$/ |/g
+extract_fastaseqs.py \
+-f wn8848-tm_lrr_only.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm_lrr_only.proteins.fasta;
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# LysM
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+# find tm_lrr proteins with kinase domain
+hmmsearch \
+--cut_ga \
+LysM.hmm \
+wn8848-tm.proteins.fasta |
+awk '/>>/' |
+sed 's/>> //' |
+cut -d " " -f 1 > wn8848-tm_lysM.proteins;
+
+# extract tm_lrr protein sequences
+extract_fastaseqs.py \
+-f wn8848-tm_lysM.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm_lysM.proteins.fasta;
+
+
+# find tm_lrr proteins with kinase domain
+hmmsearch \
+--cut_ga \
+Pkinase.hmm \
+wn8848-tm_lysM.proteins.fasta |
+awk '/>>/' |
+sed 's/>> //' |
+cut -d " " -f 1 > wn8848-tm_lysM_kinase.proteins;
+
+# extract tm_lrr_kinase protein sequences
+extract_fastaseqs.py \
+-f wn8848-tm_lysM_kinase.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm_lysM_kinase.proteins.fasta;
+
+# find proteins only with tm_lrr domain
+comm \
+-23 \
+<(sort wn8848-tm_lysM.proteins) \
+<(sort wn8848-tm_lysM_kinase.proteins) \
+> wn8848-tm_lysM_only.proteins
+
+# extract tm_lrr_only protein sequences
+# modified file using vim: %s/$/ |/g
+extract_fastaseqs.py \
+-f wn8848-tm_lysM_only.proteins \
+-i $WN8848 \
+-z \
+> wn8848-tm_lysM_only.proteins.fasta;
 
 
 ##################################################
