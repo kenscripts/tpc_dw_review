@@ -1,11 +1,12 @@
-TPC2020_DIR="/home/microbiome/data/el_projects/plant_cell_searches"
-PROJ_DIR="$TPC2020_DIR/duckweed_amp_hmm"
+TPC2020_DIR="/home/microbiome/data/el_projects/tpc_dw_review"
+PROJ_DIR="$TPC2020_DIR/dk_disease_resistance_genes/duckweed_amp"
 DK_GENOMES="/home/microbiome/data/duckweed_genomics"
 
 SP9509="$DK_GENOMES/Sp9509/Sp9509_oxford_v3.proteins.fasta"
 SP7498="$DK_GENOMES/Sp7498v3/Sp7498_pacbio.protein.fasta"
 WA8730="$DK_GENOMES/Wa8730/wa8730.asm201904v2.ann1.proteins.fasta"
 WA7733="$DK_GENOMES/Wa7733/wa7733.asm1v1.ann1.run1.all.std.maker.proteins.func.fasta"
+WN8848="$DK_GENOMES/Wn8848/Wn8848.a01.proteins.fasta"
 
 BRACHY="$TPC2020_DIR/proteome.all_transcripts.bdi.fasta"
 RICE="$TPC2020_DIR/proteome.all_transcripts.osa.fasta"
@@ -45,6 +46,7 @@ hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Cyclotide.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -59,6 +61,7 @@ hmmsearch --cut_ga PhytAMP_Defensin.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Defensin.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Defensin.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Defensin.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Defensin.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Defensin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Defensin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -73,6 +76,7 @@ hmmsearch --cut_ga PhytAMP_Hevein.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Hevein.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Hevein.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Hevein.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Hevein.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Hevein.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Hevein.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -87,6 +91,7 @@ hmmsearch --cut_ga PhytAMP_Impatiens.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Impatiens.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Impatiens.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Impatiens.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Impatiens.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Impatiens.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Impatiens.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -101,6 +106,7 @@ hmmsearch --cut_ga PhytAMP_Knottins.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Knottins.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Knottins.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Knottins.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Knottins.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Knottins.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Knottins.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -115,6 +121,7 @@ hmmsearch --cut_ga PhytAMP_LTP.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_LTP.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_LTP.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_LTP.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_LTP.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_LTP.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_LTP.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -129,6 +136,7 @@ hmmsearch --cut_ga PhytAMP_Snakins.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Snakins.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Snakins.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Snakins.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Snakins.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Snakins.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Snakins.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -143,6 +151,7 @@ hmmsearch --cut_ga PhytAMP_Shepherin.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Shepherin.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Shepherin.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Shepherin.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Shepherin.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Shepherin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Shepherin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
@@ -157,6 +166,7 @@ hmmsearch --cut_ga PhytAMP_Thionin.hmm $SP9509 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Thionin.hmm $SP7498 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Thionin.hmm $WA8730 | awk '/>>/' | wc -l
 hmmsearch --cut_ga PhytAMP_Thionin.hmm $WA7733 | awk '/>>/' | wc -l
+hmmsearch --cut_ga PhytAMP_Thionin.hmm $WN8848 | awk '/>>/' | wc -l
 
 hmmsearch --cut_ga PhytAMP_Thionin.hmm $BRACHY | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
 hmmsearch --cut_ga PhytAMP_Thionin.hmm $RICE | awk '/>>/' | sed 's/.\d*  |.*//g' | sort | uniq | wc -l
